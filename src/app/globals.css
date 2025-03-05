@@ -23,6 +23,14 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.woff') format('woff'),
+       url('/fonts/satoshi-medium.woff') format('woff'); /* Optional fallback */
+  font-weight: 500;
+  font-style: medium;
+}
+
 
 @font-face {
   font-family: 'Satoshi';
@@ -117,3 +125,19 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.footer-bg{
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+@media screen and (max-width: 786px){
+  .footer-bg{
+    width: 95%;
+    margin: auto;
+  }
+} 
+.custom-bg{background: linear-gradient(118deg, #FEFBE0 41.57%, #AFBDE3 99.76%)}
+

@@ -50,21 +50,39 @@ export default function FAQSection() {
           <div key={categoryIndex}>
             <h3 className="mb-2 text-lg font-medium">{category.category}</h3>
 
-            <div className="space-y-2  border-gray-300">
+            <div className="space-y-2 border-gray-300">
               {category.faqs.map((faq, index) => {
                 const isOpen = openIndex === `${categoryIndex}-${index}`;
                 return (
-                  <div key={index} className="border-b border-gray-300">
+                  <div
+                    key={index}
+                    className={`border-b ${
+                      isOpen
+                        ? "border-[#6584DB] bg-[#F8F9FB]"
+                        : "border-gray-300"
+                    }`}
+                  >
                     <button
-                      className="flex w-full items-center justify-between px-4 py-3 text-left text-[#121212] focus:outline-none"
+                      className="flex w-full items-center justify-between px-4 py-3 text-left focus:outline-none"
                       onClick={() => toggleFAQ(`${categoryIndex}-${index}`)}
                     >
-                      <span>{faq.question}</span>
+                      <span
+                        className={`text-[#121212] text-[18px] font-normal ${
+                          isOpen ? "text-[24px] font-bold" : " "
+                        }`}
+                      >
+                        {faq.question}
+                      </span>
                       <motion.span
-                        animate={{ rotate: isOpen ? 180: 0 }}
+                        animate={{ rotate: isOpen ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <Image src="/up-arrow.png" alt="" width={8} height={4}/>
+                        <Image
+                          src="/up-arrow.png"
+                          alt="Toggle FAQ"
+                          width={8}
+                          height={4}
+                        />
                       </motion.span>
                     </button>
 
@@ -85,12 +103,6 @@ export default function FAQSection() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="mt-8 flex justify-center">
-        <button className="rounded-full bg-[#050506] px-6 py-3 text-white">
-          View all FAQs
-        </button>
       </div>
     </section>
   );

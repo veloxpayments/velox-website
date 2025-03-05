@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "../components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo-svg.svg";
 import Image from "next/image";
 
 const navItems = [
@@ -23,18 +23,54 @@ const navItems = [
   },
 ];
 
+const headerVariants = {
+  absolute: {
+    position: "absolute",
+    top: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
+  sticky: {
+    position: "fixed",
+    top: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
+};
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [isSticky, setIsSticky] = useState(false); // State to track sticky positioning
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  // Handle scroll event to toggle sticky positioning
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-transparent backdrop-blur-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+    <motion.header
+      variants={headerVariants}
+      initial="absolute"
+      animate={isSticky ? "sticky" : "absolute"}
+      className="w-full z-50 bg-transparent backdrop-blur-sm"
+      style={{ width: "100%" }} // Ensure full width
+    >
+      <div className="container mx-auto flex h-16 items-center justify-between p-4">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
-          <Image src={logo} alt="" />
+          <Image src={logo} alt="Logo" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -46,7 +82,9 @@ const Header = () => {
               onMouseEnter={() => setHoveredItem(item.label)}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <button className="flex items-center space-x-1 text-[16px] font-medium text-[#737373]">
+              <button
+                className="flex items-center space-x-1 text-[16px] font-medium text-[#737373] hover:text-black hover:font-semibold transition-colors duration-200"
+              >
                 <span>{item.label}</span>
                 <ChevronDown
                   className={`h-4 w-4 transition-transform duration-200 ${
@@ -83,7 +121,7 @@ const Header = () => {
           ))}
           <Link
             href="/contact"
-            className="text-[16px] font-medium text-[#737373]"
+            className="text-[16px] font-medium text-[#737373] hover:text-black hover:font-semibold transition-colors duration-200"
           >
             Contact us
           </Link>
@@ -92,7 +130,7 @@ const Header = () => {
         {/* Right Section - Buttons & Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
           <button
-            className="hidden md:inline-flex  bg-black text-white hover:bg-black/90 rounded-full  px-4 py-3"
+            className="hidden md:inline-flex bg-black text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-4 py-3"
           >
             Download now
           </button>
@@ -143,7 +181,7 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 };
 

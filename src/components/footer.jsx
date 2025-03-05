@@ -37,12 +37,15 @@ export default function Footer() {
   return (
     <footer className="bg-[#6584DB] text-white">
       {/* Top Banner */}
-      <div className="relative top-10 overflow-hidden bg-gradient-to-br from-[#AEBEEB] via-[#8594BD] to-[#AEBEEB] rounded-lg mx-4 md:mx-8 lg:mx-16 mt-16 mb-12">
+      <div
+        className="relative footer-bg top-10 container overflow-hidden rounded-[16px] border mx-4 md:mx-auto mt-16 mb-12"
+        style={{ backgroundImage: `url('/footer-bg.svg')` }}
+      >
         {/* Floating Coins */}
         <FloatingCoin className="absolute hidden md:inline-flex top-12 left-12" />
-        <FloatingCoin className="absolute hidden md:inline-flex top-20 right-24" />
-        <FloatingCoin className="absolute hidden md:inline-flex bottom-12 left-1/4" />
-        <FloatingCoin className="absolute hidden md:inline-flex top-1/3 right-1/3" />
+        <FloatingCoin className="absolute hidden md:inline-flex top-12 right-12" />
+        <FloatingCoin className="absolute hidden md:inline-flex top-40 left-44" />
+        <FloatingCoin className="absolute hidden md:inline-flex top-40 right-44" />
 
         <div className="container mx-auto px-4 py-16 text-center relative z-10">
           <p className="text-sm mb-4">GET READY FOR EASE</p>
@@ -51,12 +54,12 @@ export default function Footer() {
           </h2>
 
           {/* QR Code */}
-          <div className="bg-[#FFD60A] inline-block p-4 rounded-xl">
+          <div className="bg-[#FCDE2F] inline-block p-4 rounded-xl">
             <p className="text-black mb-2 text-sm font-medium">
               Download Velox Payments
             </p>
             <Image
-              src="/qr.png"
+              src="/qr-svg.svg"
               alt="Download QR Code"
               width={200}
               height={200}
@@ -67,7 +70,7 @@ export default function Footer() {
           {/* Decorative Elements */}
           <div className="absolute hidden md:inline-flex left-0 bottom-2">
             <Image
-              src="/Money-bag.png"
+              src="/money-svg.svg"
               alt="Coins decoration"
               width={250}
               height={250}
@@ -75,7 +78,7 @@ export default function Footer() {
           </div>
           <div className="absolute hidden md:inline-flex right-0 bottom-2">
             <Image
-              src="/rocket.png"
+              src="/rocket-svg.svg"
               alt="Rocket decoration"
               width={250}
               height={250}
@@ -90,7 +93,7 @@ export default function Footer() {
           {/* Logo and Social */}
           <div className="lg:col-span-2">
             <Image
-              src="/yellow-velox.png"
+              src="/yellow-logo-svg.svg"
               alt="Velox Logo"
               width={120}
               height={40}
@@ -98,20 +101,21 @@ export default function Footer() {
             />
             <div className="flex gap-4">
               <Link href="#" className="hover:text-[#FFD60A] transition-colors">
-                <Facebook size={20} />
+                <Image src="/fb.svg" alt="" width={20} height={20} />
               </Link>
               <Link href="#" className="hover:text-[#FFD60A] transition-colors">
-                <Twitter size={20} />
+                <Image src="/x.svg" alt="" width={20} height={20} />
               </Link>
               <Link href="#" className="hover:text-[#FFD60A] transition-colors">
-                <Linkedin size={20} />
+                <Image src="/link.svg" alt="" width={20} height={20} />
               </Link>
               <Link href="#" className="hover:text-[#FFD60A] transition-colors">
-                <TikTok size={20} />
+                <Image src="/tiktok.svg" alt="" width={20} height={20} />
               </Link>
               <Link href="#" className="hover:text-[#FFD60A] transition-colors">
-                <FileText size={20} />
+                <Image src="/insta.svg" alt="" width={20} height={20} />
               </Link>
+              
             </div>
           </div>
 
@@ -233,11 +237,12 @@ export default function Footer() {
         </div>
 
         {/* Newsletter */}
-        <div className="bg-[#8DA4E4] text-white rounded-lg p-4 flex flex-col md:flex-row md:items-center md:justify-between w-full  mx-auto border md:mb-8 mb-5">
+        <div
+          style={{ backgroundImage: `url('/footer-bg.svg')` }}
+          className="footer-bg text-white rounded-lg p-4 flex flex-col md:flex-row md:items-center md:justify-between w-full  mx-auto border md:mb-8 mb-5"
+        >
           <div className="mb-4 md:mb-0">
-            <h3 className="text-lg font-semibold">
-              Subscribe to Velox Payments
-            </h3>
+            <h3 className="text-lg font-medium">Subscribe to Velox Payments</h3>
             <p className="text-sm text-white/80">
               Insert a text to make users eager to subscribe to our newsletter.
             </p>
@@ -248,14 +253,14 @@ export default function Footer() {
               placeholder="Enter your email address here"
               className="flex-1 text-gray-700 text-sm p-2 outline-none bg-transparent placeholder-gray-400"
             />
-            <button className="bg-[#FCDE2F] text-[#050506] font-semibold px-4 py-4 rounded-full hover:bg-yellow-500 transition">
+            <button className="bg-[#FCDE2F] text-[#050506] font-medium  md:px-11 md:py-4 rounded-full hover:bg-transparent border border-[#CAB22B] transition">
               Subscribe
             </button>
           </div>
         </div>
         <hr className="my-5" />
         {/* Legal */}
-        <div className="text-[16px] text-gray-300 space-y-4">
+        <div className="text-[16px] text-white space-y-4">
           <p className="text-[16px] leading-6 font-normal">
             Velox Payments Limited, Canada, is registered and regulated by the
             Financial Transactions and Report Analysis Centre of Canada as a
