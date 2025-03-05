@@ -11,10 +11,9 @@ const Home = () => {
       <Hero />
       <Services />
       <SendMoney />
-      <Reviews/>
+      <Reviews />
       <GetStarted />
-      <FAQSection/>
-      
+      <FAQSection />
     </main>
   );
 };

@@ -19,7 +19,8 @@ const steps = [
   },
   {
     title: "Start Transacting:",
-    description: "Send money in multiple currencies with just a tap—fast, secure, and completely free.",
+    description:
+      "Send money in multiple currencies with just a tap—fast, secure, and completely free.",
   },
 ];
 
@@ -41,7 +42,7 @@ const GetStarted = () => {
             {/* Phone Image */}
             <div className="relative z-10">
               <Image
-                src="/Mobile-device.png"
+                src="/Mobile.svg"
                 alt="Registration Form"
                 width={547}
                 height={665}
@@ -58,11 +59,13 @@ const GetStarted = () => {
             viewport={{ once: true }}
             className="flex flex-col justify-center"
           >
-            <h2 className="mb-8 text-[30px] font-medium">Get Started in 4 Simple Steps</h2>
+            <h2 className="mb-8 text-[30px] font-medium text-[#050506]">
+              Get Started in 4 Simple Steps
+            </h2>
 
             <div className="relative flex flex-col space-y-8">
               {/* Vertical Timeline Line */}
-              <div className="absolute left-[7px] top-10 h-[calc(100%-24px)] w-[2px] border-l-2 border-dotted border-gray-300 md:inline-flex hidden"></div>
+              <div className="absolute left-[7px] top-10 h-[calc(100%-140px)] w-[2px] border-l-2 border-dotted border-black md:inline-flex hidden"></div>
 
               {/* Steps */}
               {steps.map((step, index) => (
@@ -78,10 +81,14 @@ const GetStarted = () => {
                   <div className="relative z-10 mt-2 h-4 w-4 rounded-full bg-black md:inline-flex hidden"></div>
 
                   {/* Content */}
-                  <div className="flex flex-col space-y-2 pb-2 md:w-[300px]">
-                    <h3 className="text-lg font-medium text-black">{step.title}</h3>
+                  <div className="flex flex-col space-y-2 pb-2 md:w-[250px]">
+                    <h3 className="text-lg font-medium text-black">
+                      {step.title}
+                    </h3>
                     <p className="text-[#737373]">{step.description}</p>
-                    {step.proTip && <p className="text-[#737373] italic">({step.proTip})</p>}
+                    {step.proTip && (
+                      <p className="text-[#737373] italic">({step.proTip})</p>
+                    )}
                   </div>
                 </motion.div>
               ))}

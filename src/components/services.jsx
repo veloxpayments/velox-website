@@ -1,5 +1,6 @@
 "use client";
-
+import line from "../../public/hero-line.png";
+import line2 from "../../public/hero-line-2.png";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -44,11 +45,11 @@ const services = [
 ];
 
 const flags = [
-  { code: "CA", name: "Canada", image: "/CA.png" },
-  { code: "NG", name: "Nigeria", image: "/NG.png" },
-  { code: "TZ", name: "Tanzania", image: "/TZ.png" },
-  { code: "GH", name: "Ghana", image: "/GH.png" },
-  { code: "KE", name: "Kenya", image: "/KE.png" },
+  { code: "CA", name: "Canada", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ca_1.svg" },
+  { code: "NG", name: "Nigeria", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ng_1.svg" },
+  { code: "TZ", name: "Tanzania", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/tz_1.svg" },
+  { code: "GH", name: "Ghana", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/gh_1.svg" },
+  { code: "KE", name: "Kenya", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ke_1.svg" },
 ];
 
 const Services = () => {
@@ -62,23 +63,23 @@ const Services = () => {
       <div className="container px-4 mx-auto">
         <h2 className="mb-16 text-center text-2xl font-medium text-black">
           <span className="inline-flex items-center gap-4">
-            <span className="h-px w-8 bg-gray-300"></span>
+            <Image src={line} alt="" />
             Our services
-            <span className="h-px w-8 bg-gray-300"></span>
+            <Image src={line2} alt="" />
           </span>
         </h2>
 
-        <div className="grid gap-12 lg:grid-cols-[auto,1fr]">
+        <div className="grid gap-12 lg:grid-cols-[auto,1fr] md:w-4/5 mx-auto">
           {/* Service Tabs */}
           <div className="flex flex-row lg:flex-col gap-5 justify-between">
             {services.map((service) => (
               <button
                 key={service.id}
                 onClick={() => setActiveTab(service.id)}
-                className={`flex md:h-32 md:w-32 h-24 w-24 flex-col items-center justify-center rounded-3xl border transition-colors ${
+                className={`flex md:h-32 md:w-32 h-24 w-24 text-lg flex-col items-center justify-center rounded-3xl border transition-colors ${
                   activeTab === service.id
-                    ? "border-transparent bg-black text-white"
-                    : "border-gray-200 bg-[#EAE8E4] text-gray-600 hover:border-gray-300"
+                    ? "border-transparent bg-black text-white text-lg"
+                    : "border-gray-200 bg-[#EAE8E4] text-white text-lg hover:border-gray-300"
                 }`}
               >
                 {/* ✅ Correct way to use images */}
@@ -97,13 +98,16 @@ const Services = () => {
           {/* Content */}
           <div className="grid gap-8 lg:grid-cols-[1.2fr,1fr] lg:gap-12">
             {/* Phone Mockup */}
-            <div className="relative flex items-center justify-center">
-              <Image
-                src={phone}
-                alt="App Interface"
-                width={350}
-                height={700}
-                className=""
+            <div className="relative md:h-[620px] flex items-center justify-center">
+              <img className="h-full"
+                style={{
+                  display: "block",
+                  WebkitUserSelect: "none",
+                  margin: "auto",
+                  cursor: "zoom-in",
+                }}
+                src="https://s3-alpha-sig.figma.com/img/3927/b22c/b9b6bf978d271c649601e5c977d12786?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f1oJbsikZk3dnbXZPI-5r79bsZa50k7CNIsvva30VyYO~k7-t~1dJWMx57E7K9CJFE913w1GWpwy8OSLb5mGup1YkfMSyW5JgP0CmLE4dFcn968ktEtkgbBAYaYXD~6q4YaFG0G137KpTwmpYcV5kPBA~3NoLx7TO95zhax4~DLGEClG3vGYEDGsduM-DMYvOPy3ha1Wz8XY5nRWUrj~kR8y9FHsqiq7nhWgzKeiqpJsMuJArx9Em2TeIOU0uTRXmIP9Rjxiw1~cQXEy2eZhBrmsDANpMkgXvTwMGzkR9gVIih-p2egBvrn1u3JtGK6b7wX-29GVu1inqavgIeftwg__"
+                
               />
             </div>
 
@@ -117,46 +121,45 @@ const Services = () => {
                 transition={{ duration: 0.3 }}
                 className="flex flex-col justify-center space-y-6"
               >
-                <p className="text-[#5A5A5A] font-medium uppercase tracking-wider text-[16px]">
+                <p className="text-[#5A5A5A] font-medium uppercase tracking-wider text-[14px]">
                   INTERNATIONAL MONEY TRANSFER
                 </p>
-                <h3 className="text-4xl font-medium tracking-tighter leading-[56px] lg:text-[56px]">
+                <h3 className="text-4xl font-medium leading-[56px] md:text-[56px] text-[#050506]">
                   {activeService.title}
                 </h3>
                 <div className="space-y-4">
-                  <p className="text-[16px] text-[#5A5A5A]">
+                  <p className="text-[18px] leading-6 text-[#5A5A5A]">
                     {activeService.description}
                   </p>
-                  <p className="text-[16px] text-[#5A5A5A]">
+                  <p className="text-[18px] text-[#5A5A5A] leading-6">
                     {activeService.subtext}
                   </p>
                 </div>
 
                 {/* Flags */}
                 <div className="space-y-3">
-                  <div className="flex gap-2">
+                  <div className="flex gap-4">
                     {flags.map((flag) => (
                       <div
                         key={flag.code}
-                        className="h-6 w-6 overflow-hidden rounded-full"
+                        className="h-6 w-7 overflow-hidden rounded-full"
                       >
-                       
                         <Image
                           src={flag.image}
                           alt={flag.name}
-                          width={24}
+                          width={28}
                           height={24}
                           className="object-cover"
                         />
                       </div>
                     ))}
                   </div>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-[16px] font-medium text-[#5A5A5A]">
                     More countries coming soon!
                   </p>
                 </div>
 
-                <Button className="w-fit bg-[#6584DB] px-9 py-4 hover:bg-blue-700 rounded-full font-medium">
+                <Button className="bg-[#6584DB] border border-[#6584DB] hover:bg-transparent hover:transition-all hover:text-[#6584DB] px-6 py-6 w-fit rounded-full font-medium text-[16px]">
                   Learn more
                 </Button>
               </motion.div>
