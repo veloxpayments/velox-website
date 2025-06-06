@@ -14,10 +14,10 @@ const Hero = () => {
     <div className="relative md:min-h-[100vh] w-full p-6">
       <section className="custom-bg rounded-2xl">
         {/* Centered Content Container */}
-        <div className="container mx-auto px-4 flex md:min-h-[86vh] w-full flex-col-reverse items-center justify-between gap-2 md:pt-36 sm:flex-row ">
+        <div className="container mx-auto px-4 md:flex md:min-h-[86vh] w-full flex-col-reverse items-center justify-between gap-2 md:pt-36 sm:flex-row ">
           {/* Left Content */}
-          <div className="relative z-10  space-y-6 text-center sm:text-left">
-            <h1 className="text-2xl font-bold leading-[67px] text-[#2D2D2D]  md:text-[64px]">
+          <div className="relative z-10  space-y-6  text-left">
+            <h1 className="text-2xl pt-5 font-bold md:leading-[67px] text-[#2D2D2D]  md:text-[58px]">
               Easiest way to send <br /> money across <br /> borders.
             </h1>
             <p className="text-[24px] font-normal text-[#484E60] sm:text-xl">
@@ -25,7 +25,7 @@ const Hero = () => {
             </p>
             <button
               onClick={toggleModal}
-              className="hidden md:inline-flex bg-[#1A2238] text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-4 py-3"
+              className="md:inline-flex bg-[#1A2238] text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-4 py-3"
             >
               Download now
             </button>
@@ -54,7 +54,7 @@ const Hero = () => {
           ></div>
 
           {/* Modal Content */}
-          <div className="relative custom-modal rounded-2xl md:py-[108px] md:px-[109px] p-5  max-w-3xl z-10 shadow-lg">
+          <div className="relative custom-modal rounded-2xl md:py-[80px] md:px-[109px] p-5  max-w-3xl z-10 shadow-lg">
             {/* Cross Button */}
             <button
               onClick={toggleModal}
