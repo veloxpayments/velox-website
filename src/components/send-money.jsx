@@ -2,120 +2,222 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import hand from "../../public/hands.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-const features = ["Speed -", "Fair Rates -", "No Fees -", "Automation -"];
-
-const sections = [
-  {
-    title: "Transfer speed",
-    description:
-      'Since we know that in many love languages, "credit alert" means "I miss you," we\'ve ensured your transfers arrive faster than you can say it.',
-    image: "/hands-money.svg",
-    imageAlt: "Transfer Speed Illustration",
-  },
-  {
-    title: "Best rates",
-    description:
-      "We know money can buy happiness if it's the right amount. So, we make sure your loved ones get the most value, for every amount you send.",
-    image: "/deposite-money.svg",
-    imageAlt: "Best Rates Illustration",
-  },
-  {
-    title: "Zero fees",
-    description:
-      "No stories, No charges! Every penny you send goes directly to your loved ones. Yup! we're nice like that!",
-    image: "/deposite-money.svg",
-    imageAlt: "Zero Fees Illustration",
-  },
-  {
-    title: "Automated payments",
-    description: "You'll never miss an important transfer again!",
-    image: "/hands-money.svg",
-    imageAlt: "Automated Payments Illustration",
-  },
-];
-
-function FeatureSlider() {
-    const sliderRef = useRef(null);
-    const controls = useAnimation();
-
-  useEffect(() => {
-    const startSlider = async () => {
-      while (true) {
-        await controls.start({ x: "-100%", transition: { duration: 10, ease: "linear" } });
-        controls.set({ x: "0%" });
-      }
-    };
-    startSlider();
-  }, [controls]);
-
-  return (
-    <div className="relative overflow-hidden container max-auto py-4">
-    <motion.div
-      ref={sliderRef}
-      animate={controls}
-      className="flex whitespace-nowrap"
-      style={{ display: "flex", whiteSpace: "nowrap" }}
-    >
-      {[...features, ...features].map((feature, index) => (
-        <div
-          key={index}
-          className="mx-4 inline-block text-4xl font-medium text-[#ABB2CA] md:text-[64px]"
-        >
-          {feature}
-        </div>
-      ))}
-    </motion.div>
-  </div>
-  );
-}
-
-function Section({ title, description, image, imageAlt, isReversed }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start({ opacity: 1, y: 0 });
-    }
-  }, [isInView, controls]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={controls}
-      transition={{ duration: 0.5 }}
-      className={`grid md:w-3/4 gap-8 mx-auto md:grid-cols-2 md:gap-8 ${isReversed ? "md:grid-flow-col" : ""}`}
-    >
-      <div className={`flex flex-col justify-center space-y-4 ${isReversed ? "md:order-2" : ""}`}>
-        <h2 className="text-3xl font-medium md:text-4xl text-[#050506]">{title}</h2>
-        <p className="text-lg text-[#737373] font-normal">{description}</p>
-      </div>
-      <div className={`relative  flex items-center justify-center ${isReversed ? "md:order-1" : ""}`}>
-        <div className="absolute h-[300px] w-[300px] rounded-full" />
-        <Image src={image || "/placeholder.svg"} alt={imageAlt} width={400} height={400} className="relative z-10" />
-      </div>
-    </motion.div>
-  );
-}
-
 export default function SendMoney() {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const isInView1 = useInView(ref1, { once: true, margin: "-100px" });
+  const isInView2 = useInView(ref2, { once: true, margin: "-100px" });
+  const isInView3 = useInView(ref3, { once: true, margin: "-100px" });
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
+  const controls3 = useAnimation();
+
+  useEffect(() => {
+    if (isInView1) controls1.start({ opacity: 1, y: 0 });
+  }, [isInView1, controls1]);
+
+  useEffect(() => {
+    if (isInView2) controls2.start({ opacity: 1, y: 0 });
+  }, [isInView2, controls2]);
+
+  useEffect(() => {
+    if (isInView3) controls3.start({ opacity: 1, y: 0 });
+  }, [isInView3, controls3]);
+
   return (
     <section className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center space-y-4 text-center">
-          <h1 className="text-2xl font-medium text-[#737373]">A better way to send money</h1>
-          <FeatureSlider />
+          <p className="md:text-[40px] text-[#050506] font-medium text-4xl">Services That Deliver</p>
+          <h1 className="text-2xl font-normal text-[#2E2E2E]">
+            Explore services designed to elevate every step of your journey
+          </h1>
         </div>
 
         <div className="mt-16 space-y-24 md:mt-24 md:space-y-32">
-          {sections.map((section, index) => (
-            <Section key={section.title} {...section} isReversed={index % 2 !== 0} />
-          ))}
+          {/* Transfer Speed Section */}
+          <motion.div
+            ref={ref1}
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls1}
+            transition={{ duration: 0.5 }}
+            className="grid md:w-3/4 gap-8 mx-auto md:grid-cols-2 md:gap-8"
+          >
+            <div className="relative flex items-center justify-center">
+              <div className="absolute h-[300px] w-[300px] rounded-full" />
+              <Image
+                src="/services.svg"
+                alt="Transfer Speed Illustration"
+                width={400}
+                height={400}
+                className="relative z-10"
+              />
+            </div>
+            <section className="py-16 px-4 bg-white">
+              <div className="max-w-4xl mx-auto">
+                <div className="space-y-[16px]">
+                  {/* Header text */}
+                  <p className="text-sm font-medium text-[#5A5A5A] uppercase tracking-wider">
+                    INTERNATIONAL MONEY TRANSFER
+                  </p>
+
+                  {/* Main heading */}
+                  <h1 className="text-4xl md:text-[44px] font-bold text-gray-900 ">
+                    Send money globally without fees
+                  </h1>
+
+                  {/* Description paragraphs */}
+                  <div className="space-y-[16px]  mx-auto">
+                    <p className="text-[16px] text-[#5A5A5A]">
+                      Wherever life takes you, we'll always keep you connected
+                      to home
+                    </p>
+                    <p className="text-[16px] text-[#5A5A5A]">
+                      Join thousands who trust us, for fast, secure, and
+                      effortless international money transfers.
+                    </p>
+                  </div>
+
+                  {/* Country flags */}
+                  <div className="flex  items-center space-x-4 pt-2">
+                    {/* Canada flag */}
+                    <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
+                      <img
+                        src="/ca.png"
+                        alt="Canada flag"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Nigeria flag */}
+                    <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
+                      <img
+                        src="/ng.png"
+                        alt="Nigeria flag"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* South Africa flag */}
+                    <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
+                      <img
+                        src="/tz.png"
+                        alt="South Africa flag"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Ghana flag */}
+                    <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
+                      <img
+                        src="/gh.png"
+                        alt="Ghana flag"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    {/* Kenya flag */}
+                    <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
+                      <img
+                        src="/ke.png"
+                        alt="Kenya flag"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* More countries text */}
+                  <p className="text-gray-600 font-medium">
+                    More countries coming soon!
+                  </p>
+
+                  {/* Download button */}
+                  <div className="pt-4">
+                    <button className="w-max bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-4 py-3">
+                      Download
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </motion.div>
+
+          {/* Best Rates Section */}
+          <motion.div
+            ref={ref2}
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls2}
+            transition={{ duration: 0.5 }}
+            className="grid md:w-3/4 gap-8 mx-auto md:grid-cols-2 md:gap-8 md:grid-flow-col"
+          >
+            <div className="relative flex items-center justify-center md:order-2">
+              <div className="absolute h-[300px] w-[300px] rounded-full" />
+              <Image
+                src="/services-two.svg"
+                alt="Best Rates Illustration"
+                width={400}
+                height={400}
+                className="relative z-10"
+              />
+            </div>
+            <div className="flex flex-col justify-center space-y-4 md:order-1">
+              <p className="text-sm font-medium text-[#5A5A5A] uppercase tracking-wider">
+                LOWEST EXCHANGE rates
+              </p>
+              <h2 className="text-3xl font-medium md:text-4xl text-[#050506]">
+                Best exchange rate on the market
+              </h2>
+              <p className="text-[16px] text-[#5A5A5A] font-normal">
+                Seamlessly send money from Canada to Africa with Velox—trusted
+                by thousands as we expand our fast, secure transfers from the
+                USA, UK, and across the continent. Wherever life takes you, we
+                connect your world."
+              </p>
+              <button className="w-max bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-4 py-3">
+                Download
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Zero Fees Section */}
+          <motion.div
+            ref={ref3}
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls3}
+            transition={{ duration: 0.5 }}
+            className="grid md:w-3/4 gap-8 mx-auto md:grid-cols-2 md:gap-8"
+          >
+            <div className="relative flex items-center justify-center">
+              <div className="absolute h-[300px] w-[300px] rounded-full" />
+              <Image
+                src="/service-three.svg"
+                alt="Zero Fees Illustration"
+                width={400}
+                height={400}
+                className="relative z-10"
+              />
+            </div>
+            <div className="flex flex-col justify-center space-y-4">
+              <p className="text-sm font-medium text-[#5A5A5A] uppercase tracking-wider">
+                Automate transactions
+              </p>
+              <h2 className="text-3xl font-medium md:text-4xl text-[#050506]">
+                Recurring payments for ease
+              </h2>
+              <p className="text-[16px] text-[#5A5A5A] font-normal">
+                Seamlessly send money from Canada to Africa with Velox—trusted
+                by thousands as we expand our fast, secure transfers from the
+                USA, UK, and across the continent. Wherever life takes you, we
+                connect your world."
+              </p>
+              <button className="w-max bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-4 py-3">
+                Download
+              </button>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

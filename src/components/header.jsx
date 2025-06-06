@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "../components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../public/logo-svg.svg";
+import logo from "../../public/yellow-logo.svg";
 import Image from "next/image";
 
 const navItems = [
@@ -60,14 +60,9 @@ const Header = () => {
   }, []);
 
   return (
-    <motion.header
-      variants={headerVariants}
-      initial="absolute"
-      animate={isSticky ? "sticky" : "absolute"}
-      className="w-full z-50 bg-transparent backdrop-blur-sm"
-      style={{ width: "100%" }} // Ensure full width
-    >
-      <div className="container mx-auto flex h-16 items-center justify-between p-4">
+    <div className="container mx-auto bg-white md:absolute top-10 right-0 left-0 z-50 px-10 py-6 rounded-xl">
+  
+      <div className="flex  items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
           <Image src={logo} alt="Logo" />
@@ -130,7 +125,7 @@ const Header = () => {
         {/* Right Section - Buttons & Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
           <button
-            className="hidden md:inline-flex bg-black text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-4 py-3"
+            className="hidden md:inline-flex bg-[#1A2238] text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-4 py-3"
           >
             Download now
           </button>
@@ -152,7 +147,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 top-16 bg-white shadow-md md:hidden"
+            className="absolute left-0 right-0 top-16 bg-white shadow-md md:hidden z-50"
           >
             <div className="container mx-auto flex flex-col space-y-4 p-4">
               {navItems.map((item) => (
@@ -181,7 +176,8 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.header>
+   
+    </div>
   );
 };
 

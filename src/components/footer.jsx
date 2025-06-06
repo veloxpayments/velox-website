@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import coin from "../../public/coin-one.png";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Input } from "../components/ui/input";
+import { Button } from "../components/ui/button";
 import {
   Facebook,
   Twitter,
@@ -35,54 +35,33 @@ function FloatingCoin({ className }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#6584DB] text-white">
+    <footer className="bg-[#6584DB] text-white ">
       {/* Top Banner */}
       <div
         className="relative footer-bg top-10 container overflow-hidden rounded-[16px] border mx-4 md:mx-auto mt-16 mb-12"
         style={{ backgroundImage: `url('/footer-bg.svg')` }}
       >
-        {/* Floating Coins */}
-        <FloatingCoin className="absolute hidden md:inline-flex top-12 left-12" />
-        <FloatingCoin className="absolute hidden md:inline-flex top-12 right-12" />
-        <FloatingCoin className="absolute hidden md:inline-flex top-40 left-44" />
-        <FloatingCoin className="absolute hidden md:inline-flex top-40 right-44" />
-
-        <div className="container mx-auto px-4 py-16 text-center relative z-10">
-          <p className="text-sm mb-4">GET READY FOR EASE</p>
-          <h2 className="text-3xl md:text-[64px] font-bold mb-8">
-            Join the Velox side of things
-          </h2>
-
+        <div className="container mx-auto px-4 py-16 md:px-[100px] relative z-10 md:flex items-center justify-between">
+          <div>
+            <p className="text-sm mb-4">GET READY FOR EASE</p>
+            <h2 className="text-3xl md:text-[64px] font-bold mb-8">
+              Join the Velox side of things
+            </h2>
+          </div>
           {/* QR Code */}
-          <div className="bg-[#FCDE2F] inline-block p-4 rounded-xl">
-            <p className="text-black mb-2 text-sm font-medium">
-              Download Velox Payments
-            </p>
-            <Image
-              src="/qr-svg.svg"
-              alt="Download QR Code"
-              width={200}
-              height={200}
-              className="bg-white rounded-lg"
-            />
-          </div>
-
-          {/* Decorative Elements */}
-          <div className="absolute hidden md:inline-flex left-0 bottom-2">
-            <Image
-              src="/money-svg.svg"
-              alt="Coins decoration"
-              width={250}
-              height={250}
-            />
-          </div>
-          <div className="absolute hidden md:inline-flex right-0 bottom-2">
-            <Image
-              src="/rocket-svg.svg"
-              alt="Rocket decoration"
-              width={250}
-              height={250}
-            />
+          <div className="">
+            <div className="bg-[#FCDE2F] inline-block p-4 rounded-xl">
+              <p className="text-black mb-2 text-sm font-medium">
+                Download Velox Payments
+              </p>
+              <Image
+                src="/qr-svg.svg"
+                alt="Download QR Code"
+                width={200}
+                height={200}
+                className="bg-white rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -115,7 +94,6 @@ export default function Footer() {
               <Link href="#" className="hover:text-[#FFD60A] transition-colors">
                 <Image src="/insta.svg" alt="" width={20} height={20} />
               </Link>
-              
             </div>
           </div>
 
@@ -247,13 +225,14 @@ export default function Footer() {
               Insert a text to make users eager to subscribe to our newsletter.
             </p>
           </div>
+
           <div className="flex items-center bg-white rounded-full p-1 w-full md:w-1/3">
             <input
               type="email"
               placeholder="Enter your email address here"
               className="flex-1 text-gray-700 text-sm p-2 outline-none bg-transparent placeholder-gray-400"
             />
-            <button className="bg-[#FCDE2F] text-[#050506] font-medium  md:px-11 md:py-4 rounded-full hover:bg-transparent border border-[#CAB22B] transition">
+            <button className="bg-[#FCDE2F] text-[#050506] font-medium  md:px-11 md:py-4 p-3 rounded-full hover:bg-transparent border border-[#CAB22B] transition">
               Subscribe
             </button>
           </div>

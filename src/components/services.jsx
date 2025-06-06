@@ -2,7 +2,7 @@
 import line from "../../public/hero-line.png";
 import line2 from "../../public/hero-line-2.png";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import {
   Send,
   ArrowLeftRight,
@@ -45,11 +45,31 @@ const services = [
 ];
 
 const flags = [
-  { code: "CA", name: "Canada", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ca_1.svg" },
-  { code: "NG", name: "Nigeria", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ng_1.svg" },
-  { code: "TZ", name: "Tanzania", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/tz_1.svg" },
-  { code: "GH", name: "Ghana", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/gh_1.svg" },
-  { code: "KE", name: "Kenya", image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ke_1.svg" },
+  {
+    code: "CA",
+    name: "Canada",
+    image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ca_1.svg",
+  },
+  {
+    code: "NG",
+    name: "Nigeria",
+    image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ng_1.svg",
+  },
+  {
+    code: "TZ",
+    name: "Tanzania",
+    image: "https://velox-public-images.s3.us-east-1.amazonaws.com/tz_1.svg",
+  },
+  {
+    code: "GH",
+    name: "Ghana",
+    image: "https://velox-public-images.s3.us-east-1.amazonaws.com/gh_1.svg",
+  },
+  {
+    code: "KE",
+    name: "Kenya",
+    image: "https://velox-public-images.s3.us-east-1.amazonaws.com/ke_1.svg",
+  },
 ];
 
 const Services = () => {
@@ -99,7 +119,8 @@ const Services = () => {
           <div className="grid gap-8 lg:grid-cols-[1.2fr,1fr] lg:gap-12">
             {/* Phone Mockup */}
             <div className="relative md:h-[620px] flex items-center justify-center">
-              <img className="h-full"
+              <img
+                className="h-full"
                 style={{
                   display: "block",
                   WebkitUserSelect: "none",
@@ -107,7 +128,6 @@ const Services = () => {
                   cursor: "zoom-in",
                 }}
                 src="https://s3-alpha-sig.figma.com/img/3927/b22c/b9b6bf978d271c649601e5c977d12786?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=f1oJbsikZk3dnbXZPI-5r79bsZa50k7CNIsvva30VyYO~k7-t~1dJWMx57E7K9CJFE913w1GWpwy8OSLb5mGup1YkfMSyW5JgP0CmLE4dFcn968ktEtkgbBAYaYXD~6q4YaFG0G137KpTwmpYcV5kPBA~3NoLx7TO95zhax4~DLGEClG3vGYEDGsduM-DMYvOPy3ha1Wz8XY5nRWUrj~kR8y9FHsqiq7nhWgzKeiqpJsMuJArx9Em2TeIOU0uTRXmIP9Rjxiw1~cQXEy2eZhBrmsDANpMkgXvTwMGzkR9gVIih-p2egBvrn1u3JtGK6b7wX-29GVu1inqavgIeftwg__"
-                
               />
             </div>
 
