@@ -139,5 +139,20 @@ body {
     margin: auto;
   }
 } 
-.custom-bg{background: linear-gradient(118deg, #FEFBE0 41.57%, #AFBDE3 99.76%)}
+.custom-bg{
+  background-image: url('../../public/hero-bg-new.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
 
+}
+
+.custom-modal{
+  background-image: url('../../public/modal-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  z-index: 10;
+}

@@ -1,109 +1,99 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { useState } from "react"
+import { ChevronDown, ChevronUp } from "lucide-react"
 
-const faqData = [
+
+const faqs = [
   {
-    category: "About Velox",
-    faqs: [
-      { question: "Name of faq", answer: "This is the answer to the FAQ." },
-      { question: "Name of faq", answer: "This is another FAQ answer." },
-    ],
+    id: 1,
+    question: "How quickly will my money arrive?",
+    answer:
+      "Most transfers arrive within 1-2 business days. Platinum members receive priority processing that can deliver funds within hours for certain corridors.",
   },
   {
-    category: "Customer support",
-    faqs: [
-      { question: "Name of faq", answer: "Customer support details." },
-      { question: "Name of faq", answer: "More support information." },
-      { question: "Name of faq", answer: "Even more support info." },
-      { question: "Name of faq", answer: "Final support FAQ." },
-    ],
+    id: 2,
+    question: "How quickly will my money arrive?",
+    answer:
+      "Most transfers arrive within 1-2 business days. Platinum members receive priority processing that can deliver funds within hours for certain corridors.",
   },
   {
-    category: "Loyalty points",
-    faqs: [
-      { question: "Name of faq", answer: "Loyalty points explanation." },
-      { question: "Name of faq", answer: "More about loyalty points." },
-      { question: "Name of faq", answer: "Third loyalty FAQ." },
-      { question: "Name of faq", answer: "Final loyalty points info." },
-    ],
+    id: 3,
+    question: "How quickly will my money arrive?",
+    answer:
+      "Most transfers arrive within 1-2 business days. Platinum members receive priority processing that can deliver funds within hours for certain corridors.",
   },
-];
+  {
+    id: 4,
+    question: "How quickly will my money arrive?",
+    answer:
+      "Most transfers arrive within 1-2 business days. Platinum members receive priority processing that can deliver funds within hours for certain corridors.",
+  },
+  {
+    id: 5,
+    question: "How quickly will my money arrive?",
+    answer:
+      "Most transfers arrive within 1-2 business days. Platinum members receive priority processing that can deliver funds within hours for certain corridors.",
+  },
+]
 
-export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+const FAQSection = () => {
+    const [openFAQ, setOpenFAQ] = useState(1)
+
+  const toggleFAQ = (id) => {
+    setOpenFAQ(openFAQ === id ? null : id)
+  }
 
   return (
-    <section className="w-full px-4 py-12 container mx-auto">
-      <h2 className="text-center text-2xl font-semibold md:text-3xl">
-        Got questions?
-      </h2>
-
-      <div className="mt-8 space-y-10">
-        {faqData.map((category, categoryIndex) => (
-          <div key={categoryIndex}>
-            <h3 className="mb-2 text-lg font-medium">{category.category}</h3>
-
-            <div className="space-y-2 border-gray-300">
-              {category.faqs.map((faq, index) => {
-                const isOpen = openIndex === `${categoryIndex}-${index}`;
-                return (
-                  <div
-                    key={index}
-                    className={`border-b ${
-                      isOpen
-                        ? "border-[#6584DB] bg-[#F8F9FB]"
-                        : "border-gray-300"
-                    }`}
-                  >
-                    <button
-                      className="flex w-full items-center justify-between px-4 py-3 text-left focus:outline-none"
-                      onClick={() => toggleFAQ(`${categoryIndex}-${index}`)}
-                    >
-                      <span
-                        className={`text-[#121212] text-[18px] font-normal ${
-                          isOpen ? "text-[24px] font-bold" : " "
-                        }`}
-                      >
-                        {faq.question}
-                      </span>
-                      <motion.span
-                        animate={{ rotate: isOpen ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Image
-                          src="/up-arrow.png"
-                          alt="Toggle FAQ"
-                          width={8}
-                          height={4}
-                        />
-                      </motion.span>
-                    </button>
-
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{
-                        height: isOpen ? "auto" : 0,
-                        opacity: isOpen ? 1 : 0,
-                      }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden px-4"
-                    >
-                      <p className="pb-3 text-gray-600">{faq.answer}</p>
-                    </motion.div>
-                  </div>
-                );
-              })}
-            </div>
+    <div>
+       <section className="py-16 px-4 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Left side - Title and button */}
+          <div className="lg:sticky lg:top-8">
+            <h2 className="text-4xl md:text-[64px] font-bold text-[#050506] mb-8 leading-tight">
+              Frequently Asked Questions?
+            </h2>
+            <button className="bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full">See more FAQs</button>
           </div>
-        ))}
+
+          {/* Right side - FAQ items */}
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <div
+                key={faq.id}
+                className={`rounded-2xl transition-all duration-200 ${
+                  openFAQ === faq.id
+                    ? "border-2 border-[#6584DB] text-[#6584DB]"
+                    : "border border-gray-200 bg-white hover:border-gray-300"
+                }`}
+              >
+                <button
+                  onClick={() => toggleFAQ(faq.id)}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between"
+                >
+                  <span className="text-[20px] font-medium text-gray-900 pr-4">{faq.question}</span>
+                  {openFAQ === faq.id ? (
+                    <ChevronUp className="w-5 h-5 text-[#6584DB] flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                  )}
+                </button>
+
+                {openFAQ === faq.id && (
+                  <div className="px-6 pb-5">
+                    <p className="text-gray-700 leading-relaxed text-[18px]">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
-  );
+    </div>
+  )
 }
+
+export default FAQSection
