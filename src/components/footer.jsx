@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-16 md:px-[100px] relative z-10 md:flex items-center justify-between">
           <div>
             <p className="text-sm mb-4">GET READY FOR EASE</p>
-            <h2 className="text-3xl md:text-[64px] font-bold mb-8">
+            <h2 className="text-3xl md:text-[50px] font-bold mb-8 leading-normal">
               Join the Velox side of things
             </h2>
           </div>
