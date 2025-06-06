@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../public/yellow-logo.svg";
 import Image from "next/image";
+import QRModal from "./QRModal";
 
 const navItems = [
   {
@@ -42,7 +43,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [isSticky, setIsSticky] = useState(false); // State to track sticky positioning
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   // Handle scroll event to toggle sticky positioning
@@ -61,7 +66,6 @@ const Header = () => {
 
   return (
     <div className="container mx-auto bg-white md:absolute top-10 right-0 left-0 z-50 px-10 py-6 rounded-xl">
-  
       <div className="flex  items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
@@ -77,9 +81,7 @@ const Header = () => {
               onMouseEnter={() => setHoveredItem(item.label)}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <button
-                className="flex items-center space-x-1 text-[16px] font-medium text-[#737373] hover:text-black hover:font-semibold transition-colors duration-200"
-              >
+              <button className="flex items-center space-x-1 text-[16px] font-medium text-[#737373] hover:text-black hover:font-semibold transition-colors duration-200">
                 <span>{item.label}</span>
                 <ChevronDown
                   className={`h-4 w-4 transition-transform duration-200 ${
@@ -125,6 +127,7 @@ const Header = () => {
         {/* Right Section - Buttons & Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
           <button
+            onClick={toggleModal}
             className="hidden md:inline-flex bg-[#1A2238] text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-4 py-3"
           >
             Download now
@@ -176,7 +179,7 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-   
+      {isModalOpen && <QRModal toggleModal={toggleModal} />}
     </div>
   );
 };
