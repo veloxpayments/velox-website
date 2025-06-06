@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="container mx-auto px-4 flex md:min-h-[86vh] w-full flex-col-reverse items-center justify-between gap-2 md:pt-36 sm:flex-row ">
           {/* Left Content */}
           <div className="relative z-10  space-y-6 text-center sm:text-left">
-            <h1 className="text-2xl font-bold tracking-tight text-[#2D2D2D]  md:text-[64px]">
+            <h1 className="text-2xl font-bold leading-[67px] text-[#2D2D2D]  md:text-[64px]">
               Easiest way to send <br /> money across <br /> borders.
             </h1>
             <p className="text-[24px] font-normal text-[#484E60] sm:text-xl">
