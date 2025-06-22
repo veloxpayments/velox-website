@@ -1,0 +1,81 @@
+version: 2.1
+
+jobs:
+  build_and_publish_image:
+    docker:
+      - image: 730330577077.dkr.ecr.us-east-1.amazonaws.com/base-api-test:latest
+    steps:
+      - setup_remote_docker:
+          version: default
+      - checkout
+      - run:
+          name: Login to ECR
+          command: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 730330577077.dkr.ecr.us-east-1.amazonaws.com
+      - run:
+          name: Build Tag and publish Docker Image
+          command: bash .circleci/scripts/build_and_publish_image.sh
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - tag_name.txt
+  deploy_image_to_ecs:
+    docker:
+      - image: 730330577077.dkr.ecr.us-east-1.amazonaws.com/base-api-test:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: workspace
+      - run:
+          name: Update Task Definition and Redeploy
+          command: .circleci/scripts/create-new-task-definition.sh
+
+workflows:
+  branch_build:
+    jobs:
+      - build_and_publish_image:
+          name: 'build_and_publish_image_master'
+          context:
+            - aws-cred
+            - velox-website-staging
+          filters:
+            branches:
+              only:
+                - main
+      - approve_deploy_image_to_ecs_staging:
+          type: approval
+          filters:
+            branches:
+              only:
+                - main
+          requires:
+            - build_and_publish_image
+      - deploy_image_to_ecs:
+          context:
+            - aws-cred
+            - velox-website-staging
+          name: 'deploy admin image to development cluster'
+          filters:
+            branches:
+              only:
+                - main
+          requires:
+            - approve_deploy_image_to_ecs_staging
+      - approve_deploy_image_to_ecs_production:
+          type: approval
+          filters:
+            branches:
+              only:
+                - main
+          requires:
+            - build_and_publish_image
+      - deploy_image_to_ecs:
+          context:
+            - aws-cred
+            - velox-website-production
+          name: 'deploy admin image to production cluster'
+          filters:
+            branches:
+              only:
+                - main
+          requires:
+            - approve_deploy_image_to_ecs_production
