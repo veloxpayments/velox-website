@@ -48,7 +48,7 @@ workflows:
               only:
                 - main
           requires:
-            - build_and_publish_image
+            - build_and_publish_image_master
       - deploy_image_to_ecs:
           context:
             - aws-cred
@@ -67,7 +67,7 @@ workflows:
               only:
                 - main
           requires:
-            - build_and_publish_image
+            - build_and_publish_image_master
       - deploy_image_to_ecs:
           context:
             - aws-cred
