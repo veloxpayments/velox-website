@@ -22,6 +22,10 @@ const navItems = [
     label: "Resources",
     items: ["Blog", "Help Center", "API Docs"],
   },
+  {
+    label: "Contact Us",
+    items: ["Contact 1", "Contact 2", "Contact 3"],
+  },
 ];
 
 const headerVariants = {
@@ -65,7 +69,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="container mx-auto bg-white md:absolute top-10 right-0 left-0 z-50 px-10 py-6 rounded-xl">
+    <div className="container mx-auto bg-white md:absolute top-10 right-0 left-0 z-50  py-[15px] px-[40px] rounded-xl">
       <div className="flex  items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
@@ -81,7 +85,7 @@ const Header = () => {
               onMouseEnter={() => setHoveredItem(item.label)}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <button className="flex items-center space-x-1 text-[16px] font-medium text-[#737373] hover:text-black hover:font-semibold transition-colors duration-200">
+              <button className="flex items-center space-x-1 text-[16px] font-normal text-[#393939] hover:text-black hover:font-semibold transition-colors duration-200">
                 <span>{item.label}</span>
                 <ChevronDown
                   className={`h-4 w-4 transition-transform duration-200 ${
@@ -116,19 +120,19 @@ const Header = () => {
               </AnimatePresence>
             </div>
           ))}
-          <Link
+          {/* <Link
             href="/contact"
             className="text-[16px] font-medium text-[#737373] hover:text-black hover:font-semibold transition-colors duration-200"
           >
             Contact us
-          </Link>
+          </Link> */}
         </nav>
 
         {/* Right Section - Buttons & Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
           <button
             onClick={toggleModal}
-            className="hidden md:inline-flex bg-[#1A2238] text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-4 py-3"
+            className="hidden md:inline-flex bg-[#1A2238] font-medium text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-[24px] py-4"
           >
             Download now
           </button>

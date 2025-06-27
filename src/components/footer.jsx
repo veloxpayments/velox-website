@@ -38,14 +38,16 @@ export default function Footer() {
     <footer className="bg-[#6584DB] text-white ">
       {/* Top Banner */}
       <div
-        className="relative footer-bg top-10 container overflow-hidden rounded-[16px] border mx-4 md:mx-auto mt-16 mb-12"
+        className="relative footer-bg top-10 container overflow-hidden rounded-[16px]  mx-4 md:mx-auto mt-16 mb-[100px]"
         style={{ backgroundImage: `url('/footer-bg.svg')` }}
       >
         <div className="container mx-auto px-4 py-16 md:px-[100px] relative z-10 md:flex items-center justify-between">
           <div>
-            <p className="text-sm mb-4">GET READY FOR EASE</p>
+            <p className="text-[18px] text-[#FAFBFE] font-medium">
+              GET READY FOR EASE
+            </p>
             <h2 className="text-3xl md:text-[50px] font-bold mb-8 leading-normal">
-              Join the Velox side of things
+              Join the Velox side <br /> of things
             </h2>
           </div>
           {/* QR Code */}
@@ -57,8 +59,8 @@ export default function Footer() {
               <Image
                 src="/qr-svg.svg"
                 alt="Download QR Code"
-                width={200}
-                height={200}
+                width={357}
+                height={357}
                 className="bg-white rounded-lg"
               />
             </div>
@@ -99,20 +101,20 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-semibold mb-4 text-[#FCDE2F]">Products</h3>
-            <ul className="space-y-3 text-[16px] text-gray-200">
+            <h3 className="font-bold mb-4 text-[#FCDE2F]">Products</h3>
+            <ul className="space-y-3 text-[16px] text-white">
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
-                  International Money Transfer
+                  International Money <br /> Transfer
                 </Link>
               </li>
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   Recurring payment
                 </Link>
@@ -120,7 +122,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   Loyalty Program
                 </Link>
@@ -130,12 +132,12 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4 text-[#FCDE2F]">Company</h3>
-            <ul className="space-y-3 text-[16px] text-gray-200">
+            <h3 className="font-bold mb-4 text-[#FCDE2F]">Company</h3>
+            <ul className="space-y-3 text-[16px] text-white">
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   About us
                 </Link>
@@ -143,7 +145,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   Careers
                 </Link>
@@ -153,12 +155,12 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="font-semibold mb-4 text-[#FCDE2F]">Resources</h3>
-            <ul className="space-y-3 text-[16px] text-gray-200">
+            <h3 className="font-bold mb-4 text-[#FCDE2F]">Resources</h3>
+            <ul className="space-y-3 text-[16px] text-white">
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   FAQs
                 </Link>
@@ -166,7 +168,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   Blog
                 </Link>
@@ -174,7 +176,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   Terms of service
                 </Link>
@@ -182,7 +184,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   Privacy policy
                 </Link>
@@ -192,12 +194,12 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold mb-4 text-[#FCDE2F]">Support</h3>
-            <ul className="space-y-3 text-[16px] text-gray-200">
+            <h3 className="font-bold mb-4 text-[#FCDE2F]">Support</h3>
+            <ul className="space-y-3 text-[16px] text-white">
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   Partner with us
                 </Link>
@@ -205,7 +207,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#FFD60A] transition-colors"
+                  className="hover:text-[#FFD60A] transition-colors font-normal"
                 >
                   Get help
                 </Link>
@@ -217,27 +219,42 @@ export default function Footer() {
         {/* Newsletter */}
         <div
           style={{ backgroundImage: `url('/footer-bg.svg')` }}
-          className="footer-bg text-white rounded-lg p-4 flex flex-col md:flex-row md:items-center md:justify-between w-full  mx-auto border md:mb-8 mb-5"
+          className="footer-bg text-white rounded-lg px-8 py-6 flex flex-col md:flex-row md:items-center md:justify-between w-full mx-auto md:mb-8 mb-5"
         >
-          <div className="mb-4 md:mb-0">
-            <h3 className="text-lg font-medium">Subscribe to Velox Payments</h3>
-            <p className="text-sm text-white/80">
-              Insert a text to make users eager to subscribe to our newsletter.
+          <div className="mb-4 md:mb-0 w-full">
+            <h3 className="text-[24px] leading-6 font-medium text-white mb-[10px]">
+              Subscribe to Velox Payments
+            </h3>
+            <p className="text-[20px] font-normal text-[#ECF0FB]">
+              Get information about Velox Payments fast when you subscribe
             </p>
           </div>
-
-          <div className="flex items-center bg-white rounded-full p-1 w-full md:w-1/3">
-            <input
-              type="email"
-              placeholder="Enter your email address here"
-              className="flex-1 text-gray-700 text-sm p-2 outline-none bg-transparent placeholder-gray-400"
-            />
-            <button className="bg-[#FCDE2F] text-[#050506] font-medium  md:px-11 md:py-4 p-3 rounded-full hover:bg-transparent border border-[#CAB22B] transition">
-              Subscribe
-            </button>
+          <div className="md:flex flex-col w-full md:w-1/2 space-y-4">
+            <div className="md:flex  md:space-x-4">
+              <input
+                type="text"
+                placeholder="First name"
+                className="flex-1 md:mb-auto mb-2 bg-[#ECF0FB] md:w-auto w-full text-[#949596] text-[16px] font-medium py-5 px-6 md:rounded-l-full outline-none placeholder-[#949596]"
+              />
+              <input
+                type="text"
+                placeholder="Last name"
+                className="flex-1 bg-[#ECF0FB] md:w-auto w-full text-[#949596] text-[16px] font-medium py-5 px-6 md:rounded-r-full  outline-none placeholder-[#949596]"
+              />
+            </div>
+            <div className="md:flex items-center bg-[#ECF0FB] rounded-full p-1">
+              <input
+                type="email"
+                placeholder="Enter your email address here"
+                className="flex-1 text-[#949596] text-[16px] font-medium py-2 px-6 outline-none bg-transparent placeholder-[#949596]"
+              />
+              <button className="bg-[#FCDE2F] text-[#050506] font-medium md:px-[39px] md:py-4 px-2 py-1 md:w-auto w-11/12 flex justify-center m-auto rounded-full hover:bg-transparent border border-[#CAB22B] transition">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
-        <hr className="my-5" />
+        <hr className="my-[45px] text-[#9BAFE8] bg-[#9BAFE8]" />
         {/* Legal */}
         <div className="text-[16px] text-white space-y-4">
           <p className="text-[16px] leading-6 font-normal">
@@ -246,7 +263,7 @@ export default function Footer() {
             Money Service Business. MSB registration number: M22109793. Velox
             Payments Limited, Canada.
           </p>
-          <p className="text-[#FCDE2F]">© 2024 All rights reserved</p>
+          <p className="text-[#FCDE2F] text-[14px] font-normal">© 2024 All rights reserved</p>
         </div>
       </div>
     </footer>

@@ -6,14 +6,14 @@ import rate from "../../public/exchange-rate-icon.svg";
 import zero from '../../public/zero.svg';
 import wallet from '../../public/wallet-icon.svg';
 import speed from '../../public/speed.svg';
-import noun from '../../public/glob-vector.svg';
+import noun from '../../public/reach.svg';
 const FeatureSection = () => {
   return (
     <div>
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-[#050506]">
+            <h2 className="text-4xl font-medium text-[#050506]">
               Why Velox Payments
             </h2>
           </div>
@@ -24,10 +24,10 @@ const FeatureSection = () => {
               <div className="bg-[#4059AD] w-20 h-20 rounded-full flex items-center justify-center mb-6">
                 <Image src={rate} alt="" className="m-auto flex" />
               </div>
-              <h3 className="text-2xl font-bold text-[#2D2D2D] mb-2">
+              <h3 className="text-[32px] font-bold text-[#2D2D2D] leading-[48px]">
                 Competitive rates
               </h3>
-              <p className="text-[#2D2D2D] text-[20px] mb-6">
+              <p className="text-[#2D2D2D] text-[20px] mb-6 font-normal leading-[30px]">
                 Transact with low rates
               </p>
 
@@ -44,12 +44,12 @@ const FeatureSection = () => {
             {/* Global reach */}
             <div className="bg-gray-100 rounded-3xl p-8 relative overflow-hidden md:min-h-[623px]">
               <div className="bg-[#4059AD] w-20 h-20 rounded-full flex items-center justify-center mb-6">
-                <Image src={noun} alt=""/>
+                <Image src={noun} alt="" className="m-auto flex justify-center items-center"  />
               </div>
-              <h3 className="text-2xl font-bold text-[#2D2D2D] mb-2">
+              <h3 className="text-[32px] font-bold text-[#2D2D2D] leading-[48px]">
                 Global reach
               </h3>
-              <p className="text-[#2D2D2D] text-[20px] mb-6">Send money globally</p>
+              <p className="text-[#2D2D2D] text-[20px] mb-6 font-normal leading-[30px]">Send money globally</p>
 
               {/* Globe illustration */}
               <div className="relative flex justify-end">
@@ -62,16 +62,16 @@ const FeatureSection = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {/* Zero Fees */}
             <div className="bg-[#FFFCEA] rounded-3xl p-8">
               <div className="bg-[#4059AD] w-20 h-20 border border-black rounded-full flex items-center justify-center mb-6">
                 <Image src={zero} alt=""/>
               </div>
-              <h3 className="text-2xl font-bold text-[#2D2D2D] mb-2">
+              <h3 className="text-[32px] font-bold text-[#2D2D2D] leading-[48px]">
                 Zero Fees
               </h3>
-              <p className="text-[#2D2D2D] text-[20px]">
+              <p className="text-[#2D2D2D] text-[20px] font-normal leading-[30px]">
                 No fixed fees, transaction and conversion fees
               </p>
             </div>
@@ -81,21 +81,21 @@ const FeatureSection = () => {
               <div className="bg-[#4059AD] w-20 h-20 border border-black rounded-full flex items-center justify-center mb-6">
                 <Image src={wallet} alt=""/>
               </div>
-              <h3 className="text-2xl font-bold text-[#2D2D2D] mb-2">
+              <h3 className="text-[32px] font-bold text-[#2D2D2D] leading-[48px]">
                 Multi-wallet account
               </h3>
-              <p className="text-[#2D2D2D] text-[20px]">Hold money in multiple currencies</p>
+              <p className="text-[#2D2D2D] text-[20px] font-normal leading-[30px]">Hold money in multiple currencies</p>
             </div>
 
             {/* Fast Transactions */}
             <div className="bg-[#DED7F0] rounded-3xl p-8">
-              <div className="bg-[#4059AD] w-20 h-20 border border-black  rounded-full flex items-center justify-center mb-6">
-                <Image src={speed} alt="" />
+              <div className="bg-[#4059AD] w-20 h-20   rounded-full flex items-center justify-center mb-6">
+                <Image src={speed} alt="" className="m-auto flex"/>
               </div>
-              <h3 className="text-2xl font-bold text-[#2D2D2D] mb-2">
+              <h3 className="text-[32px] font-bold text-[#2D2D2D] leading-[48px]">
                 Fast Transactions
               </h3>
-              <p className="text-[#2D2D2D] text-[20px]">
+              <p className="text-[#2D2D2D] text-[20px] font-normal leading-[30px]">
                 Send money within seconds of an initiated transaction
               </p>
             </div>
