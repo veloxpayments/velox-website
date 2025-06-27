@@ -1,5 +1,5 @@
 "use client"
-import { Star } from "lucide-react"
+import { Star, StarIcon } from "lucide-react"
 
 import React from 'react'
 
@@ -33,18 +33,18 @@ const testimonials = [
 ]
 
   return (
-   <section className="py-16 px-4 bg-gray-50">
+   <section className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-[40px] font-bold text-[#050506] mb-4">What Our Customers Say</h2>
-          <p className="text-[24px] text-[#737373]  mx-auto">
+          <h2 className="text-4xl md:text-[40px] font-medium text-[#050506] mb-4">What Our Customers Say</h2>
+          <p className="text-[24px] text-[#737373] font-normal mx-auto">
             Join thousands of satisfied customers who trust Velox for their international money transfers.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-[#F8F9FB] rounded-[14px] p-6 shadow-sm">
+            <div key={testimonial.id} className="bg-[#F8F9FB] rounded-[14px] p-6">
               <div className="flex items-center mb-4">
                 <img
                   src={testimonial.avatar || "/black-girl.svg"}
@@ -56,18 +56,18 @@ const testimonials = [
                     <Star
                       key={i}
                       className={`w-5 h-5 ${
-                        i < testimonial.rating ? "fill-yellow-400 text-yellow-400" : "fill-gray-200 text-gray-200"
+                        i < testimonial.rating ? "fill-[#FCDE2F] text-[#FCDE2F]" : "fill-gray-200 text-gray-200"
                       }`}
                     />
                   ))}
                 </div>
               </div>
 
-              <p className="text-[#3C3C3C] text-[18px] italic mb-4 leading-relaxed">"{testimonial.text}"</p>
+              <p className="text-[#3C3C3C] text-[18px] italic mb-4 leading-[27px] font-normal">"{testimonial.text}"</p>
 
               <div>
-                <p className="font-semibold text-black text-[18px]">{testimonial.name}</p>
-                <p className="text-sm text-black">{testimonial.location}</p>
+                <p className="font-medium text-black text-[18px]">{testimonial.name}</p>
+                <p className="text-sm text-black font-normal">{testimonial.location}</p>
               </div>
             </div>
           ))}

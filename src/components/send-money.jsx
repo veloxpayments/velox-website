@@ -36,7 +36,7 @@ export default function SendMoney() {
   return (
     <section className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center space-y-4 text-center">
+        <div className="flex flex-col items-center space-y-3 text-center">
           <p className="md:text-[40px] text-[#050506] font-medium text-4xl">
             Services That Deliver
           </p>
@@ -59,8 +59,8 @@ export default function SendMoney() {
               <Image
                 src="/services.svg"
                 alt="Transfer Speed Illustration"
-                width={400}
-                height={400}
+                width={427}
+                height={427}
                 className="relative z-10"
               />
             </div>
@@ -68,22 +68,20 @@ export default function SendMoney() {
               <div className="max-w-4xl mx-auto">
                 <div className="space-y-[16px]">
                   {/* Header text */}
-                  <p className="text-sm font-medium text-[#5A5A5A] uppercase tracking-wider">
+                  <p className="text-sm font-medium text-[#5A5A5A] uppercase">
                     INTERNATIONAL MONEY TRANSFER
                   </p>
 
                   {/* Main heading */}
-                  <h1 className="text-4xl md:text-[44px] font-bold text-gray-900 ">
+                  <h1 className="text-4xl md:text-[44px] font-medium text-[#050506] leading-[44px]">
                     Send money globally without fees
                   </h1>
 
                   {/* Description paragraphs */}
-                  <div className="space-y-[16px]  mx-auto">
-                    <p className="text-[16px] text-[#5A5A5A]">
+                  <div className="mx-auto">
+                    <p className="text-[16px] text-[#5A5A5A] leading-6 font-normal">
                       Wherever life takes you, we'll always keep you connected
-                      to home
-                    </p>
-                    <p className="text-[16px] text-[#5A5A5A]">
+                      to home <br/>
                       Join thousands who trust us, for fast, secure, and
                       effortless international money transfers.
                     </p>
@@ -143,10 +141,10 @@ export default function SendMoney() {
                   </p>
 
                   {/* Download button */}
-                  <div className="pt-4">
+                  <div className="">
                     <button
                       onClick={toggleModal}
-                      className="w-max bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-4 py-3"
+                      className="md:w-[156px] bg-[#6584DB] text-white text-[16px] font-medium hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-6 py-4 font-medium"
                     >
                       Download
                     </button>
@@ -169,19 +167,19 @@ export default function SendMoney() {
               <Image
                 src="/services-two.svg"
                 alt="Best Rates Illustration"
-                width={400}
-                height={400}
+                width={427}
+                height={427}
                 className="relative z-10"
               />
             </div>
             <div className="flex flex-col justify-center space-y-4 md:order-1">
-              <p className="text-sm font-medium text-[#5A5A5A] uppercase tracking-wider">
+              <p className="text-sm font-medium text-[#5A5A5A] uppercase">
                 LOWEST EXCHANGE rates
               </p>
-              <h2 className="text-3xl font-medium md:text-4xl text-[#050506]">
+              <h2 className="text-3xl font-medium md:text-[44px] text-[#050506] leading-[44px]">
                 Best exchange rate on the market
               </h2>
-              <p className="text-[16px] text-[#5A5A5A] font-normal">
+              <p className="text-[16px] text-[#5A5A5A] font-normal leading-6">
                 Seamlessly send money from Canada to Africa with Velox—trusted
                 by thousands as we expand our fast, secure transfers from the
                 USA, UK, and across the continent. Wherever life takes you, we
@@ -189,7 +187,7 @@ export default function SendMoney() {
               </p>
               <button
                 onClick={toggleModal}
-                className="w-max bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-4 py-3"
+                className="md:w-[156px] font-medium bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-6 py-4"
               >
                 Download
               </button>
@@ -207,21 +205,21 @@ export default function SendMoney() {
             <div className="relative flex items-center justify-center">
               <div className="absolute h-[300px] w-[300px] rounded-full" />
               <Image
-                src="/service-three.svg"
+                src="/recurring-transfer.svg"
                 alt="Zero Fees Illustration"
-                width={400}
-                height={400}
+                width={427}
+                height={427}
                 className="relative z-10"
               />
             </div>
             <div className="flex flex-col justify-center space-y-4">
-              <p className="text-sm font-medium text-[#5A5A5A] uppercase tracking-wider">
+              <p className="text-sm font-medium text-[#5A5A5A] uppercase">
                 Automate transactions
               </p>
-              <h2 className="text-3xl font-medium md:text-4xl text-[#050506]">
+              <h2 className="text-3xl font-medium md:text-[44px] text-[#050506] leading-[44px]">
                 Recurring payments for ease
               </h2>
-              <p className="text-[16px] text-[#5A5A5A] font-normal">
+              <p className="text-[16px] text-[#5A5A5A] font-normal leading-6">
                 Seamlessly send money from Canada to Africa with Velox—trusted
                 by thousands as we expand our fast, secure transfers from the
                 USA, UK, and across the continent. Wherever life takes you, we
@@ -229,7 +227,7 @@ export default function SendMoney() {
               </p>
               <button
                 onClick={toggleModal}
-                className="w-max bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-4 py-3"
+                className="md:w-[156px] font-medium bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-6 py-4"
               >
                 Download
               </button>

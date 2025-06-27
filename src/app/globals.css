@@ -132,7 +132,9 @@ body {
   background-size: cover;
   width: 100%;
 }
-
+.shadow-custom{
+ box-shadow: -2px 4px 21px 0px rgba(150, 150, 150, 0.1);
+}
 @media screen and (max-width: 786px){
   .footer-bg{
     width: 95%;

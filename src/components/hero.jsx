@@ -17,7 +17,7 @@ const Hero = () => {
         {/* Centered Content Container */}
         <div className="container mx-auto px-4 md:flex md:min-h-[86vh] w-full flex-col-reverse items-center justify-between gap-2 md:pt-36 sm:flex-row ">
           {/* Left Content */}
-          <div className="relative z-10  space-y-6  text-left">
+          <div className="relative z-10  space-y-[12px]  text-left">
             <h1 className="text-2xl pt-5 font-bold md:leading-[67px] text-[#2D2D2D]  md:text-[58px]">
               Easiest way to send <br /> money across <br /> borders.
             </h1>
@@ -26,7 +26,7 @@ const Hero = () => {
             </p>
             <button
               onClick={toggleModal}
-              className="md:inline-flex bg-[#1A2238] text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-4 py-3"
+              className="md:inline-flex bg-[#1A2238] text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-6 py-4"
             >
               Download now
             </button>

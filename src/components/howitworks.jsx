@@ -1,8 +1,8 @@
 import Image from "next/image";
-import sign from '../../public/sign-up-img.svg';
-import kyc from '../../public/kyc.svg';
-import wallet from '../../public/wallet.svg';
-import doller from '../../public/doller.svg';
+import sign from "../../public/sign-up-img.svg";
+import kyc from "../../public/kyc.svg";
+import wallet from "../../public/wallet.svg";
+import doller from "../../public/doller.svg";
 
 const Howitworks = () => {
   return (
@@ -10,17 +10,17 @@ const Howitworks = () => {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-[40px] font-bold text-[#050506] mb-4">
+            <h2 className="text-4xl md:text-[40px] font-medium text-[#050506] mb-[5px]">
               How it Works
             </h2>
-            <p className="text-[24px] text-[#2E2E2E]">
+            <p className="text-[24px] text-[#2E2E2E] font-normal">
               Send money internationally in three simple step
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
             {/* Step 1: Sign up */}
-            <div className="flex flex-col items-center text-center shadow-lg rounded-lg p-4">
+            <div className="flex flex-col items-center text-center shadow-custom rounded-[8px] p-4 bg-[#fff]">
               <div className="mb-6">
                 <Image
                   src={sign}
@@ -28,15 +28,16 @@ const Howitworks = () => {
                   className="w-36 h-36 rounded-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#050506] mb-2">Sign up</h3>
-              <p className="text-gray-600 max-w-xs mx-auto">
-                Create an account in minutes with our simple verification
-                process.
+              <h3 className="text-2xl font-medium text-[#050506] mb-2">
+                Sign up
+              </h3>
+              <p className="text-[#737373] font-normal text-[18px] max-w-xs mx-auto leading-[21.6px]">
+              Create account in minutes, it’s quick and easy
               </p>
             </div>
 
             {/* Step 2: KYC Verification */}
-            <div className="flex flex-col items-center text-center shadow-lg rounded-lg p-4">
+            <div className="flex flex-col items-center text-center shadow-custom rounded-lg p-4">
               <div className="mb-6">
                 <Image
                   src={kyc}
@@ -44,16 +45,16 @@ const Howitworks = () => {
                   className="w-36 h-36 rounded-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#050506] mb-2">
+              <h3 className="text-2xl font-medium text-[#050506] mb-[6px]">
                 KYC Verification
               </h3>
-              <p className="text-[#737373] text-[18px] max-w-xs mx-auto">
-                Upload clear identifying documents to begin transacting.
+              <p className="text-[#737373] font-normal text-[18px] max-w-xs mx-auto leading-[21.6px]">
+               Upload clear IDs to begin transacting.
               </p>
             </div>
 
             {/* Step 3: Create Wallets */}
-            <div className="flex flex-col items-center text-center shadow-lg rounded-lg p-4">
+            <div className="flex flex-col items-center text-center shadow-custom rounded-lg p-4">
               <div className="mb-6">
                 <Image
                   src={wallet}
@@ -61,16 +62,16 @@ const Howitworks = () => {
                   className="w-36 h-36 rounded-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#050506] mb-2">
+              <h3 className="text-2xl font-medium text-[#050506] mb-[6px]">
                 Create Wallets
               </h3>
-              <p className="text-[#737373] text-[18px] max-w-xs mx-auto">
+              <p className="text-[#737373] font-normal text-[18px] max-w-xs mx-auto leading-[21.6px]">
                 Create wallets in multiple currencies
               </p>
             </div>
 
             {/* Step 4: Send money */}
-            <div className="flex flex-col items-center text-center shadow-lg rounded-lg p-4">
+            <div className="flex flex-col items-center text-center shadow-custom rounded-lg p-4">
               <div className="mb-6">
                 <Image
                   src={doller}
@@ -78,11 +79,11 @@ const Howitworks = () => {
                   className="w-36 h-36 rounded-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#050506] mb-2">
+              <h3 className="text-2xl font-medium text-[#050506] mb-[6px]">
                 Send money
               </h3>
-              <p className="text-[#737373] text-[18px] max-w-xs mx-auto">
-                Upload clear identifying documents to begin transacting.
+              <p className="text-[#737373] font-normal text-[18px] max-w-xs mx-auto leading-[21.6px]">
+                Upload clear IDs to begin transacting.
               </p>
             </div>
           </div>
