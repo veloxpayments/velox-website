@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../public/yellow-logo.svg";
 import Image from "next/image";
 import QRModal from "./QRModal";
+import DownloadButton from "./ui/download-button";
 
 const navItems = [
   {
@@ -47,11 +48,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [isSticky, setIsSticky] = useState(false); // State to track sticky positioning
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   // Handle scroll event to toggle sticky positioning
@@ -120,22 +117,11 @@ const Header = () => {
               </AnimatePresence>
             </div>
           ))}
-          {/* <Link
-            href="/contact"
-            className="text-[16px] font-medium text-[#737373] hover:text-black hover:font-semibold transition-colors duration-200"
-          >
-            Contact us
-          </Link> */}
         </nav>
 
         {/* Right Section - Buttons & Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
-          <button
-            onClick={toggleModal}
-            className="hidden md:inline-flex bg-[#1A2238] font-medium text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-[24px] py-4"
-          >
-            Download now
-          </button>
+          <DownloadButton variant="primary" />
           <button className="md:hidden" onClick={toggleMenu}>
             {isMenuOpen ? (
               <X className="h-6 w-6" />
@@ -183,7 +169,6 @@ const Header = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      {isModalOpen && <QRModal toggleModal={toggleModal} />}
     </div>
   );
 };

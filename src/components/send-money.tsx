@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
-import QRModal from "./QRModal";
+import DownloadButton from "./ui/download-button";
 
 export default function SendMoney() {
   const ref1 = useRef(null);
@@ -27,12 +27,7 @@ export default function SendMoney() {
   useEffect(() => {
     if (isInView3) controls3.start({ opacity: 1, y: 0 });
   }, [isInView3, controls3]);
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  
   return (
     <section className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
@@ -142,12 +137,7 @@ export default function SendMoney() {
 
                   {/* Download button */}
                   <div className="">
-                    <button
-                      onClick={toggleModal}
-                      className="md:w-[156px] bg-[#6584DB] text-white text-[16px] font-medium hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-6 py-4 font-medium"
-                    >
-                      Download
-                    </button>
+                    <DownloadButton variant="secondary" />
                   </div>
                 </div>
               </div>
@@ -185,12 +175,7 @@ export default function SendMoney() {
                 USA, UK, and across the continent. Wherever life takes you, we
                 connect your world."
               </p>
-              <button
-                onClick={toggleModal}
-                className="md:w-[156px] font-medium bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-6 py-4"
-              >
-                Download
-              </button>
+              <DownloadButton variant="secondary" />
             </div>
           </motion.div>
 
@@ -225,17 +210,11 @@ export default function SendMoney() {
                 USA, UK, and across the continent. Wherever life takes you, we
                 connect your world."
               </p>
-              <button
-                onClick={toggleModal}
-                className="md:w-[156px] font-medium bg-[#6584DB] text-white hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-6 py-4"
-              >
-                Download
-              </button>
+              <DownloadButton variant="secondary" />
             </div>
           </motion.div>
         </div>
       </div>
-      {isModalOpen && <QRModal toggleModal={toggleModal} />}
     </section>
   );
 }
