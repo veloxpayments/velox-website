@@ -11,7 +11,7 @@ const QRModal = ({ toggleModal }) => {
       ></div>
 
       {/* Modal Content */}
-      <div className="relative custom-modal rounded-2xl md:py-[80px] md:px-[109px] p-5  max-w-3xl z-10 shadow-lg">
+      <div className="relative custom-modal rounded-2xl bg-white shadow-lg z-10 w-full max-w-[90vw] sm:max-w-md lg:max-w-2xl p-4 sm:p-8 lg:py-[60px] lg:px-[80px]">
         {/* Cross Button */}
         <button
           onClick={toggleModal}
@@ -35,27 +35,27 @@ const QRModal = ({ toggleModal }) => {
 
         {/* Modal Body */}
         <div className="relative flex flex-col items-center space-y-4">
-          {/* Placeholder Background */}
-
-          {/* Modal Content */}
-          <div className="relative z-10 text-center space-y-4 bg-white p-5 rounded-md">
-            <p className="text-[40px] font-bold text-[#050506]">
+          <div className="relative z-10 text-center space-y-4 bg-white p-2 sm:p-5 rounded-md">
+            <p className="text-2xl sm:text-3xl md:text-[40px] font-bold text-[#050506]">
               Scan to download
             </p>
-            <p className="text-base font-medium text-[#737373] leading-relaxed">
+            <p className="text-sm sm:text-base font-medium text-[#737373] leading-relaxed">
               Scan the QR code with your phone camera and follow the link to
               download
             </p>
-            {/* Placeholder QR Code */}
-
-            <Image
-              className="mx-auto flex"
-              src={qr}
-              alt=""
-              width={311}
-              height={311}
-            />
-            <p className="text-sm font-medium text-[#050506]">
+            {/* Responsive QR Code */}
+            <div className="flex justify-center">
+              <Image
+                className="mx-auto"
+                src={qr}
+                alt="QR code"
+                width={200}
+                height={200}
+                sizes="(max-width: 640px) 150px, (max-width: 768px) 200px, 311px"
+                style={{ width: "100%", maxWidth: 200, height: "auto" }}
+              />
+            </div>
+            <p className="text-xs sm:text-sm font-medium text-[#050506]">
               Download Velox and sign up or log in to your account.
             </p>
           </div>
