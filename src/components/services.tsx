@@ -2,7 +2,7 @@
 import line from "../../public/hero-line.png";
 import line2 from "../../public/hero-line-2.png";
 import { useState } from "react";
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 import {
   Send,
   ArrowLeftRight,

@@ -127,14 +127,14 @@ const Header = () => {
 
   return (
     <div className="container mx-auto bg-white md:absolute top-10 right-0 left-0 z-50  py-[15px] px-[40px] rounded-xl">
-      <div className="flex  items-center justify-between">
+      <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
           <Image src={logo} alt="Logo" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex md:space-x-6">
+        <nav className="hidden lg:flex md:space-x-6">
           {navItems.map((item) => (
             <div
               key={item.label}
@@ -208,7 +208,7 @@ const Header = () => {
         {/* Right Section - Buttons & Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
           <DownloadButton variant="primary" />
-          <button className="md:hidden" onClick={toggleMenu}>
+          <button className="lg:hidden" onClick={toggleMenu}>
             {isMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -226,7 +226,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 top-16 bg-white shadow-md md:hidden z-50"
+            className="absolute left-0 right-0 top-20 bg-white shadow-md lg:hidden z-50"
           >
             <div className="container mx-auto flex flex-col space-y-4 p-4">
               {navItems.map((item) => (
@@ -248,9 +248,6 @@ const Header = () => {
                   </div>
                 </details>
               ))}
-              <Link href="/contact" className="text-sm font-medium">
-                Contact us
-              </Link>
             </div>
           </motion.div>
         )}
