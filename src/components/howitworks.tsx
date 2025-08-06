@@ -7,7 +7,7 @@ import doller from "../../public/doller.svg";
 const Howitworks = () => {
   return (
     <div>
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-[#f7f8fa]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-[40px] font-medium text-[#050506] mb-[5px]">

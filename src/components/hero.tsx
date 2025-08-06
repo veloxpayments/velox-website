@@ -12,7 +12,7 @@ const Hero = () => {
     setIsModalOpen(!isModalOpen);
   };
   return (
-    <div className="relative md:min-h-[100vh] w-full p-6">
+    <div className="relative md:min-h-[100vh] w-full p-6 bg-[#f7f8fa]">
       <section className="custom-bg rounded-2xl">
         {/* Centered Content Container */}
         <div className="container mx-auto px-4 md:flex md:min-h-[86vh] w-full flex-col-reverse items-center justify-between gap-2 md:pt-36 sm:flex-row ">
@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
 
           {/* Right Globe Image */}
-          <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[700px]">
+          <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[700px] self-end">
             <Image
               src={globe}
               alt="Globe Illustration"
