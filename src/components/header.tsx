@@ -13,19 +13,79 @@ import DownloadButton from "./ui/download-button";
 const navItems = [
   {
     label: "Products",
-    items: ["Product 1", "Product 2", "Product 3"],
+    items: [
+      {
+        title: "International Money Transfer",
+        subtitle: "Cross-border payments made easy",
+        icon: "/header-dropdown/international-money.svg",
+      },
+      {
+        title: "Recurring Payments",
+        subtitle: "Create wallets in different currencies",
+        icon: "/header-dropdown/recurring-payments.svg",
+      },
+      {
+        title: "Referral",
+        subtitle: "Refer and earn",
+        icon: "/header-dropdown/referral.svg",
+      },
+    ],
   },
   {
     label: "Company",
-    items: ["About Us", "Careers", "Press"],
+    items: [
+      {
+        title: "About Us",
+        subtitle: "Learn more about who we are at Velox Payments",
+        icon: "/header-dropdown/About-us.svg",
+      },
+      {
+        title: "Careers",
+        subtitle: "Join our team and be a part of the Velox adventure",
+        icon: "/header-dropdown/careers.svg",
+      },
+      {
+        title: "Privacy Policy",
+        subtitle: "Our privacy policy",
+        icon: "/header-dropdown/privacy.svg",
+      },
+      {
+        title: "Terms of service",
+        subtitle: "Our terms of service",
+        icon: "/header-dropdown/terms.svg",
+      },
+    ],
   },
   {
     label: "Resources",
-    items: ["Blog", "Help Center", "API Docs"],
+    items: [
+      {
+        title: "Blog",
+        subtitle: "Read articles concerning finance and busniess",
+        icon: "/header-dropdown/blogs.svg",
+      },
+      {
+        title: "CAP",
+        subtitle: "Join the Velox Community Ambassadors",
+        icon: "/header-dropdown/CAP.svg",
+      },
+    ],
   },
   {
     label: "Contact Us",
-    items: ["Contact 1", "Contact 2", "Contact 3"],
+    items: [
+      {
+        title: "FAQs",
+        subtitle: "Find answers to common questions you might have",
+        icon: "/header-dropdown/FAQs.svg",
+      },
+      {
+        title: "Talk to us",
+        subtitle: "Get the help you need with our support team",
+        icon: "/header-dropdown/talk-to-us.svg",
+      },
+      
+    ],
   },
 ];
 
@@ -98,17 +158,43 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5"
+                    className="absolute left-0 mt-2 px-6 py-[37px] rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5"
                   >
-                    <div className="py-1" role="menu">
+                    <div className="py-1 w-96 space-y-8" role="menu">
                       {item.items.map((subItem) => (
                         <Link
-                          key={subItem}
+                          key={subItem.title}
                           href="#"
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          className="flex items-center gap-3 px-4 py-2 hover:bg-[#FCDE2F20] rounded-lg transition"
                           role="menuitem"
                         >
-                          {subItem}
+                          <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-50 rounded-full">
+                            <Image
+                              src={subItem.icon}
+                              alt={subItem.title}
+                              width={40}
+                              height={40}
+                            />
+                          </div>
+                          <div className="flex-1">
+                            <div className="font-500 font-Satoshi text-black text-[16px] mb-1">
+                              {subItem.title}
+                            </div>
+                            <div className="text-[14px] font-Satoshi text-[#737373]">
+                              {subItem.subtitle}
+                            </div>
+                          </div>
+                          <span className="ml-auto text-gray-300">
+                            <svg width="20" height="20" fill="none">
+                              <path
+                                d="M8 6l4 4-4 4"
+                                stroke="#000000"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </span>
                         </Link>
                       ))}
                     </div>
@@ -152,11 +238,11 @@ const Header = () => {
                   <div className="flex flex-col space-y-2 pl-4">
                     {item.items.map((subItem) => (
                       <Link
-                        key={subItem}
+                        key={subItem.title}
                         href="#"
                         className="text-sm text-gray-700 hover:text-gray-900"
                       >
-                        {subItem}
+                        {subItem.title}
                       </Link>
                     ))}
                   </div>
