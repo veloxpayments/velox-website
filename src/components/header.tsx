@@ -18,16 +18,19 @@ const navItems = [
         title: "International Money Transfer",
         subtitle: "Cross-border payments made easy",
         icon: "/header-dropdown/international-money.svg",
+        link: "/",
       },
       {
         title: "Recurring Payments",
         subtitle: "Create wallets in different currencies",
         icon: "/header-dropdown/recurring-payments.svg",
+        link: "/",
       },
       {
         title: "Referral",
         subtitle: "Refer and earn",
         icon: "/header-dropdown/referral.svg",
+        link: "/",
       },
     ],
   },
@@ -38,21 +41,25 @@ const navItems = [
         title: "About Us",
         subtitle: "Learn more about who we are at Velox Payments",
         icon: "/header-dropdown/About-us.svg",
+        link: "/about",
       },
       {
         title: "Careers",
         subtitle: "Join our team and be a part of the Velox adventure",
         icon: "/header-dropdown/careers.svg",
+        link: "/",
       },
       {
         title: "Privacy Policy",
         subtitle: "Our privacy policy",
         icon: "/header-dropdown/privacy.svg",
+        link: "/",
       },
       {
         title: "Terms of service",
         subtitle: "Our terms of service",
         icon: "/header-dropdown/terms.svg",
+        link: "/",
       },
     ],
   },
@@ -63,11 +70,13 @@ const navItems = [
         title: "Blog",
         subtitle: "Read articles concerning finance and busniess",
         icon: "/header-dropdown/blogs.svg",
+        link: "/",
       },
       {
         title: "CAP",
         subtitle: "Join the Velox Community Ambassadors",
         icon: "/header-dropdown/CAP.svg",
+        link: "/",
       },
     ],
   },
@@ -78,13 +87,14 @@ const navItems = [
         title: "FAQs",
         subtitle: "Find answers to common questions you might have",
         icon: "/header-dropdown/FAQs.svg",
+        link: "/",
       },
       {
         title: "Talk to us",
         subtitle: "Get the help you need with our support team",
         icon: "/header-dropdown/talk-to-us.svg",
+        link: "/",
       },
-      
     ],
   },
 ];
@@ -126,7 +136,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="container mx-auto bg-white md:absolute top-10 right-0 left-0 z-50  py-[15px] px-[40px] rounded-xl">
+    <div className="container mx-auto bg-white absolute top-10 right-0 left-0 z-50 max-w-[80vw] py-[15px] px-[40px] rounded-xl">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">
@@ -164,7 +174,7 @@ const Header = () => {
                       {item.items.map((subItem) => (
                         <Link
                           key={subItem.title}
-                          href="#"
+                          href={subItem.link}
                           className="flex items-center gap-3 px-4 py-2 hover:bg-[#FCDE2F20] rounded-lg transition"
                           role="menuitem"
                         >
@@ -207,7 +217,10 @@ const Header = () => {
 
         {/* Right Section - Buttons & Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
-          <DownloadButton variant="primary" />
+          <div className="hidden md:inline-flex">
+            <DownloadButton variant="primary" />
+          </div>
+
           <button className="lg:hidden" onClick={toggleMenu}>
             {isMenuOpen ? (
               <X className="h-6 w-6" />

@@ -13,7 +13,7 @@ const DownloadButton = ({ variant }: { variant: string }) => {
       {variant === "primary" ? (
       <button
         onClick={toggleModal}
-        className="hidden md:inline-flex bg-[#1A2238] font-medium text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-[24px] py-4"
+        className="inline-flex bg-[#1A2238] font-medium text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-[24px] py-4"
       >
         Download now
       </button>
