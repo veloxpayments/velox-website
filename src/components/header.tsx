@@ -30,7 +30,7 @@ const navItems = [
         title: "Referral",
         subtitle: "Refer and earn",
         icon: "/header-dropdown/referral.svg",
-        link: "/",
+        link: "/referral",
       },
     ],
   },
@@ -87,7 +87,7 @@ const navItems = [
         title: "FAQs",
         subtitle: "Find answers to common questions you might have",
         icon: "/header-dropdown/FAQs.svg",
-        link: "/",
+        link: "/FAQs",
       },
       {
         title: "Talk to us",

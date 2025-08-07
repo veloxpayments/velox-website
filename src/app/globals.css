@@ -150,6 +150,15 @@ body {
 
 }
 
+.custom-bg-faq{
+  background-image: url('../../public/faqCustomBg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+
+}
+
 .custom-modal{
   background-image: url('../../public/modal-bg.svg');
   background-repeat: no-repeat;
