@@ -70,7 +70,7 @@ const navItems = [
         title: "Blog",
         subtitle: "Read articles concerning finance and busniess",
         icon: "/header-dropdown/blogs.svg",
-        link: "/",
+        link: "/blog",
       },
       {
         title: "CAP",
