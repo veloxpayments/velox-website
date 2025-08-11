@@ -62,7 +62,7 @@ const ContactForm = () => {
           />
           {errors.message && <span className="text-red-500 text-xs">{errors.message.message as string}</span>}
         </div>
-        <button type="submit" className="bg-[#050506] text-white rounded-full px-8 py-3 font-medium mt-2">Send message</button>
+        <button type="submit" className="bg-[#050506] self-start text-white rounded-full px-8 py-3 font-medium mt-2">Send message</button>
       </form>
     </div>
   );
