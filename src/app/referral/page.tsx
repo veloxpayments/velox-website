@@ -15,7 +15,7 @@ const Referral = () => {
   return (
     <div className="w-full flex flex-col items-center min-h-screen font-satoshi pt-7 md:px-0 md:pt-0">
       {/* Hero Section */}
-      <section className="w-full px-4">
+      <section className="w-full px-4 md:px-0">
         <header className="w-full h-[783px] md:h-auto flex flex-col items-center justify-center px-4 md:px-0 pt-12 md:pt-[120px] pb-8 md:pb-0 bg-[#E4EEFE] md:bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)] rounded-2xl md:rounded-none min-h-[400px] md:min-h-[555px] relative overflow-hidden">
           <div className="max-w-4xl w-full flex flex-col items-center justify-center mx-auto gap-6 relative z-10">
           <h1 className="text-[30px] md:text-5xl lg:text-[56px] font-[500] md:font-bold text-[#050506] leading-[1.1] md:leading-[60px] tracking-tight text-center">Earn $10 Per Referral</h1>

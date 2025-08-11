@@ -21,27 +21,29 @@ const About = () => {
 
 
   return (
-    <div className="w-full bg-[#f7f8fa] flex flex-col items-center">
+    <div className="w-full bg-[#f7f8fa] flex flex-col items-center pt-7 md:px-0 md:pt-0">
       {/* Hero Section */}
-      <section className="w-full min-h-[400px] md:min-h-[555px] flex flex-col items-center justify-center bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)] rounded-2xl md:rounded-none px-4 md:px-0 pt-12 md:pt-[145px] pb-8 md:pb-0">
-        <div className="max-w-5xl w-full flex flex-col items-center justify-center mx-auto">
+      <section className="w-full px-4 md:px-0">
+        <header className="w-full h-[783px] md:h-auto flex flex-col items-center justify-center px-4 md:px-0 pt-12 md:pt-[120px] pb-8 md:pb-0 bg-[#E4EEFE] md:bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)] rounded-2xl md:rounded-none min-h-[400px] md:min-h-[555px] relative overflow-hidden">
+          <div className="max-w-5xl w-full flex flex-col items-center justify-center mx-auto">
           <h1 className="text-[28px] md:text-[56px] font-medium text-center text-[#050506] md:leading-[50px]">About Velox Payments</h1>
           <p className="text-[16px] md:text-[24px] font-normal text-center text-[#414141] mt-4 md:mt-8 max-w-[80%] md:max-w-3xl mx-auto">
             We're transforming the way people across the globe send money to their loved ones, making it faster, more affordable, and more reliable than ever before.
           </p>
           <div className="mt-8 w-[120px] md:w-[250px] bg-[#6584DB] h-[5px] rounded-full"></div>
         </div>
+        </header>
       </section>
       {/* Mission Section */}
       <section className="w-full bg-[#fefefe] py-12 md:py-20 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-[157px] px-4">
         <img src={missionImage} alt="Mission" className="w-[180px] md:w-[202px] h-auto rounded-2xl" />
         <div className="max-w-2xl w-full flex flex-col gap-6">
-          <div>
-            <h2 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">Our Mission</h2>
+          <div className="flex flex-col items-center md:items-start">
+            <h2 className="text-[28px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">Our Mission</h2>
             <img src={yellowUnderline} alt="underline" className="w-[98px] h-2 mt-2" />
           </div>
           <div className="bg-[#fefdf6] rounded-2xl shadow-md p-6 md:p-10">
-            <p className="text-[#1f1f1f] text-[18px] md:text-[24px] leading-[1.5]">
+            <p className="text-[#1f1f1f] text-[16px] md:text-[24px] leading-[1.5]">
               To facilitate smooth, fast, and easy cross-border money transfers by decreasing the time and effort required for currency conversion.
             </p>
           </div>
@@ -51,12 +53,12 @@ const About = () => {
       <section className="w-full bg-gray-50 py-12 md:py-20 flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-[157px] px-4">
         <img src={visionImage} alt="Vision" className="w-[180px] md:w-[213px] h-auto rounded-2xl" />
         <div className="max-w-2xl w-full flex flex-col gap-6">
-          <div>
-            <h2 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">Our Vision</h2>
+          <div className="flex flex-col items-center md:items-start">
+            <h2 className="text-[28px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">Our Vision</h2>
             <img src={yellowUnderline} alt="underline" className="w-[98px] h-2 mt-2" />
           </div>
           <div className="bg-[#fefdf6] rounded-2xl shadow-md p-6 md:p-10">
-            <p className="text-[#1f1f1f] text-[18px] md:text-[24px] leading-[1.5]">
+            <p className="text-[#1f1f1f] text-[16px] md:text-[24px] leading-[1.5]">
               To revolutionize global money transfer one country at a time: customer-centric driven.
             </p>
           </div>
@@ -65,46 +67,46 @@ const About = () => {
       {/* Core Values Section */}
       <section className="w-full bg-white py-12 md:py-20 flex flex-col items-center px-4">
         <div className="max-w-5xl w-full flex flex-col items-center">
-          <h2 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] text-center">Our Core Values</h2>
+          <h2 className="text-[28px] md:text-[32px] font-bold text-[#2D2D2D] text-center">Our Core Values</h2>
           <img src={blueLine} alt="underline" className="w-[98px] h-2 mt-2" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 w-full">
             {/* Value 1 */}
-            <div className="bg-gray-50 rounded-2xl shadow-md p-6 flex gap-6 items-start">
-              <div className="rounded-full flex items-center justify-center w-[155px] h-[55px]">
+            <div className="bg-gray-50 rounded-2xl shadow-md p-6 flex flex-col md:flex-row gap-6 items-start">
+              <div className="rounded-full flex items-center md:justify-center justify-start w-[155px] h-[55px]">
                 <img src={customerCentricImage} alt="Customer Centric" className="w-[55px] h-[55px] object-contain" />
               </div>
               <div>
-                <h3 className="text-[20px] md:text-[24px] font-medium text-[#050506]">Customer Centric</h3>
+                <h3 className="text-[18px] md:text-[24px] font-medium text-[#050506]">Customer Centric</h3>
                 <p className="text-[#252525] text-[16px] md:text-[18px] mt-2">We put customers at the heart of everything we do, guided by sharp business acumen and unwavering focus, in order to deliver solutions that are effective.</p>
               </div>
             </div>
             {/* Value 2 */}
-            <div className="bg-gray-50 rounded-2xl shadow-md p-6 flex gap-6 items-start">
-              <div className="rounded-full w-[155px] h-[55px] flex items-center justify-center">
+            <div className="bg-gray-50 rounded-2xl shadow-md p-6 flex flex-col md:flex-row gap-6 items-start">
+              <div className="rounded-full w-[155px] h-[55px] flex items-center md:justify-center justify-start">
                 <img src={opennessImage} alt="Openness" className="w-[55px] h-[55px]" />
               </div>
               <div>
-                <h3 className="text-[20px] md:text-[24px] font-medium text-[#050506]">Openness</h3>
+                <h3 className="text-[18px] md:text-[24px] font-medium text-[#050506]">Openness</h3>
                 <p className="text-[#252525] text-[16px] md:text-[18px] mt-2">We value honest communication, active listening, and transparency in decision-making—creating space for trust, clarity, and real connection.</p>
               </div>
             </div>
             {/* Value 3 */}
-            <div className="bg-gray-50 rounded-2xl shadow-md p-6 flex gap-6 items-start">
-              <div className="rounded-full w-[155px] h-[55px] flex items-center justify-center">
+            <div className="bg-gray-50 rounded-2xl shadow-md p-6 flex flex-col md:flex-row gap-6 items-start">
+              <div className="rounded-full w-[155px] h-[55px] flex items-center md:justify-center justify-start">
                 <img src={respectImage} alt="Respect" className="w-[55px] h-[55px]" />
               </div>
               <div>
-                <h3 className="text-[20px] md:text-[24px] font-medium text-[#050506]">Respect</h3>
+                <h3 className="text-[18px] md:text-[24px] font-medium text-[#050506]">Respect</h3>
                 <p className="text-[#252525] text-[16px] md:text-[18px] mt-2">We embrace diversity and treat everyone with kindness and professionalism. Even in disagreement, we seek constructive, respectful resolutions that strengthen us.</p>
               </div>
             </div>
             {/* Value 4 */}
-            <div className="bg-gray-50 rounded-2xl shadow-md p-6 flex gap-6 items-start">
-              <div className="rounded-full w-[155px] h-[55px] flex items-center justify-center">
+            <div className="bg-gray-50 rounded-2xl shadow-md p-6 flex flex-col md:flex-row gap-6 items-start">
+              <div className="rounded-full w-[155px] h-[55px] flex items-center md:justify-center justify-start">
                 <img src={energyTImage} alt="Energy to Energise" className="w-[55px] h-[55px]" />
               </div>
               <div>
-                <h3 className="text-[20px] md:text-[24px] font-medium text-[#050506]">Energy to Energise</h3>
+                <h3 className="text-[18px] md:text-[24px] font-medium text-[#050506]">Energy to Energise</h3>
                 <p className="text-[#252525] text-[16px] md:text-[18px] mt-2">We show up with resilience and a positive spirit, driving teams forward with momentum by building strong synergies, we turn effort into impactful outcomes.</p>
               </div>
             </div>
@@ -158,7 +160,7 @@ const About = () => {
           <h2 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] text-center">Our Leadership Team</h2>
           <img src={blueLine} alt="underline" className="w-[98px] h-2 mt-2" />
           <p className="text-[#1f1f1f] text-[16px] md:text-[24px] text-center mt-4">Meet the experienced leaders driving our vision and mission forward.</p>
-          {/* Leadership Slider */}
+          {/* Leadership: Grid for mobile, slider for md+ */}
           {(() => {
             const leaders = [
               { name: "Paul Adebayo", title: "Captain of Chaos", img: headshot },
@@ -170,8 +172,8 @@ const About = () => {
               { name: "Tolulope Eweniyi", title: "Head of Operations", img: headshot },
               { name: "Tolulope Eweniyi", title: "Head of Operations", img: headshot },
             ];
+            // Slider logic for desktop
             const [scrollRef, setScrollRef] = useState(null);
-            const scrollBy = 1; // number of cards to scroll per click
             const handleLeft = () => {
               if (scrollRef) {
                 const card = scrollRef.querySelector('.leader-card');
@@ -185,50 +187,71 @@ const About = () => {
               }
             };
             return (
-              <div className="relative w-full md:max-w-[90vw] mt-10 flex flex-col items-center">
-                <div
-                  className="flex gap-24 overflow-x-auto scrollbar-hide w-full snap-x snap-mandatory px-1 hide-x-scrollbar"
-                  ref={setScrollRef}
-                  tabIndex={0}
-                  style={{ scrollBehavior: 'smooth' }}
-                >
-                  {leaders.map((leader, idx) => (
+              <>
+                {/* Mobile grid */}
+                <div className="grid grid-cols-2 gap-x-4 gap-y-6 w-full mt-10 md:hidden">
+                  {leaders.slice(0, 5).map((leader, idx) => (
                     <div
                       key={leader.name + idx}
-                      className="leader-card flex flex-col items-start min-w-[220px] max-w-[296px] w-full snap-start"
+                      className="flex flex-col items-center bg-white rounded-2xl p-3"
                     >
-                      <div className="w-[180px] h-[180px] md:w-[296px] md:h-[340px] rounded-2xl bg-cover bg-center" style={{ backgroundImage: `url(${leader.img})` }} />
-                      <h3 className="text-[18px] md:text-[24px] font-medium text-[#000] mt-4">{leader.name}</h3>
-                      <p className="text-[14px] md:text-[18px] text-neutral-500">{leader.title}</p>
+                      <img
+                        src={leader.img}
+                        alt={leader.name}
+                        className="w-[150px] h-[180px] rounded-2xl object-cover mb-2"
+                      />
+                      <h3 className="text-[14px] font-medium text-[#000] text-center leading-tight">{leader.name}</h3>
+                      <p className="text-[12px] text-neutral-500 text-center leading-tight">{leader.title}</p>
                     </div>
                   ))}
                 </div>
-                <div className="flex gap-4 justify-center self-end mt-6">
-                  <button
-                    onClick={handleLeft}
-                    aria-label="Previous"
-                    className={`bg-white border border-gray-300 rounded-full p-2 shadow transition`}
+                {/* Desktop slider (unchanged) */}
+                <div className="hidden md:flex relative w-full md:max-w-[90vw] mt-10 flex-col items-center">
+                  <div
+                    className="flex gap-24 overflow-x-auto scrollbar-hide w-full snap-x snap-mandatory px-1 hide-x-scrollbar"
+                    // @ts-ignore
+                    ref={setScrollRef}
+                    tabIndex={0}
+                    style={{ scrollBehavior: 'smooth' }}
                   >
-                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </button>
-                  <button
-                    onClick={handleRight}
-                    aria-label="Next"
-                    className={`bg-white border border-gray-300 rounded-full p-2 shadow transition`}
-                  >
-                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </button>
+                    {leaders.map((leader, idx) => (
+                      <div
+                        key={leader.name + idx}
+                        className="leader-card flex flex-col items-start min-w-[220px] max-w-[296px] w-full snap-start"
+                      >
+                        <div className="w-[180px] h-[180px] md:w-[296px] md:h-[340px] rounded-2xl bg-cover bg-center" style={{ backgroundImage: `url(${leader.img})` }} />
+                        <h3 className="text-[18px] md:text-[24px] font-medium text-[#000] mt-4">{leader.name}</h3>
+                        <p className="text-[14px] md:text-[18px] text-neutral-500">{leader.title}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex gap-4 justify-center self-end mt-6">
+                    <button
+                      onClick={handleLeft}
+                      aria-label="Previous"
+                      className={`bg-white border border-gray-300 rounded-full p-2 shadow transition`}
+                    >
+                      <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </button>
+                    <button
+                      onClick={handleRight}
+                      aria-label="Next"
+                      className={`bg-white border border-gray-300 rounded-full p-2 shadow transition`}
+                    >
+                      <svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="#222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </button>
+                  </div>
+                  <style>{`
+                    .hide-x-scrollbar {
+                      scrollbar-width: none;
+                      -ms-overflow-style: none;
+                    }
+                    .hide-x-scrollbar::-webkit-scrollbar {
+                      display: none;
+                    }
+                  `}</style>
                 </div>
-                <style>{`
-                  .hide-x-scrollbar {
-                    scrollbar-width: none;
-                    -ms-overflow-style: none;
-                  }
-                  .hide-x-scrollbar::-webkit-scrollbar {
-                    display: none;
-                  }
-                `}</style>
-              </div>
+              </>
             );
           })()}
         </div>
