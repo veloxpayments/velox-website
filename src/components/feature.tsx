@@ -65,7 +65,7 @@ const FeatureSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {/* Zero Fees */}
-            <div className="bg-[#FFFCEA] rounded-3xl p-8">
+            <div className="bg-[#FFFCEA] rounded-3xl px-8 py-16 md:p-8">
               <div className="bg-[#4059AD] w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 md:mb-6">
                 <Image src={zero} alt=""/>
               </div>
@@ -78,7 +78,7 @@ const FeatureSection = () => {
             </div>
 
             {/* Multi-wallet account */}
-            <div className="bg-[#D9DEEF] rounded-3xl p-8">
+            <div className="bg-[#D9DEEF] rounded-3xl px-8 py-16 md:p-8">
               <div className="bg-[#4059AD] w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 md:mb-6">
                 <Image src={wallet} alt=""/>
               </div>
@@ -89,7 +89,7 @@ const FeatureSection = () => {
             </div>
 
             {/* Fast Transactions */}
-            <div className="bg-[#DED7F0] rounded-3xl p-8">
+            <div className="bg-[#DED7F0] rounded-3xl px-8 py-16 md:p-8">
               <div className="bg-[#4059AD] w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 md:mb-6">
                 <Image src={speed} alt="" className="m-auto flex"/>
               </div>

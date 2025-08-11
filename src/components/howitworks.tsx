@@ -9,11 +9,11 @@ const Howitworks = () => {
     <div>
       <section className="py-16 px-4 bg-[#f7f8fa]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-[40px] font-medium text-[#050506] mb-[5px]">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-[24px] md:text-[40px] font-medium text-[#050506] mb-[5px]">
               How it Works
             </h2>
-            <p className="text-[24px] text-[#2E2E2E] font-normal">
+            <p className="text-[16px] text-[#2E2E2E] font-normal">
               Send money internationally in three simple step
             </p>
           </div>
@@ -37,7 +37,7 @@ const Howitworks = () => {
             </div>
 
             {/* Step 2: KYC Verification */}
-            <div className="flex flex-col items-center text-center shadow-custom rounded-lg p-4">
+            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-4">
               <div className="mb-6">
                 <Image
                   src={kyc}
@@ -54,7 +54,7 @@ const Howitworks = () => {
             </div>
 
             {/* Step 3: Create Wallets */}
-            <div className="flex flex-col items-center text-center shadow-custom rounded-lg p-4">
+            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-4">
               <div className="mb-6">
                 <Image
                   src={wallet}
@@ -71,7 +71,7 @@ const Howitworks = () => {
             </div>
 
             {/* Step 4: Send money */}
-            <div className="flex flex-col items-center text-center shadow-custom rounded-lg p-4">
+            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-4">
               <div className="mb-6">
                 <Image
                   src={doller}

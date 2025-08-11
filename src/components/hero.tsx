@@ -13,7 +13,7 @@ const Hero = () => {
     setIsModalOpen(!isModalOpen);
   };
   return (
-    <div className="relative md:min-h-[100vh] w-full p-6 bg-[#f7f8fa]">
+    <div className="relative md:min-h-[100vh] w-full px-4 pt-7 md:p-6 bg-[#f7f8fa]">
       <section className="custom-bg rounded-2xl">
         {/* Centered Content Container */}
         <div className="container pt-[145px] md:pt-0 mx-auto px-4 md:flex md:min-h-[86vh] w-full flex-col-reverse items-center justify-between gap-2 md:pt-36 sm:flex-row ">

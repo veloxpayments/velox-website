@@ -27,7 +27,7 @@ export default function SendMoney() {
   useEffect(() => {
     if (isInView3) controls3.start({ opacity: 1, y: 0 });
   }, [isInView3, controls3]);
-  
+
   return (
     <section className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
@@ -59,7 +59,7 @@ export default function SendMoney() {
                 className="relative z-10"
               />
             </div>
-            <section className="py-16 px-4 bg-white">
+            <section className="md:py-16 px-4 bg-white">
               <div className="max-w-4xl mx-auto">
                 <div className="space-y-[16px]">
                   {/* Header text */}
@@ -76,7 +76,7 @@ export default function SendMoney() {
                   <div className="mx-auto">
                     <p className="text-[16px] text-[#5A5A5A] leading-6 font-normal">
                       Wherever life takes you, we'll always keep you connected
-                      to home <br/>
+                      to home <br />
                       Join thousands who trust us, for fast, secure, and
                       effortless international money transfers.
                     </p>
@@ -175,7 +175,10 @@ export default function SendMoney() {
                 USA, UK, and across the continent. Wherever life takes you, we
                 connect your world."
               </p>
-              <DownloadButton variant="secondary" />
+              {/* Download button */}
+              <div className="">
+                <DownloadButton variant="secondary" />
+              </div>
             </div>
           </motion.div>
 
@@ -210,7 +213,10 @@ export default function SendMoney() {
                 USA, UK, and across the continent. Wherever life takes you, we
                 connect your world."
               </p>
-              <DownloadButton variant="secondary" />
+              {/* Download button */}
+              <div className="">
+                <DownloadButton variant="secondary" />
+              </div>
             </div>
           </motion.div>
         </div>

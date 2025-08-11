@@ -36,8 +36,8 @@ const testimonials = [
    <section className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-[40px] font-medium text-[#050506] mb-4">What Our Customers Say</h2>
-          <p className="text-[24px] text-[#737373] font-normal mx-auto">
+          <h2 className="text-[24px] md:text-[40px] font-medium text-[#050506] mb-4">What Our Customers Say</h2>
+          <p className="text-[16px] text-[#737373] font-normal mx-auto">
             Join thousands of satisfied customers who trust Velox for their international money transfers.
           </p>
         </div>
