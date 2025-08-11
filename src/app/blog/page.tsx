@@ -14,11 +14,11 @@ const clock = "/clock.svg";
 
 const Blog = () => {
   return (
-    <div className="w-full min-h-screen font-satoshi bg-[#F9FAFB]">
+    <div className="w-full min-h-screen font-satoshi bg-[#F9FAFB] pt-7 md:px-0 md:pt-0">
       {/* Header Section */}
-      <header className="w-full pb-8 md:pb-16 pt-36 md:pt-44 relative">
+      <header className="w-full px-4 md:px-0 pb-8 md:pb-16 pt-0 md:pt-44 relative">
         {/* Hero Section */}
-        <div className="md:max-w-[90vw] mx-auto flex flex-col md:flex-row items-center [background:linear-gradient(292deg,_#E0ECFE_0.55%,_#FCFDFF_99.45%)] gap-10 p-4 md:p-8 rounded-2xl">
+        <div className="md:max-w-[90vw] mx-auto flex flex-col md:flex-row items-center bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)] gap-10 p-4 md:p-8 pt-32 md:pt-8 rounded-2xl">
           <div className="flex-1 flex flex-col gap-3 md:gap-6 items-start justify-center">
             <h1 className="capitalize text-[#000] text-4xl md:text-6xl font-bold leading-tight">
               How blockchain is revolutionizing the banking industry

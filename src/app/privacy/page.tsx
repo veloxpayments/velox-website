@@ -5,7 +5,7 @@ const Terms = () => {
   return (
     <div className="w-full min-h-screen bg-[#f8f9fb] font-satoshi">
       {/* Header Section */}
-      <header className="px-4 md:px-8 bg-white w-full pb-8 md:pb-16 relative [background:linear-gradient(292deg,_#E0ECFE_0.55%,_#FCFDFF_99.45%)]">
+      <header className="px-4 md:px-8 bg-white w-full pb-8 md:pb-16 relative bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)]">
         <div className="max-w-5xl mx-auto w-full px-4 md:px-0">
           <div className="flex flex-col items-start justify-center pt-52 pb-0">
             <h1 className="text-[#050506] text-3xl md:text-5xl font-bold mb-2 text-left">Privacy Policy</h1>

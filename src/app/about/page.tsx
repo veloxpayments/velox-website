@@ -23,7 +23,7 @@ const About = () => {
   return (
     <div className="w-full bg-[#f7f8fa] flex flex-col items-center">
       {/* Hero Section */}
-      <section className="w-full min-h-[400px] md:min-h-[555px] flex flex-col items-center justify-center [background:linear-gradient(292deg,_#E0ECFE_0.55%,_#FCFDFF_99.45%)] rounded-2xl md:rounded-none px-4 md:px-0 pt-12 md:pt-[145px] pb-8 md:pb-0">
+      <section className="w-full min-h-[400px] md:min-h-[555px] flex flex-col items-center justify-center bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)] rounded-2xl md:rounded-none px-4 md:px-0 pt-12 md:pt-[145px] pb-8 md:pb-0">
         <div className="max-w-5xl w-full flex flex-col items-center justify-center mx-auto">
           <h1 className="text-[28px] md:text-[56px] font-medium text-center text-[#050506] md:leading-[50px]">About Velox Payments</h1>
           <p className="text-[16px] md:text-[24px] font-normal text-center text-[#414141] mt-4 md:mt-8 max-w-[80%] md:max-w-3xl mx-auto">
