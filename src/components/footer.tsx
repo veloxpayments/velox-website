@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import coin from "../../public/coin-one.png";
 import Link from "next/link";
-import { Input } from "../components/ui/input";
-import { Button } from "../components/ui/button";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
 import {
   Facebook,
   Twitter,

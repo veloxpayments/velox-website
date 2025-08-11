@@ -254,6 +254,7 @@ const Header = () => {
                         key={subItem.title}
                         href={subItem.link}
                         className="text-sm text-gray-700 hover:text-gray-900"
+                        onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.title}
                       </Link>
