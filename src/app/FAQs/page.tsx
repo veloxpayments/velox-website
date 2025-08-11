@@ -7,6 +7,8 @@ const imgQuestionLine = "/question.svg";
 const imgSearchLine = "/search.svg";
 const imgLine = "/faqline.png";
 const imgMessage1Line = "/message.svg";
+const whiteLine = "/whiteLine.svg";
+
 
 const gettingStartedFaqs = [
   {
@@ -58,13 +60,14 @@ const sendMoneyFaqs = [
 
 const FAQs = () => {
   return (
-    <div className="w-full min-h-screen bg-[#f8f9fb] font-satoshi">
+    <div className="w-full min-h-screen bg-[#f8f9fb] font-satoshi font-satoshi pt-7 px-4 md:px-0 md:pt-0">
       {/* Header Section */}
-      <header className="bg-[#1a2238] w-full pb-12 md:pb-0 relative">
-        <div className="flex flex-col items-center justify-center text-center pt-16 md:pt-48 pb-8 md:pb-16">
-          <img src={imgQuestionLine} alt="question" className="w-12 h-12 mx-auto mb-4" />
-          <h1 className="text-white text-3xl md:text-5xl font-medium mb-4">Frequently Asked Questions</h1>
-          <p className="text-white text-lg md:text-2xl font-[300] max-w-2xl lg:max-w-6xl mx-auto">Have questions about our services? Find quick answers to commonly asked questions below.</p>
+      <header className="bg-[#1a2238] w-full h-[783px] md:h-auto md:py-0 relative rounded-2xl md:rounded-none flex justify-center items-center md:block px-4">
+        <div className="flex flex-col items-center justify-center text-center md:pt-48 md:pb-16">
+          <img src={imgQuestionLine} alt="question" className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-4" />
+          <h1 className="text-white text-[30px] md:text-5xl font-medium mb-4">Frequently Asked Questions</h1>
+          <p className="text-white text-[16px] md:text-2xl font-[300] max-w-[60vw] lg:max-w-6xl mx-auto">Have questions about our services? Find quick answers to commonly asked questions below.</p>
+          <img src={whiteLine} alt="white line" className="md:hidden mt-6" />
         </div>
       </header>
 
@@ -86,7 +89,7 @@ const FAQs = () => {
         {/* Getting Started */}
         <section className="mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <h2 className="text-[28px] font-medium text-[#000]">Getting Started</h2>
+            <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">Getting Started</h2>
           </div>
           <img src={imgLine} alt="line" className="w-full h-1 mb-6" />
           <div className="flex flex-col gap-4">
@@ -98,7 +101,7 @@ const FAQs = () => {
         {/* Send Money */}
         <section className="mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <h2 className="text-[28px] font-medium text-[#000]">Send Money</h2>
+            <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">Send Money</h2>
           </div>
           <img src={imgLine} alt="line" className="w-full h-1 mb-6" />
           <div className="flex flex-col gap-4">

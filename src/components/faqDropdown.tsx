@@ -26,7 +26,7 @@ const FAQDropdown = ({ title, answer }: FAQDropdownProps) => {
         className="w-full px-6 py-5 text-left flex items-center justify-between"
       >
         <span
-          className={`text-[20px] font-medium pr-4 ${
+          className={`text-[16px] md:text-[20px] font-[400] md:font-medium pr-4 ${
             open ? "text-[#6584DB]" : "text-black"
           }`}
         >
@@ -40,7 +40,7 @@ const FAQDropdown = ({ title, answer }: FAQDropdownProps) => {
       </button>
       {open && (
         <div className="px-6 pb-5">
-          <p className="text-[#050506] leading-[27px] font-normal text-[18px]">
+          <p className="text-[#050506] leading-[27px] font-normal text-[16px] md:text-[18px]">
             {answer}
           </p>
         </div>

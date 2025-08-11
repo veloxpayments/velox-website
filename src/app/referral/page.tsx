@@ -13,20 +13,22 @@ const newsletterBg = "/about-images/699b816a9e194764251a9da7f2c992deb6a287c4.svg
 
 const Referral = () => {
   return (
-    <div className="w-full flex flex-col items-center min-h-screen font-satoshi">
+    <div className="w-full flex flex-col items-center min-h-screen font-satoshi pt-7 md:px-0 md:pt-0">
       {/* Hero Section */}
-      <section className="w-full flex flex-col items-center justify-center px-4 md:px-0 pt-12 md:pt-[120px] pb-8 md:pb-0 [background:linear-gradient(292deg,_#E0ECFE_0.55%,_#FCFDFF_99.45%)] rounded-2xl md:rounded-none mt-4 md:mt-0 min-h-[400px] md:min-h-[555px] relative overflow-hidden">
-        <div className="max-w-4xl w-full flex flex-col items-center justify-center mx-auto gap-6 relative z-10">
-          <h1 className="text-[32px] md:text-[40px] lg:text-[56px] font-bold text-[#050506] leading-[1.1] md:leading-[60px] tracking-tight text-center">Earn $10 Per Referral</h1>
-          <p className="text-[16px] md:text-[20px] lg:text-[24px] text-[#414141] max-w-2xl text-center leading-[1.4]">Invite friends to Velox and earn $10 for each successful referral. Unlike others, you get the entire reward.</p>
-          <button className="mt-2 md:mt-6 px-8 py-3 bg-[#6584DB] text-white rounded-full text-lg font-semibold shadow hover:bg-[#4a6fc1] transition mx-auto">Start Referring Now</button>
+      <section className="w-full px-4">
+        <header className="w-full h-[783px] md:h-auto flex flex-col items-center justify-center px-4 md:px-0 pt-12 md:pt-[120px] pb-8 md:pb-0 bg-[#E4EEFE] md:[background:linear-gradient(292deg,_#E0ECFE_0.55%,_#FCFDFF_99.45%)] rounded-2xl md:rounded-none min-h-[400px] md:min-h-[555px] relative overflow-hidden">
+          <div className="max-w-4xl w-full flex flex-col items-center justify-center mx-auto gap-6 relative z-10">
+          <h1 className="text-[30px] md:text-5xl lg:text-[56px] font-[500] md:font-bold text-[#050506] leading-[1.1] md:leading-[60px] tracking-tight text-center">Earn $10 Per Referral</h1>
+          <p className="text-[16px] md:text-[20px] lg:text-[24px] text-[#737373] max-w-2xl text-center leading-[1.4]">Invite friends to Velox and earn $10 for each successful referral. Unlike others, you get the entire reward.</p>
+          <button className="mt-2 md:mt-6 px-8 py-3 bg-[#6584DB] text-white rounded-full text-[16px] font-[500] shadow hover:bg-[#4a6fc1] transition mx-auto">Start Referring Now</button>
         </div>
+        </header>
       </section>
 
       {/* How it Works Section */}
-      <section className="w-full flex flex-col items-center py-16 px-4 bg-white">
-        <h2 className="text-[28px] md:text-[40px] font-bold text-[#050506] text-center mb-2">How it Works</h2>
-        <p className="text-[16px] md:text-[24px] text-[#2e2e2e] text-center mb-10">Simple steps to earn rewards with Velox referrals</p>
+      <section className="w-full flex flex-col items-center py-10 md:py-16 px-4 bg-white">
+        <h2 className="text-[18px] md:text-[40px] text-[500] md:font-bold text-[#050506] text-center mb-2">How it Works</h2>
+        <p className="text-[16px] md:text-[24px] text-[#2e2e2e] text-center mb-10 max-w-[60vw] md:max-w-full">Simple steps to earn rewards with Velox referrals</p>
         <div className="flex flex-col md:flex-row gap-10 md:gap-16 mt-4 w-full items-center justify-center">
           <div className="flex flex-col items-center bg-[#f8f9fb] rounded-[8px] p-8 w-full max-w-[392px] h-auto md:h-[223px] md:max-w-[392px]" style={{ boxShadow: '0 12px 16px -4px rgba(16,24,40,0.08), 0 4px 6px -2px rgba(16,24,40,0.03)' }}>
             <div className="bg-[#dee9fc] rounded-full flex items-center justify-center p-4 mb-6">
@@ -64,9 +66,9 @@ const Referral = () => {
               <div className="bg-[#f5f6fa] rounded-full flex items-center justify-center w-[96px] h-[96px] mb-6">
                 <img src={rewardImg} alt="Referral Icon" className="w-10 h-10" />
               </div>
-              <h4 className="text-[22px] md:text-[28px] font-bold text-[#050506] text-center mb-2">Your referral code awaits</h4>
+              <h4 className="text-[18px] md:text-[28px] font-[500] md:font-bold text-[#050506] text-center mb-2">Your referral code awaits</h4>
               <p className="text-[#2d2d2d] text-[16px] md:text-[20px] text-center mb-6">Sign up for Velox to receive your unique referral code and start earning $10 per referral</p>
-              <button className="bg-[#6584DB] hover:bg-[#4a6fc1] text-white rounded-full px-8 py-3 font-semibold text-base md:text-lg shadow transition">Download to get code</button>
+              <button className="bg-[#6584DB] hover:bg-[#4a6fc1] text-white rounded-full px-8 py-3 font-[500] text-[16px] shadow transition">Download to get code</button>
             </div>
           </div>
         </div>
@@ -75,8 +77,8 @@ const Referral = () => {
       {/* FAQ Section */}
       <section className="w-full bg-[#F8F9FB] flex flex-col items-center py-16 px-4">
         <div className="max-w-4xl w-full flex flex-col items-center mb-10">
-          <h2 className="text-[32px] md:text-[40px] font-bold text-[#050506] text-center mb-4">Frequently Asked Questions?</h2>
-          <p className="text-[18px] md:text-[22px] text-[#737373] text-center">Have questions about our services? Find quick answers to commonly asked questions below.</p>
+          <h2 className="text-[18px] md:text-[40px] font-[500] md:font-bold text-[#050506] text-center mb-4">Frequently Asked Questions?</h2>
+          <p className="text-[16px] md:text-[22px] text-[#737373] text-center">Have questions about our services? Find quick answers to commonly asked questions below.</p>
         </div>
         <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10">
           {Array.from({ length: 8 }).map((_, i) => (

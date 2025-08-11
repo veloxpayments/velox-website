@@ -252,7 +252,7 @@ const Header = () => {
                     {item.items.map((subItem) => (
                       <Link
                         key={subItem.title}
-                        href="#"
+                        href={subItem.link}
                         className="text-sm text-gray-700 hover:text-gray-900"
                       >
                         {subItem.title}

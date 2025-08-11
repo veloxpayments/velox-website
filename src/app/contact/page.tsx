@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <div className="w-full min-h-screen bg-[#f8f9fb] font-satoshi pt-7 px-4 md:px-0 md:pt-0">
       {/* Header Section */}
-      <header className="bg-[#1a2238] w-full py-[300px] md:py-0 relative rounded-2xl md:rounded-none">
+      <header className="bg-[#1a2238] w-full h-[783px] md:h-auto md:py-0 relative rounded-2xl md:rounded-none flex items-center md:block justify-center">
         <div className="flex flex-col items-center justify-center text-center md:pt-48 md:pb-16">
           <img src={imgCustomerCareFill} alt="customer care" className="w-10 h-10 md:w-14 md:h-14 mx-auto mb-4" />
           <h1 className="text-white text-[30px] md:text-5xl font-bold mb-4">Talk to us</h1>
