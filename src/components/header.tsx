@@ -93,7 +93,7 @@ const navItems = [
         title: "Talk to us",
         subtitle: "Get the help you need with our support team",
         icon: "/header-dropdown/talk-to-us.svg",
-        link: "/",
+        link: "/contact",
       },
     ],
   },

@@ -60,7 +60,7 @@ const FAQs = () => {
   return (
     <div className="w-full min-h-screen bg-[#f8f9fb] font-satoshi">
       {/* Header Section */}
-      <header className="bg-[#1a2238] w-full pb-12 md:pb-24 relative">
+      <header className="bg-[#1a2238] w-full pb-12 md:pb-0 relative">
         <div className="flex flex-col items-center justify-center text-center pt-16 md:pt-48 pb-8 md:pb-16">
           <img src={imgQuestionLine} alt="question" className="w-12 h-12 mx-auto mb-4" />
           <h1 className="text-white text-3xl md:text-5xl font-medium mb-4">Frequently Asked Questions</h1>
