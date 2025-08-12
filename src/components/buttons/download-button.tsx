@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import QRModal from "../QRModal";
+import QRModal from "../modals/QRModal";
 
 const DownloadButton = ({ variant }: { variant: string }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

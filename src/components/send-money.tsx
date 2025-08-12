@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
-import DownloadButton from "./ui/download-button";
+import DownloadButton from "./buttons/download-button";
 
 export default function SendMoney() {
   const ref1 = useRef(null);

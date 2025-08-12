@@ -1,5 +1,5 @@
 import Image from "next/image";
-import qr from "../../public/qr-code.svg";
+import qr from "../../../public/qr-code.svg";
 
 const QRModal = ({ toggleModal }) => {
   return (

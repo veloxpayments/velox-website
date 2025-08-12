@@ -1,6 +1,7 @@
 
 import React from "react";
 import FAQDropdown from "../../components/faqDropdown";
+import ContactButton from "../../components/buttons/contact-button";
 
 // Figma asset constants
 const imgQuestionLine = "/question.svg";
@@ -121,7 +122,7 @@ const FAQs = () => {
         <img src={imgMessage1Line} alt="message" className="w-16 h-16 mb-4" />
         <h2 className="text-[#050506] text-2xl md:text-3xl font-medium mb-2 text-center">Still have questions?</h2>
         <p className="text-[#393939] text-lg text-center max-w-xl mb-6">Can’t find what you’re looking for? Send us a message and our support team will get back to you within 48 hours</p>
-        <button className="bg-[#6584db] text-white rounded-full px-8 py-3 font-medium">Load More Articles</button>
+        <ContactButton />
       </section>
     </div>
   );

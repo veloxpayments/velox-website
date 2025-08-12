@@ -3,8 +3,8 @@
 import Image from "next/image";
 import globe from "../../public/mobile-trim.svg";
 import { useState } from "react";
-import QRModal from "./QRModal";
-import DownloadButton from "./ui/download-button";
+import QRModal from "./modals/QRModal";
+import DownloadButton from "./buttons/download-button";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

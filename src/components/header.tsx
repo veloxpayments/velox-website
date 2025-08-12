@@ -7,8 +7,8 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../public/yellow-logo.svg";
 import Image from "next/image";
-import QRModal from "./QRModal";
-import DownloadButton from "./ui/download-button";
+import QRModal from "./modals/QRModal";
+import DownloadButton from "./buttons/download-button";
 
 const navItems = [
   {
