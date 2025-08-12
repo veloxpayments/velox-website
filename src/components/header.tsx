@@ -47,7 +47,7 @@ const navItems = [
         title: "Careers",
         subtitle: "Join our team and be a part of the Velox adventure",
         icon: "/header-dropdown/careers.svg",
-        link: "/",
+        link: "/careers",
       },
       {
         title: "Privacy Policy",
