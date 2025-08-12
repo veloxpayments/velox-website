@@ -303,7 +303,7 @@ export default function Footer() {
                 className="md:flex-1 flex-shrink min-w-0 text-[#949596] text-[16px] font-medium py-2 pl-6 outline-none bg-transparent placeholder-[#949596]"
               />
               <div>
-                <button className="bg-[#FCDE2F] text-[#050506] font-medium md:px-6 md:py-4 px-[14px] py-2 flex-shrink-0 flex justify-center rounded-full hover:bg-transparent transition">
+                <button className="bg-[#FCDE2F] text-[#050506] font-medium md:px-6 md:py-4 px-[14px] py-2 flex-shrink-0 flex justify-center rounded-full hover:bg-transparent hover:border hover:border-[#CAB22B] transition">
                   Subscribe
                 </button>
               </div>
