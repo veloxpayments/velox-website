@@ -172,7 +172,7 @@ export default function Footer() {
               <ul className="space-y-3 text-[16px] text-white">
                 <li>
                   <Link
-                    href="#"
+                    href="/about"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
                     About us
@@ -180,7 +180,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/careers"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
                     Careers
@@ -195,7 +195,7 @@ export default function Footer() {
               <ul className="space-y-3 text-[16px] text-white">
                 <li>
                   <Link
-                    href="#"
+                    href="/FAQs"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
                     FAQs
@@ -203,7 +203,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/blog"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
                     Blog
@@ -211,7 +211,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="terms"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
                     Terms of service
@@ -219,7 +219,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="privacy"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
                     Privacy policy
