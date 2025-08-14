@@ -32,7 +32,7 @@ const navItems = [
       {
         title: "Referral",
         subtitle: "Refer and earn",
-        icon: "/header-dropdown/referral.svg",
+        icon: "/header-dropdown/Referral.svg",
         link: "/referral",
       },
     ],
@@ -164,10 +164,8 @@ export function DrawerMenu({ onClose }: { onClose: () => void }) {
                       className="flex items-center gap-3 px-2 py-2 rounded-lg text-[16px] text-[#393939] hover:bg-[#f8f9fb]"
                       onClick={onClose}
                     >
-                      {/* <img src={subItem.icon} alt={subItem.title} className="h-6 w-6" /> */}
                       <div className="flex flex-col">
                         <span className="font-medium">{subItem.title}</span>
-                        {/* <span className="text-xs text-[#737373]">{subItem.subtitle}</span> */}
                       </div>
                     </Link>
                   ))}
