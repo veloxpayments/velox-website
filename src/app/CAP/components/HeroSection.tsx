@@ -11,7 +11,7 @@ export default function HeroSection() {
                 md:bg-[url('/capHero.png')] bg-no-repeat bg-right-bottom bg-contain bg-[url('/capHeroMobile.png')] bg-no-repeat bg-right bg-contain`}
       >
         {/* Text section */}
-        <div className="flex flex-col gap-4 xl:gap-6 items-start justify-start md:justify-center relative z-10">
+        <div className="flex flex-col gap-4 xl:gap-6 items-start justify-start md:justify-center relative z-1">
           <div className="hidden md:block bg-[#fcde2f] flex flex-row gap-2 items-center px-[13px] py-2 rounded-[22px]">
             <span className="text-[#050506] text-[16px] font-satoshi font-medium">
               Earn $10 per referral

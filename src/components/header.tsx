@@ -239,7 +239,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute left-0 right-0 top-20 bg-white shadow-md lg:hidden z-50"
+            className="absolute left-0 right-0 top-20 bg-white shadow-md lg:hidden z-10"
           >
             <div className="container mx-auto flex flex-col space-y-4 p-4">
               {navItems.map((item) => (

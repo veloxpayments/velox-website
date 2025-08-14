@@ -9,7 +9,6 @@ const how1 = "/about-images/getCode.svg";
 const how2 = "/about-images/share.svg";
 const how3 = "/about-images/dollar.svg";
 const rewardImg = "/about-images/phone.svg";
-const newsletterBg = "/about-images/699b816a9e194764251a9da7f2c992deb6a287c4.svg";
 
 const Referral = () => {
   return (
@@ -17,7 +16,7 @@ const Referral = () => {
       {/* Hero Section */}
       <section className="w-full px-4 md:px-0">
         <header className="w-full h-[783px] md:h-auto flex flex-col items-center justify-center px-4 md:px-0 pt-12 md:pt-[120px] pb-8 md:pb-0 bg-[#E4EEFE] md:bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)] rounded-2xl md:rounded-none min-h-[400px] md:min-h-[555px] relative overflow-hidden">
-          <div className="max-w-4xl w-full flex flex-col items-center justify-center mx-auto gap-6 relative z-10">
+          <div className="max-w-4xl w-full flex flex-col items-center justify-center mx-auto gap-6 relative z-1">
           <h1 className="text-[30px] md:text-5xl lg:text-[56px] font-[500] md:font-bold text-[#050506] leading-[1.1] md:leading-[60px] tracking-tight text-center">Earn $10 Per Referral</h1>
           <p className="text-[16px] md:text-[20px] lg:text-[24px] text-[#737373] max-w-2xl text-center leading-[1.4]">Invite friends to Velox and earn $10 for each successful referral. Unlike others, you get the entire reward.</p>
           <button className="mt-2 md:mt-6 px-8 py-3 bg-[#6584DB] text-white rounded-full text-[16px] font-[500] shadow hover:bg-[#4a6fc1] transition mx-auto">Start Referring Now</button>
