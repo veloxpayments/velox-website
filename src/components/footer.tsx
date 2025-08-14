@@ -43,7 +43,7 @@ export default function Footer() {
         className="relative footer-bg container overflow-hidden rounded-[16px] mx-4 md:mx-auto mb-[100px]"
         style={{ backgroundImage: `url('/footer-bg.svg')` }}
       >
-        <div className="container mx-auto px-4 py-16 md:px-[100px] relative z-10 md:flex items-center justify-between">
+        <div className="container mx-auto px-4 py-16 md:px-[100px] relative z-1 md:flex items-center justify-between">
           <div>
             <p className="text-[12px] md:text-[18px] text-[#FAFBFE] font-medium">
               GET READY FOR EASE

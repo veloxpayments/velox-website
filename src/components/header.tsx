@@ -76,7 +76,7 @@ const navItems = [
         title: "CAP",
         subtitle: "Join the Velox Community Ambassadors",
         icon: "/header-dropdown/CAP.svg",
-        link: "/",
+        link: "/CAP",
       },
     ],
   },
@@ -136,7 +136,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="container mx-auto bg-white absolute top-10 right-0 left-0 z-50 max-w-[80vw] py-[15px] px-[40px] rounded-xl">
+    <div className="container mx-auto bg-white absolute top-10 right-0 left-0 z-10 max-w-[80vw] py-[15px] px-[40px] rounded-xl">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold">

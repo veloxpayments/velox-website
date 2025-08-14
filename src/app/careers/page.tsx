@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import ApplicationButton from "../../components/buttons/application-button";
 
 // Image asset imports (SVGs and PNGs as constants)
 const imgSelectorVerticalLine = "/chevronUpDown.svg";
@@ -106,7 +107,7 @@ const jobListings = [
     ],
   },
   {
-    title: "Backed Engineer",
+    title: "Backend Engineer",
     dept: "Engineering",
     type: "Contract",
     typeColor: "#dee9fc",
@@ -159,6 +160,7 @@ const jobListings = [
 
 export default function Careers() {
   const [openIndex, setOpenIndex] = useState(0); // 0 = first job open by default
+  const [modalJobIndex, setModalJobIndex] = useState<number | null>(null);
 
   return (
     <main className="w-full bg-[#f7f8fa] flex flex-col items-center pt-7 md:px-0 md:pt-0">
@@ -303,9 +305,15 @@ export default function Careers() {
                       </div>
                     </div>
                     <div className="flex justify-center mt-6">
-                      <button className="bg-[#050506] text-white px-6 py-4 rounded-full font-medium text-base hover:bg-[#1a2238] transition-colors">
-                        Apply Now
-                      </button>
+                      <ApplicationButton
+                        title={job.title}
+                        onClick={(e: React.MouseEvent) => {
+                          e.stopPropagation();
+                          setModalJobIndex(i);
+                        }}
+                        isModalOpen={modalJobIndex === i}
+                        closeModal={() => setModalJobIndex(null)}
+                      />
                     </div>
                   </>
                 )}
