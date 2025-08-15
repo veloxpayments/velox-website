@@ -65,7 +65,7 @@ const Contact = () => {
           className="absolute left-0 top-0 w-full h-full object-cover opacity-10 pointer-events-none select-none"
           loading="lazy"
         />
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-start justify-center relative z-10 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-start justify-center relative z-1 px-4">
           {/* Left: Contact Info */}
           <div className="flex-1 flex flex-col gap-10 min-w-[300px]">
             <h2 className="text-[#050506] text-[18px] md:text-4xl font-[500] md:font-bold max-w-lg">
