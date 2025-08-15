@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className="bg-[#F7F8FA]">
+      <body className="bg-[#F7F8FA] font-Satoshi">
         <Header />
         {children}
         <Footer />

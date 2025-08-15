@@ -56,7 +56,7 @@ export default function SendMoney() {
                 alt="Transfer Speed Illustration"
                 width={427}
                 height={427}
-                className="relative z-10"
+                className="relative z-1"
               />
             </div>
             <section className="md:py-16 px-4 bg-white">
@@ -174,7 +174,7 @@ export default function SendMoney() {
                 alt="Best Rates Illustration"
                 width={427}
                 height={427}
-                className="relative z-10"
+                className="relative z-1"
               />
             </div>
             <div className="flex flex-col justify-center space-y-4 md:order-1">
@@ -212,7 +212,7 @@ export default function SendMoney() {
                 alt="Zero Fees Illustration"
                 width={427}
                 height={427}
-                className="relative z-10"
+                className="relative z-1"
               />
             </div>
             <div className="flex flex-col justify-center space-y-4">

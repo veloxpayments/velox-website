@@ -69,20 +69,20 @@ export default function Footer() {
             </div>
           </div>
           {/* Mobile download option on mobileviw */}
-          <div className="md:hidden flex items-center justify-between flex-wrap gap-4">
+          <div className="md:hidden flex items-center flex-wrap gap-4">
             <Image
               src={googlePlay}
               alt="Download QR Code"
               width={170}
               height={50}
-              className="bg-white rounded-lg"
+              className="bg-white rounded-lg md:w-[170px] md:h-[50px] w-[119px] h-[45px]"
             />
             <Image
               src={appleStore}
               alt="Download QR Code"
               width={170}
               height={50}
-              className="bg-white rounded-lg"
+              className="bg-white rounded-lg md:w-[170px] md:h-[50px] w-[119px] h-[45px]"
             />
           </div>
         </div>
