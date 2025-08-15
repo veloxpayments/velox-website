@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import DownloadButton from "../../../components/buttons/download-button";
 import CapApplicationButton from "../../../components/buttons/cap-application-button";
 const imgCap = "/CAPImage.svg";
@@ -18,10 +19,13 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <img
+          <Image
             src={imgCap}
             alt="CAP"
+            width={392}
+            height={203}
             className="h-[103px] w-[200px] md:h-[183px] md:w-[372px] lg:h-[203px] lg:w-[392px]"
+            loading="lazy"
           />
 
           <div className="flex flex-col gap-2 items-start w-full">

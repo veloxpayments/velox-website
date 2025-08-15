@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 const imgUserFollowLine = "/personTick.svg";
 const imgCheckFill = "/tick.svg";
 const imgShareForwardLine = "/bentArrowRight.svg";
@@ -43,7 +44,7 @@ export default function HowItWorks() {
           {steps.map((step, idx) => (
             <div key={idx} className="bg-white h-[333px] w-[301px] px-4 rounded-lg shadow-md flex flex-col items-start justify-center gap-4">
               <div className="bg-[#d6e3fb] rounded-full size-16 flex items-center justify-center">
-                <img src={step.img} alt="step" className="size-8" />
+                <Image src={step.img} alt="step" width={32} height={32} className="size-8" loading="lazy" />
               </div>
               <div className="bg-[#fcde2f] px-2.5 py-1 rounded-[34px]">
                 <span className="text-[#050506] text-[16px] font-satoshi font-normal">{step.step}</span>

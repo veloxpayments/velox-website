@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 const imgCurrencyDollar2Line1 = "/dollar.svg";
 const imgDownload2Line = "/download.svg";
 const imgCheckLine = "/tick.svg";
@@ -15,14 +16,14 @@ export default function EarningProcess() {
         <div className="flex flex-col gap-4 items-start">
           <div className="flex flex-row gap-4 items-center">
             <div className="bg-[#f7df56] rounded-full size-[51px] flex items-center justify-center">
-              <img src={imgCurrencyDollar2Line1} alt="dollar" className="size-[25px]" />
+              <Image src={imgCurrencyDollar2Line1} alt="dollar" width={25} height={25} className="size-[25px]" loading="lazy" />
             </div>
             <span className="text-[#050506] text-[20px] md:text-[30px] font-satoshi font-bold">Earning Process</span>
           </div>
           <div className="flex flex-col gap-5 items-start">
             <div className="flex flex-row gap-4 items-start w-full">
               <div className="bg-[#d6e3fb] rounded-full w-[39px] h-[39px] flex items-center justify-center flex-none">
-                <img src={imgDownload2Line} alt="download" className="size-[19px] contain" />
+                <Image src={imgDownload2Line} alt="download" width={19} height={19} className="size-[19px] contain" loading="lazy" />
               </div>
               <div className="flex flex-col gap-2 items-start">
                 <span className="text-[#050506] text-[18px] md:text-[20px] font-satoshi font-medium">Download the app</span>
@@ -31,7 +32,7 @@ export default function EarningProcess() {
             </div>
             <div className="flex flex-row gap-4 items-start w-full">
               <div className="bg-[#d6e3fb] rounded-full w-[39px] h-[39px] flex items-center justify-center flex-none">
-                <img src={imgCheckLine} alt="check" className="size-[19px]" />
+                <Image src={imgCheckLine} alt="check" width={19} height={19} className="size-[19px]" loading="lazy" />
               </div>
               <div className="flex flex-col gap-2 items-start">
                 <span className="text-[#050506] text-[18px] md:text-[20px] font-satoshi font-medium">Completes KYC</span>
@@ -40,7 +41,7 @@ export default function EarningProcess() {
             </div>
             <div className="flex flex-row gap-4 items-start w-full">
               <div className="bg-[#d6e3fb] rounded-full w-[39px] h-[39px] flex items-center justify-center flex-none">
-                <img src={imgCurrencyDollar2Line2} alt="dollar" className="size-[19px]" />
+                <Image src={imgCurrencyDollar2Line2} alt="dollar" width={19} height={19} className="size-[19px]" loading="lazy" />
               </div>
               <div className="flex flex-col gap-2 items-start">
                 <span className="text-[#050506] text-[18px] md:text-[20px] font-satoshi font-medium">Makes a transaction of at least $50</span>
@@ -54,13 +55,13 @@ export default function EarningProcess() {
         </div>
         {/* Divider */}
         <div className="flex h-full items-center justify-center">
-          <img src={imgLine367} alt="divider" className="h-[1px] w-full lg:h-full lg:w-[1px]" />
+          <Image src={imgLine367} alt="divider" width={1} height={40} className="h-[1px] w-full lg:h-full lg:w-[1px]" loading="lazy" />
         </div>
         {/* Right: Requirements to Qualify */}
         <div className="flex flex-col gap-6 items-start">
           <div className="flex flex-row gap-4 items-center">
             <div className="bg-[#f7df56] rounded-full size-[51px] flex items-center justify-center">
-              <img src={imgWarningLine} alt="warning" className="size-[25px]" />
+              <Image src={imgWarningLine} alt="warning" width={25} height={25} className="size-[25px]" loading="lazy" />
             </div>
             <span className="text-[#050506] text-[20px] md:text-[30px] font-satoshi font-bold">Requirements to Qualify</span>
           </div>
@@ -73,7 +74,7 @@ export default function EarningProcess() {
             ].map((req, idx) => (
               <div key={idx} className="flex flex-row gap-4 items-center w-full">
                 <div className="bg-[#babdc3] rounded-full w-[39px] h-[39px] flex items-center justify-center flex-none">
-                  <img src={imgCheckLine1} alt="check" className="size-[19px]" />
+                  <Image src={imgCheckLine1} alt="check" width={19} height={19} className="size-[19px]" loading="lazy" />
                 </div>
                 <span className="text-[#000] text-[16px] md:text-[18px] font-satoshi font-normal">{req}</span>
               </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import CapApplicationButton from "../../../components/buttons/cap-application-button";
 const imgMedalLine = "/medal.svg";
 const imgStarLine = "/star.svg";
@@ -51,7 +52,7 @@ export default function AmbassadorBenefits() {
           {benefits.map((benefit, idx) => (
             <div key={idx} className="bg-[#f8f9fb] h-[273px] w-[392px] rounded-lg shadow-lg flex flex-col items-start justify-center gap-4 px-9">
               <div className="bg-[#6584db] rounded-full size-10 md:size-16 flex items-center justify-center flex-none">
-                <img src={benefit.img} alt="benefit" className="size-6 md:size-8" />
+                <Image src={benefit.img} alt="benefit" width={32} height={32} className="size-6 md:size-8" loading="lazy" />
               </div>
               <span className="text-[#050506] text-[18px] md:text-[24px] font-satoshi font-medium">{benefit.title}</span>
               <span className="text-neutral-500 text-[16px] md:text-[18px] font-satoshi font-normal">{benefit.desc}</span>

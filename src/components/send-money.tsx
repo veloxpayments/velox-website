@@ -86,46 +86,61 @@ export default function SendMoney() {
                   <div className="flex  items-center space-x-4 pt-2">
                     {/* Canada flag */}
                     <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
-                      <img
+                      <Image
                         src="/ca.png"
                         alt="Canada flag"
+                        width={28}
+                        height={28}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
 
                     {/* Nigeria flag */}
                     <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
-                      <img
+                      <Image
                         src="/ng.png"
                         alt="Nigeria flag"
+                        width={28}
+                        height={28}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
 
                     {/* South Africa flag */}
                     <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
-                      <img
+                      <Image
                         src="/tz.png"
                         alt="South Africa flag"
+                        width={28}
+                        height={28}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
 
                     {/* Ghana flag */}
                     <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
-                      <img
+                      <Image
                         src="/gh.png"
                         alt="Ghana flag"
+                        width={28}
+                        height={28}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
 
                     {/* Kenya flag */}
                     <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
-                      <img
+                      <Image
                         src="/ke.png"
                         alt="Kenya flag"
+                        width={28}
+                        height={28}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                   </div>

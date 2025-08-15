@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import dynamic from "next/dynamic";
+const Menu = dynamic(() => import("lucide-react").then(mod => mod.Menu));
+const X = dynamic(() => import("lucide-react").then(mod => mod.X));
+const ChevronDown = dynamic(() => import("lucide-react").then(mod => mod.ChevronDown));
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../public/yellow-logo.svg";
 import Image from "next/image";
@@ -122,9 +124,23 @@ export function DrawerMenu({ onClose }: { onClose: () => void }) {
   return (
     <div className="bg-[#ffffff] h-full w-full overflow-clip relative rounded-br-[20px] rounded-tr-[20px] flex flex-col pt-10 pl-6">
       <div className="flex flex-row gap-[7px] items-center justify-start pr-4 py-4">
-        <img src={veloxLogo} alt="logo" className="h-[26px] w-[24px]" />
-        <img src={veloxName} alt="logo text" className="h-[18px] w-[58px]" />
-        <button className="ml-auto text-gray-500" onClick={onClose} aria-label="Close menu">
+        <Image
+          src={veloxLogo}
+          alt="logo"
+          className="h-[26px] w-[24px]"
+          loading="lazy"
+        />
+        <Image
+          src={veloxName}
+          alt="logo text"
+          className="h-[18px] w-[58px]"
+          loading="lazy"
+        />
+        <button
+          className="ml-auto text-gray-500"
+          onClick={onClose}
+          aria-label="Close menu"
+        >
           <X className="h-6 w-6" />
         </button>
       </div>
@@ -133,19 +149,31 @@ export function DrawerMenu({ onClose }: { onClose: () => void }) {
           <div key={item.label} className="w-full">
             <button
               className="flex flex-row items-center w-full py-2 text-[18px] text-[#393939] font-satoshi font-medium"
-              onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)}
+              onClick={() =>
+                setOpenMenu(openMenu === item.label ? null : item.label)
+              }
               aria-expanded={openMenu === item.label}
             >
-              <img
+              <Image
                 src={chevronRight}
                 alt="expand"
-                className={`h-6 w-6 pb-[3px] transition-transform ${openMenu === item.label ? "rotate-180" : "hidden"}`}
+                width={24}
+                height={24}
+                className={`h-6 w-6 pb-[3px] transition-transform ${
+                  openMenu === item.label ? "rotate-180" : "hidden"
+                }`}
+                loading="lazy"
               />
               {item.label}
-              <img
+              <Image
                 src={chevronRight}
                 alt="expand"
-                className={`h-6 w-6 pb-[3px] transition-transform ${openMenu === item.label ? "rotate-180 hidden" : ""}`}
+                width={24}
+                height={24}
+                className={`h-6 w-6 pb-[3px] transition-transform ${
+                  openMenu === item.label ? "rotate-180 hidden" : ""
+                }`}
+                loading="lazy"
               />
             </button>
             <AnimatePresence>
@@ -320,8 +348,7 @@ const Header = () => {
           </div>
         </div>
 
-  {/* ...existing code... (Mobile Navigation now handled above) */}
-
+        {/* ...existing code... (Mobile Navigation now handled above) */}
       </div>
     </>
   );

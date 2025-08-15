@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import ApplicationButton from "../../components/buttons/application-button";
 
 // Image asset imports (SVGs and PNGs as constants)
@@ -185,20 +186,26 @@ export default function Careers() {
             <span className="text-[14px] md:text-[18px] font-medium text-black">
               Filter by Department
             </span>
-            <img
+            <Image
               src={imgSelectorVerticalLine}
               alt="filter"
+              width={32}
+              height={32}
               className="w-8 h-8"
+              loading="lazy"
             />
           </button>
           <button className="bg-white py-3 md:py-0 md:h-[60px] w-full md:w-[331px] rounded-2xl flex items-center justify-between px-1 md:px-6 border border-[#bdbdbd]">
             <span className="text-[14px] md:text-[18px] font-medium text-black">
               Filter by Job Type
             </span>
-            <img
+            <Image
               src={imgSelectorVerticalLine}
               alt="filter"
+              width={32}
+              height={32}
               className="w-8 h-8"
+              loading="lazy"
             />
           </button>
         </div>
@@ -248,12 +255,15 @@ export default function Careers() {
                       </span>
                     </div>
                   </div>
-                  <img
+                  <Image
                     src={img3}
                     alt={isOpen ? "collapse" : "expand"}
+                    width={32}
+                    height={32}
                     className={`w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
+                    loading="lazy"
                   />
                 </div>
                 {isOpen && (
@@ -261,15 +271,15 @@ export default function Careers() {
                     <div className="flex flex-col md:flex-row gap-8 mt-6">
                       <div className="flex flex-col gap-2 min-w-[188px]">
                         <div className="flex items-center gap-1.5 text-[#464646] text-[14px]">
-                          <img src={img4} alt="calendar" className="w-5 h-5" />
+                          <Image src={img4} alt="calendar" width={20} height={20} className="w-5 h-5" loading="lazy" />
                           <span>Posted on {job.posted}</span>
                         </div>
                         <div className="flex items-center gap-1.5 text-[#464646] text-[14px]">
-                          <img src={img5} alt="location" className="w-5 h-5" />
+                          <Image src={img5} alt="location" width={20} height={20} className="w-5 h-5" loading="lazy" />
                           <span>{job.location}</span>
                         </div>
                         <div className="flex items-center gap-1.5 text-[#464646] text-[14px]">
-                          <img src={img6} alt="briefcase" className="w-5 h-5" />
+                          <Image src={img6} alt="briefcase" width={20} height={20} className="w-5 h-5" loading="lazy" />
                           <span>{job.type}</span>
                         </div>
                       </div>

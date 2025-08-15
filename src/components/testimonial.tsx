@@ -1,5 +1,8 @@
 "use client"
-import { Star, StarIcon } from "lucide-react"
+import dynamic from "next/dynamic";
+const Star = dynamic(() => import("lucide-react").then(mod => mod.Star));
+const StarIcon = dynamic(() => import("lucide-react").then(mod => mod.StarIcon));
+import Image from "next/image";
 
 import React from 'react'
 
@@ -46,10 +49,13 @@ const testimonials = [
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="bg-[#F8F9FB] rounded-[14px] p-6">
               <div className="flex items-center mb-4">
-                <img
+                <Image
                   src={testimonial.avatar || "/black-girl.svg"}
                   alt={testimonial.name}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full mr-4"
+                  loading="lazy"
                 />
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (

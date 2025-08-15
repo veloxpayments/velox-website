@@ -1,13 +1,16 @@
-import React from "react";
-import { DollarSign, Globe, Zap, Wallet, Clock } from "lucide-react";
-import globe from "../../public/globe-img.svg";
-import veloxGlobe from "../../public/velox-globe.png";
+import dynamic from "next/dynamic";
+const DollarSign = dynamic(() => import("lucide-react").then(mod => mod.DollarSign));
+const Globe = dynamic(() => import("lucide-react").then(mod => mod.Globe));
+const Zap = dynamic(() => import("lucide-react").then(mod => mod.Zap));
+const Wallet = dynamic(() => import("lucide-react").then(mod => mod.Wallet));
+const Clock = dynamic(() => import("lucide-react").then(mod => mod.Clock));
 import Image from "next/image";
 import rate from "../../public/exchange-rate-icon.svg";
 import zero from '../../public/zero.svg';
 import wallet from '../../public/wallet-icon.svg';
 import speed from '../../public/speed.svg';
 import noun from '../../public/reach.svg';
+
 const FeatureSection = () => {
   return (
     <div>
@@ -23,7 +26,7 @@ const FeatureSection = () => {
             {/* Competitive rates */}
             <div className="bg-[#ECF4F5] rounded-3xl p-8 relative overflow-hidden md:min-h-[623px]">
               <div className="bg-[#4059AD] w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 md:mb-6">
-                <Image src={rate} alt="" className="m-auto flex" />
+                <Image src={rate} alt="" width={40} height={40} className="m-auto flex" />
               </div>
               <h3 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">
                 Competitive rates
@@ -43,9 +46,9 @@ const FeatureSection = () => {
             </div>
 
             {/* Global reach */}
-            <div className="bg-gray-100 rounded-3xl p-8 relative overflow-hidden min-h-[373px] md:min-h-[623px]">
+            <div className="bg-gray-100 rounded-3xl p-8 relative overflow-hidden min-h-[373px] md:min-h-[623px] bg-contain bg-[url('/velox-globe.png')] bg-no-repeat bg-right bg-contain">
               <div className="bg-[#4059AD] w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 md:mb-6">
-                <Image src={noun} alt="" className="m-auto flex justify-center items-center"  />
+                <Image src={noun} alt="" width={40} height={40} className="m-auto flex justify-center items-center"  />
               </div>
               <h3 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">
                 Global reach
@@ -53,13 +56,13 @@ const FeatureSection = () => {
               <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">Send money globally</p>
 
               {/* Globe illustration */}
-              <div className="relative flex justify-end">
+              {/* <div className="relative flex justify-end">
                 <Image
                   src={veloxGlobe}
                   alt="Global network visualization"
                   className="object-cover overflow-hidden md:absolute md:-right-24 md:-top-24"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -67,7 +70,7 @@ const FeatureSection = () => {
             {/* Zero Fees */}
             <div className="bg-[#FFFCEA] rounded-3xl px-8 py-16 md:p-8">
               <div className="bg-[#4059AD] w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 md:mb-6">
-                <Image src={zero} alt=""/>
+                <Image src={zero} alt="" width={40} height={40}/>
               </div>
               <h3 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">
                 Zero Fees
@@ -80,7 +83,7 @@ const FeatureSection = () => {
             {/* Multi-wallet account */}
             <div className="bg-[#D9DEEF] rounded-3xl px-8 py-16 md:p-8">
               <div className="bg-[#4059AD] w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 md:mb-6">
-                <Image src={wallet} alt=""/>
+                <Image src={wallet} alt="" width={40} height={40}/>
               </div>
               <h3 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">
                 Multi-wallet account
@@ -91,7 +94,7 @@ const FeatureSection = () => {
             {/* Fast Transactions */}
             <div className="bg-[#DED7F0] rounded-3xl px-8 py-16 md:p-8">
               <div className="bg-[#4059AD] w-14 h-14 md:w-20 md:h-20 rounded-full flex items-center justify-center mb-2 md:mb-6">
-                <Image src={speed} alt="" className="m-auto flex"/>
+                <Image src={speed} alt="" width={40} height={40} className="m-auto flex"/>
               </div>
               <h3 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">
                 Fast Transactions

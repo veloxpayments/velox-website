@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import globe from "../../public/mobile-trim.svg";
 import { useState } from "react";
 import QRModal from "./modals/QRModal";
@@ -18,7 +19,7 @@ const Hero = () => {
         {/* Centered Content Container */}
         <div className="container pt-[145px] md:pt-0 mx-auto px-4 md:flex md:min-h-[86vh] w-full flex-col-reverse items-center justify-between gap-2 md:pt-36 sm:flex-row ">
           {/* Left Content */}
-          <div className="relative z-10  space-y-[12px]  text-left">
+          <div className="relative z-2  space-y-[12px]  text-left">
             <h1 className="text-[32px] pt-5 font-bold leading-[33px] md:leading-[46px] lg:leading-[67px] text-[#2D2D2D] md:text-[42px] lg:text-[58px]">
               Easiest way to send <br /> money across <br /> borders.
             </h1>
