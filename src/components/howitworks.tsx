@@ -20,7 +20,7 @@ const Howitworks = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
             {/* Step 1: Sign up */}
-            <div className="flex flex-col items-center text-center shadow-custom rounded-[8px] p-4 bg-[#fff]">
+            <div className="flex flex-col items-center text-center shadow-custom rounded-[8px] p-6 md:p-4 bg-[#fff]">
               <div className="mb-6">
                 <Image
                   src={sign}
@@ -28,16 +28,16 @@ const Howitworks = () => {
                   className="w-36 h-36 rounded-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-medium text-[#050506] mb-2">
+              <h3 className="text-[24px] md:text-2xl font-medium text-[#050506] mb-2">
                 Sign up
               </h3>
-              <p className="text-[#737373] font-normal text-[18px] max-w-xs mx-auto leading-[21.6px]">
+              <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
               Create account in minutes, it’s quick and easy
               </p>
             </div>
 
             {/* Step 2: KYC Verification */}
-            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-4">
+            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-6 md:p-4">
               <div className="mb-6">
                 <Image
                   src={kyc}
@@ -45,16 +45,16 @@ const Howitworks = () => {
                   className="w-36 h-36 rounded-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-medium text-[#050506] mb-[6px]">
+              <h3 className="text-[24px] md:text-2xl font-medium text-[#050506] mb-[6px]">
                 KYC Verification
               </h3>
-              <p className="text-[#737373] font-normal text-[18px] max-w-xs mx-auto leading-[21.6px]">
+              <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
                Upload clear IDs to begin transacting.
               </p>
             </div>
 
             {/* Step 3: Create Wallets */}
-            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-4">
+            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-6 md:p-4">
               <div className="mb-6">
                 <Image
                   src={wallet}
@@ -62,16 +62,16 @@ const Howitworks = () => {
                   className="w-36 h-36 rounded-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-medium text-[#050506] mb-[6px]">
+              <h3 className="text-[24px] md:text-2xl font-medium text-[#050506] mb-[6px]">
                 Create Wallets
               </h3>
-              <p className="text-[#737373] font-normal text-[18px] max-w-xs mx-auto leading-[21.6px]">
+              <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
                 Create wallets in multiple currencies
               </p>
             </div>
 
             {/* Step 4: Send money */}
-            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-4">
+            <div className="bg-[#fff] flex flex-col items-center text-center shadow-custom rounded-lg p-6 md:p-4">
               <div className="mb-6">
                 <Image
                   src={doller}
@@ -79,10 +79,10 @@ const Howitworks = () => {
                   className="w-36 h-36 rounded-full object-cover"
                 />
               </div>
-              <h3 className="text-2xl font-medium text-[#050506] mb-[6px]">
+              <h3 className="text-[24px] md:text-2xl font-medium text-[#050506] mb-[6px]">
                 Send money
               </h3>
-              <p className="text-[#737373] font-normal text-[18px] max-w-xs mx-auto leading-[21.6px]">
+              <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
                 Upload clear IDs to begin transacting.
               </p>
             </div>

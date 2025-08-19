@@ -189,17 +189,30 @@ export function DrawerMenu({ onClose }: { onClose: () => void }) {
                   transition={{ duration: 0.2 }}
                   className="pl-2"
                 >
-                  {item.items.map((subItem) => (
-                    <Link
-                      key={subItem.title}
-                      href={subItem.link}
-                      className="flex items-center gap-3 px-2 py-2 rounded-lg text-[16px] text-[#393939] hover:bg-[#f8f9fb]"
-                      onClick={onClose}
-                    >
-                      <div className="flex flex-col">
-                        <span className="font-medium">{subItem.title}</span>
-                      </div>
-                    </Link>
+                  {item.items.map((subItem, subIdx) => (
+                    <>
+                      <Link
+                        key={subItem.title}
+                        href={subItem.link}
+                        className="flex items-center gap-3 px-2 py-2 rounded-lg text-[16px] text-[#393939] hover:bg-[#f8f9fb]"
+                        onClick={onClose}
+                      >
+                        <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-50 rounded-full">
+                          <Image
+                            src={subItem.icon}
+                            alt={subItem.title}
+                            width={24}
+                            height={24}
+                          />
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="font-medium">{subItem.title}</span>
+                        </div>
+                      </Link>
+                      {subIdx < item.items.length - 1 && (
+                        <hr className="border-t border-[#ECECEC] my-2" />
+                      )}
+                    </>
                   ))}
                 </motion.div>
               )}
@@ -292,41 +305,46 @@ const Header = () => {
                       className="absolute left-0 mt-2 px-6 py-[37px] rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5"
                     >
                       <div className="py-1 w-96 space-y-8" role="menu">
-                        {item.items.map((subItem) => (
-                          <Link
-                            key={subItem.title}
-                            href={subItem.link}
-                            className="flex items-center gap-3 px-4 py-2 hover:bg-[#FCDE2F20] rounded-lg transition"
-                            role="menuitem"
-                          >
-                            <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-50 rounded-full">
-                              <Image
-                                src={subItem.icon}
-                                alt={subItem.title}
-                                width={40}
-                                height={40}
-                              />
-                            </div>
-                            <div className="flex-1">
-                              <div className="font-500 font-Satoshi text-black text-[16px] mb-1">
-                                {subItem.title}
-                              </div>
-                              <div className="text-[14px] font-Satoshi text-[#737373]">
-                                {subItem.subtitle}
-                              </div>
-                            </div>
-                            <span className="ml-auto text-gray-300">
-                              <svg width="20" height="20" fill="none">
-                                <path
-                                  d="M8 6l4 4-4 4"
-                                  stroke="#000000"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
+                        {item.items.map((subItem, subIdx) => (
+                          <>
+                            <Link
+                              key={subIdx}
+                              href={subItem.link}
+                              className="flex items-center gap-3 px-4 py-2 hover:bg-[#FCDE2F20] rounded-lg transition"
+                              role="menuitem"
+                            >
+                              <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-50 rounded-full">
+                                <Image
+                                  src={subItem.icon}
+                                  alt={subItem.title}
+                                  width={40}
+                                  height={40}
                                 />
-                              </svg>
-                            </span>
-                          </Link>
+                              </div>
+                              <div className="flex-1">
+                                <div className="font-500 font-Satoshi text-black text-[16px] mb-1">
+                                  {subItem.title}
+                                </div>
+                                <div className="text-[14px] font-Satoshi text-[#737373]">
+                                  {subItem.subtitle}
+                                </div>
+                              </div>
+                              <span className="ml-auto text-gray-300">
+                                <svg width="20" height="20" fill="none">
+                                  <path
+                                    d="M8 6l4 4-4 4"
+                                    stroke="#000000"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </svg>
+                              </span>
+                            </Link>
+                            {subIdx < item.items.length - 1 && (
+                              <hr className="border-t border-[#ECECEC] my-2" />
+                            )}
+                          </>
                         ))}
                       </div>
                     </motion.div>
@@ -351,8 +369,6 @@ const Header = () => {
             </button>
           </div>
         </div>
-
-        {/* ...existing code... (Mobile Navigation now handled above) */}
       </div>
     </>
   );

@@ -32,10 +32,10 @@ export default function SendMoney() {
     <section className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center space-y-3 text-center">
-          <p className="md:text-[40px] text-[#050506] font-medium text-4xl">
+          <p className="text-[24px] md:text-[40px] text-[#050506] font-medium text-4xl">
             Services That Deliver
           </p>
-          <h1 className="text-2xl font-normal text-[#2E2E2E]">
+          <h1 className="text-[16px] md:text-2xl font-normal text-[#2E2E2E]">
             Explore services designed to elevate every step of your journey
           </h1>
         </div>
@@ -63,12 +63,12 @@ export default function SendMoney() {
               <div className="max-w-4xl mx-auto">
                 <div className="space-y-[16px]">
                   {/* Header text */}
-                  <p className="text-sm font-medium text-[#5A5A5A] uppercase">
+                  <p className="text-[12px] md:text-sm font-medium text-[#5A5A5A] uppercase">
                     INTERNATIONAL MONEY TRANSFER
                   </p>
 
                   {/* Main heading */}
-                  <h1 className="text-4xl md:text-[44px] font-medium text-[#050506] leading-[44px]">
+                  <h1 className="text-[24px] md:text-[44px] font-medium text-[#050506] leading-[24px] md:leading-[44px]">
                     Send money globally without fees
                   </h1>
 
@@ -178,10 +178,10 @@ export default function SendMoney() {
               />
             </div>
             <div className="flex flex-col justify-center space-y-4 md:order-1">
-              <p className="text-sm font-medium text-[#5A5A5A] uppercase">
+              <p className="text-[12px] md:text-sm font-medium text-[#5A5A5A] uppercase">
                 LOWEST EXCHANGE rates
               </p>
-              <h2 className="text-3xl font-medium md:text-[44px] text-[#050506] leading-[44px]">
+              <h2 className="text-[24px] font-medium md:text-[44px] text-[#050506] leading-[24px] md:leading-[44px]">
                 Best exchange rate on the market
               </h2>
               <p className="text-[16px] text-[#5A5A5A] font-normal leading-6">
@@ -216,10 +216,10 @@ export default function SendMoney() {
               />
             </div>
             <div className="flex flex-col justify-center space-y-4">
-              <p className="text-sm font-medium text-[#5A5A5A] uppercase">
+              <p className="text-[12px] md:text-sm font-medium text-[#5A5A5A] uppercase">
                 Automate transactions
               </p>
-              <h2 className="text-3xl font-medium md:text-[44px] text-[#050506] leading-[44px]">
+              <h2 className="text-[24px] font-medium md:text-[44px] text-[#050506] leading-[24px] md:leading-[44px]">
                 Recurring payments for ease
               </h2>
               <p className="text-[16px] text-[#5A5A5A] font-normal leading-6">
