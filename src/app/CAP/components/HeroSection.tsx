@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="bg-white md:h-[665px] w-full relative overflow-clip pt-7 pb-3 px-4 md:px-[60px] md:pt-[140px]">
       <div
-        className={`bg-[#6a82d4] h-[783px] md:h-[474px] rounded-2xl relative flex px-3 pt-28 md:px-[60px] md:py-7
+        className={`bg-[#6a82d4] h-[783px] md:h-auto rounded-2xl relative flex px-3 pt-28 md:px-[60px] md:py-7
                 md:bg-[url('/capHero.png')] bg-no-repeat bg-right-bottom bg-contain bg-[url('/capHeroMobile.png')] bg-no-repeat bg-right bg-contain`}
       >
         {/* Text section */}

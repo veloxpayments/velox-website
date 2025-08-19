@@ -3,6 +3,8 @@
 import React from "react";
 import FAQDropdown from "../../components/faqDropdown";
 import Image from "next/image";
+import PrimaryButton from "../../components/buttons/primary-button";
+import SecondaryButton from "../../components/buttons/secondary-button";
 
 // Figma asset constants (update these paths to match your exported Figma assets)
 
@@ -25,9 +27,9 @@ const Referral = () => {
               Invite friends to Velox and earn $10 for each successful referral.
               Unlike others, you get the entire reward.
             </p>
-            <button className="mt-2 md:mt-6 px-8 py-3 bg-[#6584DB] text-white rounded-full text-[16px] font-[500] shadow hover:bg-[#4a6fc1] transition mx-auto">
+            <PrimaryButton onClick={() => {}}>
               Start Referring Now
-            </button>
+            </PrimaryButton>
           </div>
         </header>
       </section>
@@ -146,9 +148,9 @@ const Referral = () => {
                 Sign up for Velox to receive your unique referral code and start
                 earning $10 per referral
               </p>
-              <button className="bg-[#6584DB] hover:bg-[#4a6fc1] text-white rounded-full px-8 py-3 font-[500] text-[16px] shadow transition">
-                Download to get code
-              </button>
+              <PrimaryButton onClick={() => {}}>
+                Download to get code{" "}
+              </PrimaryButton>
             </div>
           </div>
         </div>
@@ -174,9 +176,9 @@ const Referral = () => {
             />
           ))}
         </div>
-        <button className="bg-[#050506] text-white rounded-full px-8 py-3 font-medium text-base md:text-lg shadow transition hover:bg-[#222]">
+        <SecondaryButton onClick={()=>{}}>
           See more FAQs
-        </button>
+        </SecondaryButton>
       </section>
     </div>
   );

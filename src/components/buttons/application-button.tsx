@@ -23,7 +23,7 @@ const ApplicationButton: React.FC<ApplicationButtonProps> = ({ title, onClick, i
     <>
       <button
         onClick={onClick}
-        className="bg-[#050506] text-white px-6 py-4 rounded-full font-medium text-base hover:bg-[#1a2238] transition-colors"
+        className="inline-flex bg-[#1A2238] font-medium text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-6 py-4"
       >
         Apply Now
       </button>

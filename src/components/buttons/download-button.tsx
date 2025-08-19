@@ -20,7 +20,7 @@ const DownloadButton = ({ variant }: { variant: string }) => {
       ) : variant === "secondary" ? (
         <button
           onClick={toggleModal}
-          className="md:w-[156px] bg-[#6584DB] text-white text-[16px] font-medium hover:text-black hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-6 py-4 font-medium"
+          className="md:w-[156px] bg-[#6584DB] text-white text-[16px] font-medium hover:text-[#6584DB] hover:transition hover:bg-transparent border border-[#6584DB] rounded-full px-6 py-4 font-medium"
         >
           Download
         </button>

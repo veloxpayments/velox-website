@@ -152,7 +152,7 @@ export function DrawerMenu({ onClose }: { onClose: () => void }) {
         {navItems.map((item, idx) => (
           <div key={item.label} className="w-full">
             <button
-              className="flex flex-row items-center w-full py-2 text-[18px] text-[#393939] font-satoshi font-medium"
+              className={`flex flex-row items-center w-full py-2 text-[18px] ${openMenu === item.label ? 'text-[#6584DB]' : 'text-[#393939]'} font-satoshi font-medium`}
               onClick={() =>
                 setOpenMenu(openMenu === item.label ? null : item.label)
               }
@@ -194,7 +194,7 @@ export function DrawerMenu({ onClose }: { onClose: () => void }) {
                       <Link
                         key={subItem.title}
                         href={subItem.link}
-                        className="flex items-center gap-3 px-2 py-2 rounded-lg text-[16px] text-[#393939] hover:bg-[#f8f9fb]"
+                        className="flex items-center gap-3 px-2 py-2 rounded-lg text-[16px] text-[#393939] hover:bg-[#FCDE2F20]"
                         onClick={onClose}
                       >
                         <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center bg-blue-50 rounded-full">
@@ -306,7 +306,7 @@ const Header = () => {
                     >
                       <div className="py-1 w-96 space-y-8" role="menu">
                         {item.items.map((subItem, subIdx) => (
-                          <>
+                          <div key={subIdx}>
                             <Link
                               key={subIdx}
                               href={subItem.link}
@@ -344,7 +344,7 @@ const Header = () => {
                             {subIdx < item.items.length - 1 && (
                               <hr className="border-t border-[#ECECEC] my-2" />
                             )}
-                          </>
+                          </div>
                         ))}
                       </div>
                     </motion.div>

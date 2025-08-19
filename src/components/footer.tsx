@@ -62,8 +62,8 @@ export default function Footer() {
               <Image
                 src="/qr-svg.svg"
                 alt="Download QR Code"
-                width={357}
-                height={357}
+                width={257}
+                height={257}
                 className="bg-white rounded-lg"
               />
             </div>
@@ -288,12 +288,12 @@ export default function Footer() {
               <input
                 type="text"
                 placeholder="First name"
-                className="flex-1 mb-auto mb-2 bg-[#ECF0FB] w-full text-[#949596] text-[16px] font-medium py-5 px-6 rounded-l-full outline-none placeholder-[#949596]"
+                className="flex-1 mb-auto mb-2 bg-[#ECF0FB] w-full text-[#949596] text-[16px] font-medium py-3 pl-6 md:py-5 md:px-6 rounded-l-full outline-none placeholder-[#949596]"
               />
               <input
                 type="text"
                 placeholder="Last name"
-                className="flex-1 bg-[#ECF0FB] w-full text-[#949596] text-[16px] font-medium py-5 px-6 rounded-r-full  outline-none placeholder-[#949596]"
+                className="flex-1 bg-[#ECF0FB] w-full text-[#949596] text-[16px] font-medium py-3 pl-6 md:py-5 md:px-6 rounded-r-full  outline-none placeholder-[#949596]"
               />
             </div>
             <div className="flex justify-between items-center bg-[#ECF0FB] rounded-full p-1">
