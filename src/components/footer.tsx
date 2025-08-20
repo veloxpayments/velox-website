@@ -141,7 +141,7 @@ export default function Footer() {
               <ul className="space-y-3 text-[16px] text-white">
                 <li>
                   <Link
-                    href="#"
+                    href="/#send-money"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
                     International Money <br /> Transfer
@@ -149,7 +149,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/#recurring-payment"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
                     Recurring payment
@@ -157,10 +157,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/referral"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
-                    Loyalty Program
+                    Refer and earn
                   </Link>
                 </li>
               </ul>
@@ -186,29 +186,6 @@ export default function Footer() {
                     Careers
                   </Link>
                 </li>
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h3 className="font-bold mb-4 text-[#FCDE2F]">Resources</h3>
-              <ul className="space-y-3 text-[16px] text-white">
-                <li>
-                  <Link
-                    href="/FAQs"
-                    className="hover:text-[#FFD60A] transition-colors font-normal"
-                  >
-                    FAQs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog"
-                    className="hover:text-[#FFD60A] transition-colors font-normal"
-                  >
-                    Blog
-                  </Link>
-                </li>
                 <li>
                   <Link
                     href="terms"
@@ -228,24 +205,47 @@ export default function Footer() {
               </ul>
             </div>
 
+            {/* Resources */}
+            <div>
+              <h3 className="font-bold mb-4 text-[#FCDE2F]">Resources</h3>
+              <ul className="space-y-3 text-[16px] text-white">
+                <li>
+                  <Link
+                    href="/CAP"
+                    className="hover:text-[#FFD60A] transition-colors font-normal"
+                  >
+                    CAP
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="hover:text-[#FFD60A] transition-colors font-normal"
+                  >
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
             {/* Support */}
             <div>
               <h3 className="font-bold mb-4 text-[#FCDE2F]">Support</h3>
               <ul className="space-y-3 text-[16px] text-white">
                 <li>
                   <Link
-                    href="#"
+                    href="/FAQs"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
-                    Partner with us
+                    FAQs
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/contact"
                     className="hover:text-[#FFD60A] transition-colors font-normal"
                   >
-                    Get help
+                    Talk to us
                   </Link>
                 </li>
               </ul>

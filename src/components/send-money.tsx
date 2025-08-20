@@ -18,18 +18,27 @@ export default function SendMoney() {
 
   useEffect(() => {
     if (isInView1) controls1.start({ opacity: 1, y: 0 });
-  }, [isInView1, controls1]);
-
-  useEffect(() => {
     if (isInView2) controls2.start({ opacity: 1, y: 0 });
-  }, [isInView2, controls2]);
+    if (isInView3) controls3.start({ opacity: 1, y: 0 });
+  }, [isInView1, controls1, isInView2, controls2, isInView3, controls3]);
 
   useEffect(() => {
-    if (isInView3) controls3.start({ opacity: 1, y: 0 });
-  }, [isInView3, controls3]);
+    if (window.location.hash === "#send-money") {
+      const el = document.getElementById("send-money");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    if (window.location.hash === "#recurring-payment") {
+      const el = document.getElementById("recurring-payment");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
 
   return (
-    <section className="w-full py-12 md:py-24">
+    <section className="w-full py-12 md:py-24" id="send-money">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center space-y-3 text-center">
           <p className="text-[24px] md:text-[40px] text-[#050506] font-medium text-4xl">
@@ -59,7 +68,7 @@ export default function SendMoney() {
                 className="relative z-1"
               />
             </div>
-            <section className="md:py-16 px-4 bg-white">
+            <section className="md:py-16 px-4 bg-white" >
               <div className="max-w-4xl mx-auto">
                 <div className="space-y-[16px]">
                   {/* Header text */}
@@ -191,7 +200,7 @@ export default function SendMoney() {
                 connect your world."
               </p>
               {/* Download button */}
-              <div className="">
+              <div className="" id="recurring-payment">
                 <DownloadButton variant="secondary" />
               </div>
             </div>
