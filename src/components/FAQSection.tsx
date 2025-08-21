@@ -29,6 +29,7 @@ const PAGE_SIZE = 10;
 export default function FAQSection () {
   // GLOBAL pagination count (reveals across categories in order)
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const [search, setSearch] = useState("");
 
   // Pre-calc totals to know when to stop
   const totalFaqsCount =
@@ -42,7 +43,14 @@ export default function FAQSection () {
     accountManagementFaqs.length +
     supportFaqs.length;
 
-  // Compute visible slices per category in order, and hide empty sections
+  // Filter and paginate FAQs by search
+  const filterFaqs = (faqs: any[]) =>
+    faqs.filter(
+      (faq) =>
+        faq.question.toLowerCase().includes(search.toLowerCase()) ||
+        faq.answer.toLowerCase().includes(search.toLowerCase())
+    );
+
   const {
     gsVisible,
     smVisible,
@@ -58,8 +66,9 @@ export default function FAQSection () {
     let remaining = visibleCount;
 
     const take = (arr: any[]) => {
-      const n = Math.min(arr.length, Math.max(0, remaining));
-      const slice = arr.slice(0, n);
+      const filtered = filterFaqs(arr);
+      const n = Math.min(filtered.length, Math.max(0, remaining));
+      const slice = filtered.slice(0, n);
       remaining -= n;
       return slice;
     };
@@ -76,7 +85,7 @@ export default function FAQSection () {
       supVisible: take(supportFaqs),
       canLoadMore: visibleCount < totalFaqsCount,
     };
-  }, [visibleCount, totalFaqsCount]);
+  }, [visibleCount, totalFaqsCount, search]);
 
   return (
     <section className="w-full custom-bg-faq">
@@ -95,6 +104,8 @@ export default function FAQSection () {
             type="text"
             placeholder="Search frequently asked questions"
             className="flex-1 bg-transparent outline-none text-base text-[#b9b9bb] placeholder-[#b9b9bb]"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
           />
         </div>
       </div>

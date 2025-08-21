@@ -41,7 +41,8 @@ const FAQs = () => {
           />
         </div>
       </header>
-
+      
+      {/* FAQ Section */}
       <FAQSection/>
 
       {/* Still have questions */}
