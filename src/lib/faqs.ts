@@ -73,10 +73,6 @@ export const coverageFaqs = [
     answer: "You can send money to Nigeria, and other countries coming soon.",
   },
   {
-    question: "Which countries can I send money to?",
-    answer: "You can send money to Nigeria, and other countries coming soon.",
-  },
-  {
     question: "Which countries do you operate in?",
     answer:
       "We currently operate in Canada; other countries are coming soon. P.S.: Please note that Velox only supports users in Canada currently.",

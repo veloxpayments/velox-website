@@ -5,6 +5,7 @@ import FAQDropdown from "../../components/faqDropdown";
 import Image from "next/image";
 import PrimaryButton from "../../components/buttons/primary-button";
 import SecondaryButton from "../../components/buttons/secondary-button";
+import { useRouter } from "next/navigation";
 
 // Figma asset constants (update these paths to match your exported Figma assets)
 
@@ -13,7 +14,57 @@ const how2 = "/about-images/share.svg";
 const how3 = "/about-images/dollar.svg";
 const rewardImg = "/about-images/phone.svg";
 
+const faqs = [
+    {
+    id: 1,
+    question: "How transfers work",
+    answer:
+      "Making a transfer with Velox is easy. All you have to do is: 1. Download the Velox app on your iOS or Android device. 2. Sign in to your profile within the app. 3. Users can now fund their wallet through Paramount for CAD 4. NGN wallets are funded by swapping the CAD amount from the wallet 5. Add the amount you wish to send and provide your receiver's details. 6. Relax, and let us take care of the rest!",
+  },
+  {
+    id: 2,
+    question: "Recurring payments",
+    answer:
+      "If you ever feel like setting up recurring payments, we have you covered! Users can schedule payments to loved ones on specific dates in the future and leave it to us to work our magic on the day without coming back to the app.",
+  },
+  {
+    id: 3,
+    question: "How long does it take for the recipient to receive the money I sent?",
+    answer: "It only takes a few moments for the recipient to receive the transaction.",
+  },
+  {
+    id: 4,
+    question: "What happens if I send money to the wrong recipient by mistake?",
+    answer:
+      "Before confirming any transfer, please double-check your recipient information. There is no assurance of a reimbursement for transactions made to the incorrect account. To start a reversal, you would need to get in touch with your beneficiary. Please inform our support team as soon as you find you've sent money to the wrong account for further support.",
+  },
+  {
+    id: 5,
+    question: "Which countries can I send money to?",
+    answer: "You can send money to Nigeria, and other countries coming soon.",
+  },
+  {
+    id: 6,
+    question: "How do I keep my account secure?",
+    answer:
+      "We do everything we can to keep your money safe. We ask you to do the same by keeping your security details safe. We encourage you to disguise or protect them should you write them down. You should not disclose your security details to anyone. Velox will not ask you for your card information or login details.",
+  },
+  {
+    id: 7,
+    question: "How secure is the Velox platform?",
+    answer:
+      "The Velox platform is safe and secure, our facial verification login, encrypted platform, and fraud monitoring tools keep your personal and transaction information safe and secure.",
+  },
+  {
+    id: 8,
+    question: "Account security and safety",
+    answer:
+      "If you ever have any reason to believe your account has been compromised, reach out to us at support@veloxpayments.com",
+  },
+];
+
 const Referral = () => {
+  const router = useRouter()
   return (
     <div className="w-full flex flex-col items-center min-h-screen font-satoshi pt-7 md:px-0 md:pt-0">
       {/* Hero Section */}
@@ -148,7 +199,7 @@ const Referral = () => {
                 Sign up for Velox to receive your unique referral code and start
                 earning $10 per referral
               </p>
-              <PrimaryButton onClick={() => {}}>
+              <PrimaryButton onClick={() => {router.push('/FAQs')}}>
                 Download to get code{" "}
               </PrimaryButton>
             </div>
@@ -168,15 +219,15 @@ const Referral = () => {
           </p>
         </div>
         <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10">
-          {Array.from({ length: 8 }).map((_, i) => (
+          {faqs.map((faq) => (
             <FAQDropdown
-              key={i}
-              title="How quickly will my money arrive?"
-              answer="Most transfers arrive within 1-2 business days. Platinum members receive priority processing that can deliver funds within hours for certain corridors."
+              key={faq.id}
+              title={faq.question}
+              answer={faq.answer}
             />
           ))}
         </div>
-        <SecondaryButton onClick={()=>{}}>
+        <SecondaryButton onClick={()=>{router.push('/FAQs')}}>
           See more FAQs
         </SecondaryButton>
       </section>

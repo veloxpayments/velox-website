@@ -330,7 +330,7 @@ export default function FAQSection () {
 
           <div className="flex justify-center mt-8">
             <button
-              className="bg-[#1a2238] text-white rounded-full px-8 py-3 font-medium"
+              className={`inline-flex bg-[#1A2238] font-medium text-white hover:text-black hover:transition hover:bg-[#CAB22B] rounded-full px-6 py-4 ${!canLoadMore ? 'opacity-50 disabled hover:bg-gray-500' : ''}`}
               onClick={() => canLoadMore && setVisibleCount((c) => c + PAGE_SIZE)}
               disabled={!canLoadMore}
               aria-disabled={!canLoadMore}
