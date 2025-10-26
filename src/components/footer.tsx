@@ -49,8 +49,7 @@ export default function Footer() {
               GET READY FOR EASE
             </p>
             <h2 className="text-[24px] md:text-[50px] font-bold mb-8 leading-normal">
-              Join the Velox side <br className="hidden md:inline-block" /> of
-              things
+              Join the #VeloxSideofLife
             </h2>
           </div>
           {/* QR Code */}

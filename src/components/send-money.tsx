@@ -197,7 +197,7 @@ export default function SendMoney() {
                 Seamlessly send money from Canada to Africa with Velox—trusted
                 by thousands as we expand our fast, secure transfers from the
                 USA, UK, and across the continent. Wherever life takes you, we
-                connect your world."
+                connect your world.
               </p>
               {/* Download button */}
               <div className="" id="recurring-payment">

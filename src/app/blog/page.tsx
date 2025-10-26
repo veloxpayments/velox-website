@@ -1,9 +1,11 @@
+// ...existing code...
 import Link from "next/link";
 import Image from "next/image";
 import { sanityClient } from "../../lib/sanity.client";
 import { postsListQuery, postsCountQuery, PAGE_SIZE } from "../../lib/queries";
 import { urlFor } from "../../lib/image";
 import { formatDateToLong } from "../../lib/consts";
+import BlogCoverButton from "../../components/buttons/blog-cover-button";
 
 export const revalidate = 60; // ISR
 
@@ -18,12 +20,12 @@ export default async function BlogIndex({
     sanityClient.fetch(postsListQuery, { page, limit: PAGE_SIZE }),
     sanityClient.fetch(postsCountQuery),
   ]);
-
   const pages = Math.ceil((total || 0) / PAGE_SIZE);
 
   // Sort posts by publishedAt descending (most recent first)
   const sortedPosts = [...posts].sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
   const [coverPost, ...otherPosts] = sortedPosts;
 
@@ -60,7 +62,10 @@ export default async function BlogIndex({
               <div className="flex items-center gap-3">
                 {coverPost.author?.avatar && (
                   <Image
-                    src={urlFor(coverPost.author.avatar).width(48).height(48).url()}
+                    src={urlFor(coverPost.author.avatar)
+                      .width(48)
+                      .height(48)
+                      .url()}
                     alt={coverPost.author?.name || "Author"}
                     width={48}
                     height={48}
@@ -74,30 +79,25 @@ export default async function BlogIndex({
                   </div>
                   <div className="text-[#2c2c2c] text-sm">
                     {coverPost.publishedAt
-                      ? formatDateToLong(new Date(coverPost.publishedAt).toLocaleDateString())
+                      ? formatDateToLong(
+                          new Date(coverPost.publishedAt).toLocaleDateString()
+                        )
                       : "Draft"}
                   </div>
                 </div>
               </div>
-              <Link
-                href={`/blogtest/${coverPost.slug}`}
-                className="bg-[#050506] text-white rounded-full px-8 py-3 font-medium flex items-center gap-2 mt-2"
-              >
-                Read Article
-                <Image
-                  src="/arrowRight.svg"
-                  alt="arrow"
-                  width={20}
-                  height={20}
-                  className="w-5 h-5"
-                  loading="lazy"
-                />
-              </Link>
+              <div className="mt-2">
+                <BlogCoverButton slug={coverPost.slug} />
+              </div>
             </div>
             <div className="flex-1 flex items-center justify-center">
               {coverPost.coverImage && (
                 <Image
-                  src={urlFor(coverPost.coverImage).width(600).height(400).fit("crop").url()}
+                  src={urlFor(coverPost.coverImage)
+                    .width(600)
+                    .height(400)
+                    .fit("crop")
+                    .url()}
                   alt={coverPost.title}
                   width={600}
                   height={400}
@@ -130,7 +130,7 @@ export default async function BlogIndex({
               type="text"
               placeholder="Search Articles"
               className="flex-1 bg-transparent outline-none text-base text-[#51515466] placeholder-[#51515466]"
-              // Add search logic if needed
+              // Add search logic
               disabled
             />
           </div>
@@ -143,7 +143,11 @@ export default async function BlogIndex({
             >
               {p.coverImage && (
                 <Image
-                  src={urlFor(p.coverImage).width(400).height(240).fit("crop").url()}
+                  src={urlFor(p.coverImage)
+                    .width(400)
+                    .height(240)
+                    .fit("crop")
+                    .url()}
                   alt={p.title}
                   width={400}
                   height={240}
@@ -191,25 +195,16 @@ export default async function BlogIndex({
                       </div>
                       <div className="text-[#2c2c2c] text-xs">
                         {p.publishedAt
-                          ? formatDateToLong(new Date(p.publishedAt).toLocaleDateString())
+                          ? formatDateToLong(
+                              new Date(p.publishedAt).toLocaleDateString()
+                            )
                           : "Draft"}
                       </div>
                     </div>
                   </div>
-                  <Link
-                    href={`/blogtest/${p.slug}`}
-                    className="bg-[#050506] text-white rounded-full px-6 py-2 font-medium flex items-center gap-2"
-                  >
-                    Read Article
-                    <Image
-                      src="/arrowRight.svg"
-                      alt="arrow"
-                      width={16}
-                      height={16}
-                      className="w-4 h-4"
-                      loading="lazy"
-                    />
-                  </Link>
+                  <div className="mt-2">
+                    <BlogCoverButton slug={p.slug} />
+                  </div>
                 </div>
               </div>
             </div>

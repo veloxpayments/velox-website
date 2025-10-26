@@ -14,7 +14,7 @@ const Howitworks = () => {
               How it Works
             </h2>
             <p className="text-[16px] text-[#2E2E2E] font-normal">
-              Send money internationally in three simple step
+              Send money internationally in three simple steps
             </p>
           </div>
 
@@ -32,7 +32,7 @@ const Howitworks = () => {
                 Sign up
               </h3>
               <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
-              Create account in minutes, it’s quick and easy
+              Create an account in minutes. It’s quick and easy.
               </p>
             </div>
 
