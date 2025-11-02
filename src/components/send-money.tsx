@@ -68,7 +68,7 @@ export default function SendMoney() {
                 className="relative z-1"
               />
             </div>
-            <section className="md:py-16 px-4 bg-white" >
+            <section className="md:py-16 px-4 bg-white">
               <div className="max-w-4xl mx-auto">
                 <div className="space-y-[16px]">
                   {/* Header text */}
@@ -152,6 +152,18 @@ export default function SendMoney() {
                         loading="lazy"
                       />
                     </div>
+
+                    {/* UK flag */}
+                    <div className="w-[28px] h-[28px] rounded-full overflow-hidden">
+                      <Image
+                        src="/uk.svg"
+                        alt="UK flag"
+                        width={28}
+                        height={28}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
 
                   {/* More countries text */}
@@ -188,16 +200,15 @@ export default function SendMoney() {
             </div>
             <div className="flex flex-col justify-center space-y-4 md:order-1">
               <p className="text-[12px] md:text-sm font-medium text-[#5A5A5A] uppercase">
-                LOWEST EXCHANGE rates
+                LOWEST EXCHANGE RATES
               </p>
               <h2 className="text-[24px] font-medium md:text-[44px] text-[#050506] leading-[24px] md:leading-[44px]">
                 Best exchange rate on the market
               </h2>
               <p className="text-[16px] text-[#5A5A5A] font-normal leading-6">
-                Seamlessly send money from Canada to Africa with Velox—trusted
-                by thousands as we expand our fast, secure transfers from the
-                USA, UK, and across the continent. Wherever life takes you, we
-                connect your world.
+                We keep it real, and that includes our rates. Get daily exchange
+                rate alerts, so you always know the perfect time to send money,
+                save more and stress less.
               </p>
               {/* Download button */}
               <div className="" id="recurring-payment">
@@ -232,13 +243,47 @@ export default function SendMoney() {
                 Recurring payments for ease
               </h2>
               <p className="text-[16px] text-[#5A5A5A] font-normal leading-6">
-                Seamlessly send money from Canada to Africa with Velox—trusted
-                by thousands as we expand our fast, secure transfers from the
-                USA, UK, and across the continent. Wherever life takes you, we
-                connect your world."
+                Never miss a birthday, rent or a monthly commitment. Automate
+                your transfers with zero fees and great rates. Stay consistent,
+                connected and carefree across borders.
               </p>
               {/* Download button */}
               <div className="">
+                <DownloadButton variant="secondary" />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Loyalty Points Section */}
+          <motion.div
+            ref={ref2}
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls2}
+            transition={{ duration: 0.5 }}
+            className="grid md:w-3/4 gap-8 mx-auto md:grid-cols-2 md:gap-8 md:grid-flow-col"
+          >
+            <div className="relative flex items-center justify-center md:order-2">
+              <div className="absolute h-[300px] w-[300px] rounded-full" />
+              <Image
+                src="/services-two.svg"
+                alt="Best Rates Illustration"
+                width={427}
+                height={427}
+                className="relative z-1"
+              />
+            </div>
+            <div className="flex flex-col justify-center space-y-4 md:order-1">
+              <p className="text-[12px] md:text-sm font-medium text-[#5A5A5A] uppercase">
+                LOYALTY POINTS
+              </p>
+              <h2 className="text-[24px] font-medium md:text-[44px] text-[#050506] leading-[24px] md:leading-[44px]">
+                Earn points while you spend
+              </h2>
+              <p className="text-[16px] text-[#5A5A5A] font-normal leading-6">
+                Each time you send money, you earn loyalty points you can redeem later.Because adulting deserves rewards.
+              </p>
+              {/* Download button */}
+              <div className="" id="recurring-payment">
                 <DownloadButton variant="secondary" />
               </div>
             </div>

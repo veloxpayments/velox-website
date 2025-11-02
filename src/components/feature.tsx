@@ -32,7 +32,7 @@ const FeatureSection = () => {
                 Competitive rates
               </h3>
               <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">
-                Transact with low rates
+                Get more for your money that works for you.
               </p>
 
               {/* Phone mockup image */}
@@ -53,7 +53,7 @@ const FeatureSection = () => {
               <h3 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">
                 Global reach
               </h3>
-              <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">Send money globally</p>
+              <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">Send money globally. We've got you.</p>
 
               {/* Globe illustration */}
               {/* <div className="relative flex justify-end">
@@ -76,7 +76,7 @@ const FeatureSection = () => {
                 Zero Fees
               </h3>
               <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">
-                No fixed fees, transaction and conversion fees
+                No hidden fees or fixed charges. Just transparency.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ const FeatureSection = () => {
               <h3 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">
                 Multi-wallet account
               </h3>
-              <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">Hold money in multiple currencies</p>
+              <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">All your currencies in one wallet.</p>
             </div>
 
             {/* Fast Transactions */}
@@ -100,7 +100,7 @@ const FeatureSection = () => {
                 Fast Transactions
               </h3>
               <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">
-                Send money within seconds of an initiated transaction
+                Transactions completed in seconds. Its like teleportation.
               </p>
             </div>
           </div>

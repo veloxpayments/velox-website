@@ -32,7 +32,7 @@ const Howitworks = () => {
                 Sign up
               </h3>
               <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
-              Create an account in minutes. It’s quick and easy.
+              Create your account in just a few taps
               </p>
             </div>
 
@@ -49,7 +49,7 @@ const Howitworks = () => {
                 KYC Verification
               </h3>
               <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
-               Upload clear IDs to begin transacting.
+               Verify your ID to keep your account safe
               </p>
             </div>
 
@@ -66,7 +66,7 @@ const Howitworks = () => {
                 Create Wallets
               </h3>
               <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
-                Create wallets in multiple currencies
+                Open wallets in multiple currencies instantly
               </p>
             </div>
 
@@ -83,7 +83,7 @@ const Howitworks = () => {
                 Send money
               </h3>
               <p className="text-[#737373] font-normal text-[16px] md:text-[18px] max-w-xs mx-auto leading-[21.6px]">
-                Upload clear IDs to begin transacting.
+                Choose a currency, enter the amount and hit send 
               </p>
             </div>
           </div>

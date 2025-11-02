@@ -167,15 +167,17 @@ export default function Careers() {
     <main className="w-full bg-[#f7f8fa] flex flex-col items-center pt-7 md:px-0 md:pt-0">
       {/* Header Section */}
       <section className="w-full px-4 md:px-0">
-		<header className="w-full h-[783px] md:h-auto flex flex-col items-center justify-center px-4 md:px-0 pt-12 md:pt-[120px] pb-8 md:pb-0 bg-[#E4EEFE] md:bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)] rounded-2xl md:rounded-none min-h-[400px] md:min-h-[555px] relative overflow-hidden">
+        <header className="w-full h-[783px] md:h-auto flex flex-col items-center justify-center px-4 md:px-0 pt-12 md:pt-[120px] pb-8 md:pb-0 bg-[#E4EEFE] md:bg-[linear-gradient(110deg,_#F0F3FB_0.23%,_#D1DAF4_99.77%)] rounded-2xl md:rounded-none min-h-[400px] md:min-h-[555px] relative overflow-hidden">
           <div className="max-w-5xl w-full flex flex-col items-center justify-center mx-auto">
-          <h1 className="text-[28px] md:text-[56px] font-medium text-center text-[#050506] md:leading-[50px]">Join Our Team</h1>
-          <p className="text-[16px] md:text-[24px] font-normal text-center text-[#414141] mt-4 md:mt-8 max-w-[80%] md:max-w-3xl mx-auto">
-            Discover your next career opportunity and become part of a team
-            that's building the future.
-          </p>
-          <div className="mt-8 w-[120px] md:w-[250px] bg-[#6584DB] h-[5px] rounded-full"></div>
-        </div>
+            <h1 className="text-[28px] md:text-[56px] font-medium text-center text-[#050506] md:leading-[50px]">
+              Join Our Team
+            </h1>
+            <p className="text-[16px] md:text-[24px] font-normal text-center text-[#414141] mt-4 md:mt-8 max-w-[80%] md:max-w-3xl mx-auto">
+              Discover your next career opportunity and become part of a team
+              that's building the future.
+            </p>
+            <div className="mt-8 w-[120px] md:w-[250px] bg-[#6584DB] h-[5px] rounded-full"></div>
+          </div>
         </header>
       </section>
 
@@ -221,7 +223,9 @@ export default function Careers() {
               <div
                 key={job.title}
                 className={`bg-white rounded-2xl border border-[#bdbdbd] transition-all duration-300 ${
-                  isOpen ? "p-4 md:p-8" : "px-4 md:px-8 py-4 overflow-hidden cursor-pointer"
+                  isOpen
+                    ? "p-4 md:p-8"
+                    : "px-4 md:px-8 py-4 overflow-hidden cursor-pointer"
                 }`}
                 onClick={() => setOpenIndex(isOpen ? -1 : i)}
                 tabIndex={0}
@@ -271,15 +275,36 @@ export default function Careers() {
                     <div className="flex flex-col md:flex-row gap-8 mt-6">
                       <div className="flex flex-col gap-2 min-w-[188px]">
                         <div className="flex items-center gap-1.5 text-[#464646] text-[14px]">
-                          <Image src={img4} alt="calendar" width={20} height={20} className="w-5 h-5" loading="lazy" />
+                          <Image
+                            src={img4}
+                            alt="calendar"
+                            width={20}
+                            height={20}
+                            className="w-5 h-5"
+                            loading="lazy"
+                          />
                           <span>Posted on {job.posted}</span>
                         </div>
                         <div className="flex items-center gap-1.5 text-[#464646] text-[14px]">
-                          <Image src={img5} alt="location" width={20} height={20} className="w-5 h-5" loading="lazy" />
+                          <Image
+                            src={img5}
+                            alt="location"
+                            width={20}
+                            height={20}
+                            className="w-5 h-5"
+                            loading="lazy"
+                          />
                           <span>{job.location}</span>
                         </div>
                         <div className="flex items-center gap-1.5 text-[#464646] text-[14px]">
-                          <Image src={img6} alt="briefcase" width={20} height={20} className="w-5 h-5" loading="lazy" />
+                          <Image
+                            src={img6}
+                            alt="briefcase"
+                            width={20}
+                            height={20}
+                            className="w-5 h-5"
+                            loading="lazy"
+                          />
                           <span>{job.type}</span>
                         </div>
                       </div>
