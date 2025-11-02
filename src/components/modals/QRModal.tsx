@@ -1,5 +1,6 @@
 import Image from "next/image";
 import qr from "../../../public/qr-code.svg";
+import Link from "next/link";
 
 const QRModal = ({ toggleModal }) => {
   return (
@@ -11,11 +12,31 @@ const QRModal = ({ toggleModal }) => {
       ></div>
 
       {/* Modal Content */}
-      <div className="relative custom-modal rounded-2xl bg-white shadow-lg z-10 w-full max-w-[90vw] sm:max-w-md lg:max-w-2xl p-4 sm:p-8 lg:py-[60px] lg:px-[80px]">
+      <div className="relative custom-modal rounded-2xl bg-white shadow-lg z-10 w-full max-w-[90vw] sm:max-w-md lg:max-w-2xl md:p-4 py-20 px-4 lg:py-[60px] lg:px-[80px]">
         {/* Cross Button */}
         <button
           onClick={toggleModal}
-          className="absolute top-0 -right-14 bg-white p-2 rounded-full text-black hover:text-gray-700"
+          className="hidden md:block absolute top-0 -right-14 bg-white p-2 rounded-full text-black hover:text-gray-700"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <button
+          onClick={toggleModal}
+          className="md:hidden absolute top-4 right-4 p-2 rounded-full text-black hover:text-gray-700"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +55,7 @@ const QRModal = ({ toggleModal }) => {
         </button>
 
         {/* Modal Body */}
-        <div className="relative flex flex-col items-center space-y-4">
+        <div className="relative hidden md:flex flex-col items-center space-y-4">
           <div className="relative z-10 text-center space-y-4 bg-white p-2 sm:p-5 rounded-md">
             <p className="text-2xl sm:text-3xl md:text-[40px] font-bold text-[#050506]">
               Scan to download
@@ -58,6 +79,23 @@ const QRModal = ({ toggleModal }) => {
             <p className="text-xs sm:text-sm font-medium text-[#050506]">
               Download Velox and sign up or log in to your account.
             </p>
+          </div>
+        </div>
+
+        {/* Mobile View */}
+        <div className="md:hidden flex flex-col items-center ">
+          <div className="relative z-10 text-center space-y-4 p-2 sm:p-5 rounded-md">
+            <p className="text-[22px] font-bold">Tap to download</p>
+            <p className="text-[16px] text-[#737373] leading-relaxed">Download Velox using the appropriate link</p>
+            <div className="flex flex-col justify-center items-center gap-2">
+              <Link href="" target="_blank" rel="noopener noreferrer">
+                <Image src="/googlePlayDownload.png" alt="Google Play" width={150} height={50} className="mx-2" ></Image>
+              </Link>
+              <Link href="" target="_blank" rel="noopener noreferrer">
+                <Image src="/appleStoreDownload.png" alt="App Store" width={150} height={50} className="mx-2" ></Image>
+              </Link>
+            </div>
+            <p>Download Velox and sign up or log in to your account.</p>
           </div>
         </div>
       </div>
