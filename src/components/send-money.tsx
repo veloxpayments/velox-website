@@ -265,7 +265,7 @@ export default function SendMoney() {
             <div className="relative flex items-center justify-center md:order-2">
               <div className="absolute h-[300px] w-[300px] rounded-full" />
               <Image
-                src="/services-two.svg"
+                src="/services-three.svg"
                 alt="Best Rates Illustration"
                 width={427}
                 height={427}
