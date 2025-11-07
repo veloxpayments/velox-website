@@ -12,8 +12,6 @@ const {
   coverageFaqs,
   beneficiariesFaqs,
   securityFaqs,
-  accountManagementFaqs,
-  supportFaqs,
 } = faqsByCategory;
 
 
@@ -39,9 +37,7 @@ export default function FAQSection () {
     complianceKycFaqs.length +
     coverageFaqs.length +
     beneficiariesFaqs.length +
-    securityFaqs.length +
-    accountManagementFaqs.length +
-    supportFaqs.length;
+    securityFaqs.length ;
 
   // Filter and paginate FAQs by search
   const filterFaqs = (faqs: any[]) =>
@@ -59,8 +55,6 @@ export default function FAQSection () {
     covVisible,
     benVisible,
     secVisible,
-    accVisible,
-    supVisible,
     canLoadMore,
   } = useMemo(() => {
     let remaining = visibleCount;
@@ -81,8 +75,6 @@ export default function FAQSection () {
       covVisible: take(coverageFaqs),
       benVisible: take(beneficiariesFaqs),
       secVisible: take(securityFaqs),
-      accVisible: take(accountManagementFaqs),
-      supVisible: take(supportFaqs),
       canLoadMore: visibleCount < totalFaqsCount,
     };
   }, [visibleCount, totalFaqsCount, search]);
@@ -117,7 +109,7 @@ export default function FAQSection () {
             <section className="mb-10">
               <div className="flex items-center gap-3 mb-2">
                 <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Getting Started
+                  About Velox & General Information
                 </h2>
               </div>
               <Image
@@ -136,60 +128,12 @@ export default function FAQSection () {
             </section>
           )}
 
-          {/* Send Money */}
-          {smVisible.length > 0 && (
-            <section className="mb-10">
-              <div className="flex items-center gap-3 mb-2">
-                <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Send Money
-                </h2>
-              </div>
-              <Image
-                src={imgLine}
-                alt="line"
-                width={200}
-                height={8}
-                className="w-full h-1 mb-6"
-                loading="lazy"
-              />
-              <div className="flex flex-col gap-4">
-                {smVisible.map((faq: any, idx: number) => (
-                  <FAQDropdown key={idx} title={faq.question} answer={faq.answer} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Fees & Pricing */}
-          {fpVisible.length > 0 && (
-            <section className="mb-10">
-              <div className="flex items-center gap-3 mb-2">
-                <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Fees & Pricing
-                </h2>
-              </div>
-              <Image
-                src={imgLine}
-                alt="line"
-                width={200}
-                height={8}
-                className="w-full h-1 mb-6"
-                loading="lazy"
-              />
-              <div className="flex flex-col gap-4">
-                {fpVisible.map((faq: any, idx: number) => (
-                  <FAQDropdown key={idx} title={faq.question} answer={faq.answer} />
-                ))}
-              </div>
-            </section>
-          )}
-
           {/* Compliance & KYC */}
           {kycVisible.length > 0 && (
             <section className="mb-10">
               <div className="flex items-center gap-3 mb-2">
                 <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Compliance & KYC
+                  Account Setup & Verification (KYC)
                 </h2>
               </div>
               <Image
@@ -208,12 +152,60 @@ export default function FAQSection () {
             </section>
           )}
 
-          {/* Coverage & Availability */}
+          {/* Send Money */}
+          {smVisible.length > 0 && (
+            <section className="mb-10">
+              <div className="flex items-center gap-3 mb-2">
+                <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
+                  Funding & Sending Money
+                </h2>
+              </div>
+              <Image
+                src={imgLine}
+                alt="line"
+                width={200}
+                height={8}
+                className="w-full h-1 mb-6"
+                loading="lazy"
+              />
+              <div className="flex flex-col gap-4">
+                {smVisible.map((faq: any, idx: number) => (
+                  <FAQDropdown key={idx} title={faq.question} answer={faq.answer} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* New Features & Corridors */}
+          {fpVisible.length > 0 && (
+            <section className="mb-10">
+              <div className="flex items-center gap-3 mb-2">
+                <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
+                  New Features & Corridors
+                </h2>
+              </div>
+              <Image
+                src={imgLine}
+                alt="line"
+                width={200}
+                height={8}
+                className="w-full h-1 mb-6"
+                loading="lazy"
+              />
+              <div className="flex flex-col gap-4">
+                {fpVisible.map((faq: any, idx: number) => (
+                  <FAQDropdown key={idx} title={faq.question} answer={faq.answer} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Loyalty Program */}
           {covVisible.length > 0 && (
             <section className="mb-10">
               <div className="flex items-center gap-3 mb-2">
                 <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Coverage & Availability
+                  Loyalty Program
                 </h2>
               </div>
               <Image
@@ -232,36 +224,12 @@ export default function FAQSection () {
             </section>
           )}
 
-          {/* Beneficiaries */}
-          {benVisible.length > 0 && (
-            <section className="mb-10">
-              <div className="flex items-center gap-3 mb-2">
-                <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Beneficiaries
-                </h2>
-              </div>
-              <Image
-                src={imgLine}
-                alt="line"
-                width={200}
-                height={8}
-                className="w-full h-1 mb-6"
-                loading="lazy"
-              />
-              <div className="flex flex-col gap-4">
-                {benVisible.map((faq: any, idx: number) => (
-                  <FAQDropdown key={idx} title={faq.question} answer={faq.answer} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Security & Privacy */}
+          {/* Security & Safety */}
           {secVisible.length > 0 && (
             <section className="mb-10">
               <div className="flex items-center gap-3 mb-2">
                 <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Security & Privacy
+                  Security & Safety
                 </h2>
               </div>
               <Image
@@ -280,12 +248,12 @@ export default function FAQSection () {
             </section>
           )}
 
-          {/* Account & Profile Management */}
-          {accVisible.length > 0 && (
+          {/* Troubleshooting & Support */}
+          {benVisible.length > 0 && (
             <section className="mb-10">
               <div className="flex items-center gap-3 mb-2">
                 <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Account & Profile Management
+                  Troubleshooting & Support
                 </h2>
               </div>
               <Image
@@ -297,31 +265,7 @@ export default function FAQSection () {
                 loading="lazy"
               />
               <div className="flex flex-col gap-4">
-                {accVisible.map((faq: any, idx: number) => (
-                  <FAQDropdown key={idx} title={faq.question} answer={faq.answer} />
-                ))}
-              </div>
-            </section>
-          )}
-
-          {/* Support & Complaints */}
-          {supVisible.length > 0 && (
-            <section className="mb-10">
-              <div className="flex items-center gap-3 mb-2">
-                <h2 className="text-[18px] md:text-[28px] font-medium text-[#000]">
-                  Support & Complaints
-                </h2>
-              </div>
-              <Image
-                src={imgLine}
-                alt="line"
-                width={200}
-                height={8}
-                className="w-full h-1 mb-6"
-                loading="lazy"
-              />
-              <div className="flex flex-col gap-4">
-                {supVisible.map((faq: any, idx: number) => (
+                {benVisible.map((faq: any, idx: number) => (
                   <FAQDropdown key={idx} title={faq.question} answer={faq.answer} />
                 ))}
               </div>

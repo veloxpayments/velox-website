@@ -40,7 +40,7 @@ const FAQDropdown = ({ title, answer }: FAQDropdownProps) => {
       </button>
       {open && (
         <div className="px-6 pb-5">
-          <p className="text-[#050506] leading-[27px] font-normal text-[16px] md:text-[18px]">
+          <p className="text-[#050506] leading-[27px] font-normal text-[16px] md:text-[18px] whitespace-pre-line">
             {answer}
           </p>
         </div>
