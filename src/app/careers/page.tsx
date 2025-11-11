@@ -174,7 +174,7 @@ export default function Careers() {
             </h1>
             <p className="text-[16px] md:text-[24px] font-normal text-center text-[#414141] mt-4 md:mt-8 max-w-[80%] md:max-w-3xl mx-auto">
               Discover your next career opportunity and become part of a team
-              that's building the future.
+              that&apos;s building the future.
             </p>
             <div className="mt-8 w-[120px] md:w-[250px] bg-[#6584DB] h-[5px] rounded-full"></div>
           </div>

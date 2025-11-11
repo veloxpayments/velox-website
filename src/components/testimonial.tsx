@@ -69,7 +69,7 @@ const testimonials = [
                 </div>
               </div>
 
-              <p className="text-[#3C3C3C] text-[18px] italic mb-4 leading-[27px] font-normal">"{testimonial.text}"</p>
+              <p className="text-[#3C3C3C] text-[18px] italic mb-4 leading-[27px] font-normal">&quot;{testimonial.text}&quot;</p>
 
               <div>
                 <p className="font-medium text-black text-[18px]">{testimonial.name}</p>

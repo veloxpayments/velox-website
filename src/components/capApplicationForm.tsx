@@ -95,7 +95,7 @@ export default function CapApplicationForm() {
               })}
             />
             <div>
-              <span className="text-xs text-gray-400">Please use the same one linked to your account if you're an existing user</span>
+              <span className="text-xs text-gray-400">Please use the same one linked to your account if you&apos;re an existing user</span>
             </div>
             
             {errors.phone && <span className="text-red-500 text-xs">{errors.phone.message as string}</span>}

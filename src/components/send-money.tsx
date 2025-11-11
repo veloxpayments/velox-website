@@ -84,7 +84,7 @@ export default function SendMoney() {
                   {/* Description paragraphs */}
                   <div className="mx-auto">
                     <p className="text-[16px] text-[#5A5A5A] leading-6 font-normal">
-                      Wherever life takes you, we'll always keep you connected
+                      Wherever life takes you, we&apos;ll always keep you connected
                       to home <br />
                       Join thousands who trust us, for fast, secure, and
                       effortless international money transfers.

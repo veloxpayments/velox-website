@@ -82,7 +82,7 @@ export default function EarningProcess() {
           </div>
           <div className="bg-[#fdf9dd] p-4 rounded-lg lg:w-[422px] mt-4 border-l-4 border-[#f7df57] flex flex-col gap-2">
             <span className="text-[#000] text-[18px] md:text-[22px] font-satoshi font-medium">After Approval:</span>
-            <span className="text-neutral-500 text-[16px] md:text-[18px] max-w-[60vw] font-satoshi font-normal">You'll receive a welcome email with your unique referral code, program rules, and a link to access the ambassador toolkit.</span>
+            <span className="text-neutral-500 text-[16px] md:text-[18px] max-w-[60vw] font-satoshi font-normal">You&apos;ll receive a welcome email with your unique referral code, program rules, and a link to access the ambassador toolkit.</span>
           </div>
         </div>
       </div>

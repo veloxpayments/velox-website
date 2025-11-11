@@ -53,7 +53,7 @@ const FeatureSection = () => {
               <h3 className="text-[22px] md:text-[32px] font-bold text-[#2D2D2D] leading-[33px] md:leading-[48px]">
                 Global reach
               </h3>
-              <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">Send money globally. We've got you.</p>
+              <p className="text-[#2D2D2D] text-[14px] md:text-[20px] mb-6 font-normal leading-[21px] md:leading-[30px]">Send money globally. We&apos;ve got you.</p>
 
               {/* Globe illustration */}
               {/* <div className="relative flex justify-end">
