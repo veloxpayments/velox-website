@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { SanityLive } from "../lib/sanity.live";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const RootLayout = ({ children }) => {
   return (
@@ -10,6 +11,7 @@ const RootLayout = ({ children }) => {
       <body className="bg-[#F7F8FA] font-Satoshi">
         <Header />
         {children}
+        <SpeedInsights />
         <SanityLive />
         <Footer />
       </body>
