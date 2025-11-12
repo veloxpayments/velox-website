@@ -9,18 +9,22 @@ export default function SendMoney() {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
+  const ref4 = useRef(null);
   const isInView1 = useInView(ref1, { once: true, margin: "-100px" });
   const isInView2 = useInView(ref2, { once: true, margin: "-100px" });
   const isInView3 = useInView(ref3, { once: true, margin: "-100px" });
+  const isInView4 = useInView(ref4, { once: true, margin: "-100px" });
   const controls1 = useAnimation();
   const controls2 = useAnimation();
   const controls3 = useAnimation();
+  const controls4 = useAnimation();
 
   useEffect(() => {
     if (isInView1) controls1.start({ opacity: 1, y: 0 });
     if (isInView2) controls2.start({ opacity: 1, y: 0 });
     if (isInView3) controls3.start({ opacity: 1, y: 0 });
-  }, [isInView1, controls1, isInView2, controls2, isInView3, controls3]);
+    if (isInView4) controls4.start({ opacity: 1, y: 0 });
+  }, [isInView1, controls1, isInView2, controls2, isInView3, controls3, isInView4, controls4]);
 
   useEffect(() => {
     if (window.location.hash === "#send-money") {
@@ -256,9 +260,9 @@ export default function SendMoney() {
 
           {/* Loyalty Points Section */}
           <motion.div
-            ref={ref2}
+            ref={ref4}
             initial={{ opacity: 0, y: 50 }}
-            animate={controls2}
+            animate={controls4}
             transition={{ duration: 0.5 }}
             className="grid md:w-3/4 gap-8 mx-auto md:grid-cols-2 md:gap-8 md:grid-flow-col"
           >

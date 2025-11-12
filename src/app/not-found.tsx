@@ -11,7 +11,7 @@ export default function NotFound() {
       {/* Main Content */}
       <div className="flex flex-col items-center gap-4 px-4 text-center">
         <h1 className="text-[24px] md:text-5xl font-bold text-[#050506]">Error 404</h1>
-        <p className="text-[16px] md:text-xl text-[#050506] mb-8">Oops... Page not found. Let’s get you back home</p>
+        <p className="text-[16px] md:text-xl text-[#050506] mb-8">Oops... Page not found. Let&apos;s get you back home</p>
         <SecondaryButton onClick={() => window.location.href = "/"}>Go back home</SecondaryButton>
       </div>
     </div>
