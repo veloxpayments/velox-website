@@ -19,7 +19,7 @@ const faqs = [
     id: 1,
     question: "How transfers work",
     answer:
-      "Making a transfer with Velox is easy. All you have to do is: 1. Download the Velox app on your iOS or Android device. 2. Sign in to your profile within the app. 3. Users can now fund their wallet through Paramount for CAD 4. NGN wallets are funded by swapping the CAD amount from the wallet 5. Add the amount you wish to send and provide your receiver's details. 6. Relax, and let us take care of the rest!",
+      "1. Download and Sign In to the Velox app.\n2. Fund your Wallet (e.g., CAD Wallet via Paramount, or GBP Wallet via supported method).\n3. Swap your home currency (CAD/GBP) to the recipient's currency (NGN/KES) within the wallet.\n4. Enter the amount, provide your receiver's details, and confirm the transaction.",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const faqs = [
   {
     id: 3,
     question: "How long does it take for the recipient to receive the money I sent?",
-    answer: "It only takes a few moments for the recipient to receive the transaction.",
+    answer: "Transfers are typically instant, taking only a few moments for the recipient to receive the funds.",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const faqs = [
   {
     id: 5,
     question: "Which countries can I send money to?",
-    answer: "You can send money to Nigeria, and other countries coming soon.",
+    answer: "You can currently send money to Nigeria and Kenya, with more countries launching soon.",
   },
   {
     id: 6,

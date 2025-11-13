@@ -8,7 +8,7 @@ export const gettingStartedFaqs = [
   {
     question: "Which countries do you operate in?",
     answer:
-      "Velox is currently fully operational and regulated for users in Canada. We are actively expanding to serve users in the United Kingdom.",
+      "Velox is currently fully operational and regulated for Nigerian and Kenyan users in Canada. We are actively expanding to serve users in the United Kingdom.",
   },
   {
     question: "Which countries can I send money to?",
@@ -204,34 +204,6 @@ export const securityFaqs = [
   },
 ];
 
-// Account & Profile Management
-export const accountManagementFaqs = [
-  {
-    question: "How do I reset my password?",
-    answer:
-      "When prompted for your password, if it is incorrect, you will see a button to reset your password via your registered email.",
-  },
-  {
-    question: "How do I update my details?",
-    answer:
-      "Users can't make changes to their information once KYC is verified. If they want to, they have to reach out to support.",
-  },
-  {
-    question: "Can I close my Velox account?",
-    answer:
-      "We hope that you never have to, but if you ever feel the need to delete your account, please contact the customer support team at support@veloxpayments.com",
-  },
-];
-
-// Support & Complaints
-export const supportFaqs = [
-  {
-    question: "Who do I reach out to if I have a complaint?",
-    answer:
-      "You can now live chat with an agent on the Velox mobile app or contact the customer support team at support@veloxpayments.com",
-  },
-];
-
 export const faqsByCategory = {
   gettingStartedFaqs,
   sendMoneyFaqs,
@@ -240,6 +212,4 @@ export const faqsByCategory = {
   coverageFaqs,
   beneficiariesFaqs,
   securityFaqs,
-  accountManagementFaqs,
-  supportFaqs,
 };

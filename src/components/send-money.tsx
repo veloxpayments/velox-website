@@ -89,7 +89,7 @@ export default function SendMoney() {
                   <div className="mx-auto">
                     <p className="text-[16px] text-[#5A5A5A] leading-6 font-normal">
                       Wherever life takes you, we&apos;ll always keep you connected
-                      to home <br />
+                      to home. <br />
                       Join thousands who trust us, for fast, secure, and
                       effortless international money transfers.
                     </p>
@@ -284,7 +284,7 @@ export default function SendMoney() {
                 Earn points while you spend
               </h2>
               <p className="text-[16px] text-[#5A5A5A] font-normal leading-6">
-                Each time you send money, you earn loyalty points you can redeem later.Because adulting deserves rewards.
+                Each time you send money, you earn loyalty points you can redeem later. Because adulting deserves rewards.
               </p>
               {/* Download button */}
               <div className="" id="recurring-payment">
